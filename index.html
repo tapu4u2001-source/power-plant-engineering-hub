@@ -1873,7 +1873,7 @@
                 voltage control, field current and troubleshooting.
             </p>
 
-            <a href="#electrical">
+            <a href="#excitation-avr">
                 Learn Excitation →
             </a>
 
@@ -1897,7 +1897,7 @@
                 protection, insulation testing and troubleshooting.
             </p>
 
-            <a href="#electrical">
+            <a href="#motors-protection">
                 Learn Motors →
             </a>
 
@@ -1921,7 +1921,7 @@
                 motor control, faults and troubleshooting.
             </p>
 
-            <a href="#electrical">
+            <a href="#vfd-drives">
                 Learn Drives →
             </a>
 
@@ -6597,6 +6597,5536 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     ADVANCED GENERATOR PROTECTION
+========================================= -->
+
+<section class="lesson-section" id="advanced-generator-protection">
+
+    <div class="lesson-header">
+
+        <div class="section-badge">
+            🛡️ ADVANCED GENERATOR PROTECTION
+        </div>
+
+        <h2>
+            Advanced Generator Protection
+        </h2>
+
+        <p>
+            Practical understanding of generator protection functions,
+            relay operation, trip logic and systematic generator fault
+            troubleshooting used in power plants.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+        <!-- =========================================
+             LESSON MENU
+        ========================================== -->
+
+        <div class="lesson-menu">
+
+            <a href="#adv-87g">
+                1. 87G — Generator Differential
+            </a>
+
+            <a href="#adv-64g">
+                2. 64G — Stator Earth Fault
+            </a>
+
+            <a href="#adv-64f">
+                3. 64F — Rotor Earth Fault
+            </a>
+
+            <a href="#adv-46">
+                4. 46 — Negative Sequence
+            </a>
+
+            <a href="#adv-40">
+                5. 40 — Loss of Excitation
+            </a>
+
+            <a href="#adv-32">
+                6. 32 — Reverse Power
+            </a>
+
+            <a href="#adv-24">
+                7. 24 — Overfluxing / V/Hz
+            </a>
+
+            <a href="#adv-voltage">
+                8. 27 / 59 — Voltage Protection
+            </a>
+
+            <a href="#adv-frequency">
+                9. 81 — Frequency Protection
+            </a>
+
+            <a href="#adv-overcurrent">
+                10. 50 / 51 — Overcurrent
+            </a>
+
+            <a href="#adv-trip-matrix">
+                11. Trip Matrix & 86 Lockout
+            </a>
+
+            <a href="#adv-ctpt">
+                12. CT / PT Failure & Misoperation
+            </a>
+
+            <a href="#adv-trip-analysis">
+                13. Practical Generator Trip Analysis
+            </a>
+
+        </div>
+
+
+        <!-- =========================================
+             LESSON CONTENT
+        ========================================== -->
+
+        <div class="lesson-content">
+
+
+            <!-- =====================================
+                 1. 87G
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-87g">
+
+                <h3>
+                    1. 87G — Generator Differential Protection
+                </h3>
+
+                <p>
+                    Generator differential protection compares the currents
+                    entering and leaving the protected generator stator
+                    zone. It is primarily intended to detect internal
+                    electrical faults within the protected zone.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Current In
+                    −
+                    Current Out
+                    →
+                    Differential Current
+
+                    <br><br>
+
+                    Internal Fault
+                    →
+                    Differential Current
+                    →
+                    Relay Operation
+                    →
+                    Generator Trip
+
+                </div>
+
+                <p>
+                    The protected zone is defined by the location and
+                    connection of the generator current transformers.
+                    CT ratio, polarity and relay compensation must be
+                    correct for dependable operation.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        A differential trip should never be treated as
+                        "just a relay trip". First establish whether the
+                        fault is internal or whether a CT circuit,
+                        wiring or protection issue has caused the operation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 2. 64G
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-64g">
+
+                <h3>
+                    2. 64G — Stator Earth Fault Protection
+                </h3>
+
+                <p>
+                    Stator earth-fault protection detects insulation failure
+                    between the generator stator winding and earth.
+                    The actual protection arrangement depends on the
+                    generator neutral grounding method and protection scheme.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Fault
+                        </strong>
+
+                        <span>
+                            Stator winding insulation breakdown to earth.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Detection
+                        </strong>
+
+                        <span>
+                            Voltage, current or zero-sequence based schemes
+                            may be used depending on the design.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Protection
+                        </strong>
+
+                        <span>
+                            The protection scheme is designed to detect
+                            earth faults within the intended generator zone.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Action
+                        </strong>
+
+                        <span>
+                            A serious internal earth fault may initiate
+                            generator trip and lockout according to the
+                            approved protection philosophy.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Practical Point
+                    </strong>
+
+                    <p>
+                        Always consider the generator neutral grounding
+                        arrangement before interpreting an earth-fault
+                        indication.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 3. 64F
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-64f">
+
+                <h3>
+                    3. 64F — Rotor Earth Fault Protection
+                </h3>
+
+                <p>
+                    The generator rotor field circuit is normally insulated
+                    from earth. A first earth fault on the rotor field
+                    circuit can therefore be an important warning condition.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Rotor Insulation
+                    →
+                    Earth Fault Detection
+                    →
+                    Alarm / Protection
+                    →
+                    Investigation
+
+                </div>
+
+                <p>
+                    Depending on the generator design, a rotor earth-fault
+                    system may detect insulation resistance degradation or
+                    an earth connection in the field circuit.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Practical Plant Point
+                    </strong>
+
+                    <p>
+                        A rotor earth-fault indication requires careful
+                        investigation because the field circuit is directly
+                        associated with generator excitation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 4. 46
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-46">
+
+                <h3>
+                    4. 46 — Negative Sequence Protection
+                </h3>
+
+                <p>
+                    Negative-sequence protection detects unbalanced three-phase
+                    currents. Negative-sequence current produces a magnetic
+                    field component that rotates opposite to the normal
+                    rotor rotation and can cause rotor heating.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Unbalanced Load
+                    →
+                    Negative Sequence Current
+                    →
+                    Rotor Heating
+                    →
+                    Protection Operation
+
+                </div>
+
+                <p>
+                    Possible causes include phase-to-phase faults, unequal
+                    phase loading, open-phase conditions and system
+                    abnormalities.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Do not look only at the generator average current.
+                        Compare the three phase currents whenever an
+                        unbalance condition is suspected.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 5. 40
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-40">
+
+                <h3>
+                    5. 40 — Loss of Excitation
+                </h3>
+
+                <p>
+                    Loss-of-excitation protection detects abnormal generator
+                    operation associated with inadequate or lost field
+                    excitation.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Excitation Reduction / Loss
+                    →
+                    Generator Reactive Power Change
+                    →
+                    Abnormal Operating Condition
+                    →
+                    Protection Operation
+
+                </div>
+
+                <p>
+                    Possible causes include excitation-system faults,
+                    field circuit problems, AVR problems or abnormal
+                    operating conditions.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Check AVR
+                        </strong>
+
+                        <span>
+                            Review excitation controller indications,
+                            alarms and event records.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Check Field
+                        </strong>
+
+                        <span>
+                            Check field voltage and field current indications.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Check MVAR
+                        </strong>
+
+                        <span>
+                            Review generator reactive power behavior before
+                            the protection operation.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Check Relay
+                        </strong>
+
+                        <span>
+                            Review relay event records and operating elements.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 6. 32
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-32">
+
+                <h3>
+                    6. 32 — Reverse Power Protection
+                </h3>
+
+                <p>
+                    Reverse-power protection detects a condition in which
+                    the generator begins absorbing active power from the
+                    electrical system instead of supplying it.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Loss / Reduction of Prime Mover Input
+                    →
+                    Generator Tends to Motor
+                    →
+                    Active Power Reversal
+                    →
+                    Reverse Power Relay
+                    →
+                    Trip
+
+                </div>
+
+                <p>
+                    In a steam turbine generator, reverse power can occur
+                    when mechanical input from the turbine is lost while
+                    the generator remains connected to the grid.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+                        Reverse-power settings and time delays are application
+                        dependent. Always use the approved protection setting
+                        and coordination study for the actual generator.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 7. 24
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-24">
+
+                <h3>
+                    7. 24 — Overfluxing / V/Hz Protection
+                </h3>
+
+                <p>
+                    Generator and transformer magnetic flux is related to
+                    voltage and frequency. Excessive V/Hz can cause excessive
+                    magnetic flux and heating of magnetic components.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Flux ∝ V / f
+
+                    <br><br>
+
+                    High V/Hz
+                    →
+                    High Flux
+                    →
+                    Magnetic Heating
+                    →
+                    Protection Operation
+
+                </div>
+
+                <p>
+                    Causes may include excessive voltage, reduced frequency
+                    or an abnormal combination of voltage and frequency.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        When investigating a V/Hz operation, examine both
+                        voltage and frequency history rather than looking
+                        at voltage alone.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 8. 27 / 59
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-voltage">
+
+                <h3>
+                    8. 27 / 59 — Under / Over Voltage Protection
+                </h3>
+
+                <p>
+                    Voltage protection monitors generator terminal voltage
+                    and detects abnormal voltage conditions.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            27 — Under Voltage
+                        </strong>
+
+                        <span>
+                            Detects voltage below the configured operating
+                            threshold.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            59 — Over Voltage
+                        </strong>
+
+                        <span>
+                            Detects voltage above the configured operating
+                            threshold.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Voltage abnormalities may result from excitation-system
+                    problems, grid disturbances, faults, incorrect control
+                    action or other system conditions.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Troubleshooting Tip
+                    </strong>
+
+                    <p>
+                        Compare generator terminal voltage, AVR status,
+                        field current, bus voltage and the relay event
+                        record before concluding that the generator itself
+                        is faulty.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 9. 81
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-frequency">
+
+                <h3>
+                    9. 81 — Frequency Protection
+                </h3>
+
+                <p>
+                    Frequency protection detects abnormal system frequency
+                    conditions affecting the generator.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            81U — Under Frequency
+                        </strong>
+
+                        <span>
+                            Detects frequency below the configured threshold.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            81O — Over Frequency
+                        </strong>
+
+                        <span>
+                            Detects frequency above the configured threshold.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-formula">
+
+                    Mechanical Power
+                    ↔
+                    Electrical Power
+                    ↔
+                    System Frequency
+
+                </div>
+
+                <p>
+                    Frequency deviations can be associated with generation
+                    and load imbalance, turbine/governor conditions or
+                    system disturbances.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 10. 50 / 51
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-overcurrent">
+
+                <h3>
+                    10. 50 / 51 — Overcurrent Protection
+                </h3>
+
+                <p>
+                    Overcurrent protection provides protection against
+                    excessive current and can serve as backup protection
+                    depending on the generator protection scheme.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            50
+                        </strong>
+
+                        <span>
+                            Instantaneous overcurrent protection.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            51
+                        </strong>
+
+                        <span>
+                            Time overcurrent protection.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Proper coordination is essential so that the protection
+                    nearest to the fault operates first whenever the scheme
+                    permits.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Never evaluate an overcurrent operation from current
+                        magnitude alone. Check fault type, duration, CT
+                        behavior, relay pickup and protection coordination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 11. TRIP MATRIX
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-trip-matrix">
+
+                <h3>
+                    11. Trip Matrix & 86 Lockout
+                </h3>
+
+                <p>
+                    The generator trip matrix defines how individual
+                    protection functions initiate alarms, breaker trips,
+                    lockout and associated equipment actions.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Protection Relay
+                    →
+                    Trip Logic
+                    →
+                    86 Lockout
+                    →
+                    Generator Breaker Trip
+                    →
+                    Prime Mover / Associated Trip
+                    →
+                    Generator Isolated
+
+                </div>
+
+                <p>
+                    The exact trip matrix varies from plant to plant.
+                    The approved protection logic diagram and cause-and-
+                    effect document should always be treated as the
+                    controlling reference.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Practical Rule
+                    </strong>
+
+                    <p>
+                        Never bypass or alter a generator protection trip
+                        circuit without authorized procedures, testing
+                        controls and the approved plant protection philosophy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 12. CT / PT
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-ctpt">
+
+                <h3>
+                    12. CT / PT Failure & Protection Misoperation
+                </h3>
+
+                <p>
+                    Protection relays depend on accurate current and voltage
+                    signals. Problems in CT or PT circuits can therefore
+                    result in incorrect measurements or protection operation.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            CT Polarity
+                        </strong>
+
+                        <span>
+                            Incorrect polarity can affect differential and
+                            other protection calculations.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            CT Circuit
+                        </strong>
+
+                        <span>
+                            Wiring problems or abnormal CT circuits can
+                            produce incorrect relay inputs.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            PT / VT Circuit
+                        </strong>
+
+                        <span>
+                            Voltage circuit problems can affect voltage,
+                            frequency and related protection functions.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Relay Records
+                        </strong>
+
+                        <span>
+                            Relay measurements and event records help
+                            determine whether the input was credible.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Practical Plant Tip
+                    </strong>
+
+                    <p>
+                        Compare relay values with independent plant
+                        measurements whenever a protection operation appears
+                        inconsistent with the actual system condition.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 13. TRIP ANALYSIS
+            ====================================== -->
+
+            <div class="lesson-topic" id="adv-trip-analysis">
+
+                <h3>
+                    13. Practical Generator Trip Analysis
+                </h3>
+
+                <p>
+                    A generator trip should be investigated systematically.
+                    The objective is to identify the first valid protection
+                    operation and determine the root cause.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Generator Trip
+                    →
+                    Identify First Protection
+                    →
+                    Check Relay Target
+                    →
+                    Check SOE / Event Record
+                    →
+                    Verify CT / PT Inputs
+                    →
+                    Check Trip Logic
+                    →
+                    Check Plant Process
+                    →
+                    Determine Root Cause
+                    →
+                    Corrective Action
+
+                </div>
+
+                <h4>
+                    🔎 Recommended Investigation Sequence
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Record generator MW, MVAR, voltage, current,
+                        frequency, power factor and excitation parameters.
+                    </li>
+
+                    <li>
+                        Identify the protection relay or protection element
+                        that initiated the trip.
+                    </li>
+
+                    <li>
+                        Review relay target indications.
+                    </li>
+
+                    <li>
+                        Review the SOE and disturbance/event records.
+                    </li>
+
+                    <li>
+                        Check CT and PT inputs where relevant.
+                    </li>
+
+                    <li>
+                        Check the generator breaker and trip circuit.
+                    </li>
+
+                    <li>
+                        Check 86 lockout operation and the associated
+                        protection logic.
+                    </li>
+
+                    <li>
+                        Check turbine, excitation, cooling and other
+                        associated systems according to the protection
+                        indication.
+                    </li>
+
+                    <li>
+                        Establish the root cause before reset or
+                        re-energization.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Golden Rule for Generator Trips
+                    </strong>
+
+                    <p>
+                        <b>
+                            First identify the protection that operated;
+                            then investigate why it operated.
+                        </b>
+                        Do not start troubleshooting randomly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     EXCITATION SYSTEM & AVR
+========================================= -->
+
+<section class="lesson-section" id="excitation-avr">
+
+    <div class="lesson-header">
+
+        <div class="section-badge">
+            ⚡ EXCITATION & AVR
+        </div>
+
+        <h2>
+            Excitation System & AVR
+        </h2>
+
+        <p>
+            Practical understanding of generator excitation, AVR operation,
+            field control, reactive power, voltage regulation, limiters,
+            excitation trips and troubleshooting in power plants.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+        <!-- =========================================
+             LESSON MENU
+        ========================================== -->
+
+        <div class="lesson-menu">
+
+            <a href="#avr-basics">
+                1. Excitation Fundamentals
+            </a>
+
+            <a href="#avr-purpose">
+                2. Why Excitation Is Required
+            </a>
+
+            <a href="#avr-working">
+                3. AVR Working Principle
+            </a>
+
+            <a href="#avr-types">
+                4. Types of Excitation Systems
+            </a>
+
+            <a href="#avr-brushless">
+                5. Brushless Excitation
+            </a>
+
+            <a href="#avr-static">
+                6. Static Excitation
+            </a>
+
+            <a href="#avr-modes">
+                7. AVR Control Modes
+            </a>
+
+            <a href="#avr-voltage">
+                8. Generator Voltage Control
+            </a>
+
+            <a href="#avr-mvar">
+                9. MVAR & Power Factor Control
+            </a>
+
+            <a href="#avr-manual">
+                10. Auto / Manual Mode
+            </a>
+
+            <a href="#avr-flashing">
+                11. Field Flashing
+            </a>
+
+            <a href="#avr-limiters">
+                12. Excitation Limiters
+            </a>
+
+            <a href="#avr-uel">
+                13. Under Excitation Limiter
+            </a>
+
+            <a href="#avr-oel">
+                14. Over Excitation Limiter
+            </a>
+
+            <a href="#avr-failure">
+                15. AVR Failure
+            </a>
+
+            <a href="#avr-field-breaker">
+                16. Field Breaker & Discharge
+            </a>
+
+            <a href="#avr-trip">
+                17. Excitation Trip Sequence
+            </a>
+
+            <a href="#avr-troubleshooting">
+                18. Practical AVR Troubleshooting
+            </a>
+
+            <a href="#avr-mw-mvar">
+                19. MW–MVAR–Voltage–Excitation
+            </a>
+
+            <a href="#avr-practical">
+                20. Practical Plant Examples
+            </a>
+
+        </div>
+
+
+        <!-- =========================================
+             LESSON CONTENT
+        ========================================== -->
+
+        <div class="lesson-content">
+
+
+            <!-- =====================================
+                 1. EXCITATION FUNDAMENTALS
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-basics">
+
+                <h3>
+                    1. Excitation System Fundamentals
+                </h3>
+
+                <p>
+                    The excitation system supplies and controls the field
+                    current of a synchronous generator. The generator field
+                    establishes the magnetic field required for generation
+                    of electrical voltage.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Excitation System
+                    →
+                    Field Current
+                    →
+                    Magnetic Field
+                    →
+                    Generator EMF
+                    →
+                    Terminal Voltage
+
+                </div>
+
+                <p>
+                    In a practical power plant, the excitation system normally
+                    includes an exciter, AVR, field circuit, sensing circuits,
+                    control logic and protective limiters.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            AVR
+                        </strong>
+
+                        <span>
+                            Automatically controls excitation to maintain
+                            generator voltage according to the selected
+                            operating mode.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Exciter
+                        </strong>
+
+                        <span>
+                            Provides the electrical power required by the
+                            generator field system.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Field Circuit
+                        </strong>
+
+                        <span>
+                            Carries field current through the generator
+                            rotor field winding.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Limiters
+                        </strong>
+
+                        <span>
+                            Keep generator operation within permissible
+                            excitation and stability limits.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 2. WHY EXCITATION
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-purpose">
+
+                <h3>
+                    2. Why Excitation Is Required
+                </h3>
+
+                <p>
+                    A synchronous generator requires a magnetic field to
+                    produce electrical EMF. The excitation system establishes
+                    this field and allows the generator terminal voltage and
+                    reactive power behavior to be controlled.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Increase Excitation
+                    →
+                    Increased Generator EMF
+                    →
+                    Reactive Power Tendency Changes
+
+                    <br><br>
+
+                    Decrease Excitation
+                    →
+                    Reduced Generator EMF
+                    →
+                    Reactive Power Tendency Changes
+
+                </div>
+
+                <p>
+                    The exact relationship between excitation, MVAR and
+                    terminal voltage depends on whether the generator is
+                    operating isolated or connected to a strong electrical
+                    grid.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        When the generator is connected to a large grid,
+                        excitation primarily influences reactive power and
+                        power factor, while active power is primarily
+                        controlled by the prime mover.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 3. AVR WORKING
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-working">
+
+                <h3>
+                    3. AVR Working Principle
+                </h3>
+
+                <p>
+                    The Automatic Voltage Regulator continuously compares
+                    the measured generator voltage with the voltage
+                    reference and adjusts excitation to reduce the error.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Voltage Reference
+                    →
+                    AVR
+                    ←
+                    Generator Voltage Feedback
+
+                    <br><br>
+
+                    Voltage Error
+                    →
+                    AVR Controller
+                    →
+                    Excitation Command
+                    →
+                    Field Current
+                    →
+                    Generator Voltage
+
+                </div>
+
+                <h4>
+                    Basic AVR Control Loop
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Generator terminal voltage is measured through
+                        PT / VT circuits.
+                    </li>
+
+                    <li>
+                        The measured voltage is fed to the AVR.
+                    </li>
+
+                    <li>
+                        AVR compares actual voltage with the reference.
+                    </li>
+
+                    <li>
+                        The controller calculates the required correction.
+                    </li>
+
+                    <li>
+                        Excitation is increased or decreased.
+                    </li>
+
+                    <li>
+                        Generator voltage moves toward the reference.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+                        The actual AVR architecture, control algorithm,
+                        limiters and redundancy depend on the manufacturer
+                        and generator excitation system.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 4. TYPES
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-types">
+
+                <h3>
+                    4. Types of Excitation Systems
+                </h3>
+
+                <p>
+                    Generator excitation systems can be broadly classified
+                    according to how excitation power is produced and
+                    transferred to the rotor field.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Brushless Excitation
+                        </strong>
+
+                        <span>
+                            Uses a rotating exciter and rotating rectifier
+                            arrangement to supply the main generator field.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Static Excitation
+                        </strong>
+
+                        <span>
+                            Uses controlled electrical power electronics
+                            to supply the generator field circuit.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            AVR
+                        </strong>
+
+                        <span>
+                            Controls the excitation power according to
+                            generator operating conditions.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Plant Practice
+                    </strong>
+
+                    <p>
+                        Always identify the actual excitation arrangement
+                        installed on your TG before troubleshooting.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 5. BRUSHLESS
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-brushless">
+
+                <h3>
+                    5. Brushless Excitation
+                </h3>
+
+                <p>
+                    In a brushless excitation system, the exciter is mounted
+                    on the generator shaft. The exciter output is rectified
+                    by rotating rectifier components and supplied to the
+                    main generator field.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AVR
+                    →
+                    Exciter Field
+                    →
+                    Exciter Armature
+                    →
+                    Rotating Rectifier
+                    →
+                    Main Generator Field
+
+                </div>
+
+                <p>
+                    Because the main generator field current does not need
+                    conventional slip-ring brushes for normal operation,
+                    brushless systems can reduce brush and slip-ring
+                    maintenance requirements.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔎 Troubleshooting Point
+                    </strong>
+
+                    <p>
+                        When field output is abnormal, investigate the AVR,
+                        exciter, rotating rectifier system and associated
+                        sensing/control circuits systematically.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 6. STATIC
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-static">
+
+                <h3>
+                    6. Static Excitation
+                </h3>
+
+                <p>
+                    A static excitation system supplies field power using
+                    stationary power-electronic equipment. The field supply
+                    may be derived from the generator terminals or another
+                    designated excitation source depending on the system
+                    design.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AC Excitation Supply
+                    →
+                    Controlled Rectifier
+                    →
+                    DC Field Current
+                    →
+                    Generator Rotor
+
+                </div>
+
+                <p>
+                    Static excitation systems can provide rapid excitation
+                    response and precise control when properly designed and
+                    maintained.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Safety
+                    </strong>
+
+                    <p>
+                        Field circuits can contain dangerous DC voltage and
+                        stored energy. Testing and maintenance must follow
+                        the plant isolation and discharge procedures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 7. CONTROL MODES
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-modes">
+
+                <h3>
+                    7. AVR Control Modes
+                </h3>
+
+                <p>
+                    Modern excitation systems can provide several control
+                    modes depending on generator operating requirements.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Automatic Voltage Control
+                        </strong>
+
+                        <span>
+                            AVR maintains the selected generator voltage
+                            reference.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Manual / Field Current Control
+                        </strong>
+
+                        <span>
+                            Excitation is controlled through an alternate
+                            operator or field-current reference.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Power Factor Control
+                        </strong>
+
+                        <span>
+                            Controls generator reactive behavior toward a
+                            selected power-factor target when supported.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Reactive Power Control
+                        </strong>
+
+                        <span>
+                            Controls generator reactive power toward a
+                            selected MVAR reference when supported.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 8. VOLTAGE CONTROL
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-voltage">
+
+                <h3>
+                    8. Generator Voltage Control
+                </h3>
+
+                <p>
+                    When the generator is connected to the grid, the AVR
+                    regulates the generator voltage according to the selected
+                    reference and system conditions.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Voltage Set Point
+                    →
+                    AVR
+                    →
+                    Excitation
+                    →
+                    Generator Terminal Voltage
+
+                </div>
+
+                <p>
+                    If generator voltage feedback falls below the reference,
+                    the AVR normally responds by increasing excitation,
+                    subject to limiters and operating constraints.
+                </p>
+
+                <p>
+                    If measured voltage rises above the reference, the AVR
+                    normally reduces excitation, again subject to the actual
+                    control scheme and limiters.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Always compare AVR reference, actual voltage,
+                        field current and MVAR together. A single parameter
+                        rarely explains an excitation problem.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 9. MVAR / PF
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-mvar">
+
+                <h3>
+                    9. MVAR & Power Factor Control
+                </h3>
+
+                <p>
+                    Excitation has a major influence on generator reactive
+                    power when the generator is connected to the grid.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Excitation
+                    ↔
+                    Reactive Power
+                    ↔
+                    Power Factor
+
+                </div>
+
+                <p>
+                    Increasing or decreasing excitation can move the generator
+                    toward over-excited or under-excited operation, depending
+                    on the system condition and control convention.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            MW
+                        </strong>
+
+                        <span>
+                            Primarily associated with mechanical input from
+                            the turbine or prime mover.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            MVAR
+                        </strong>
+
+                        <span>
+                            Strongly influenced by excitation when the
+                            generator is grid connected.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Voltage
+                        </strong>
+
+                        <span>
+                            Controlled through excitation and influenced by
+                            the connected electrical system.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Power Factor
+                        </strong>
+
+                        <span>
+                            Changes with the relationship between MW and
+                            reactive power.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 10. AUTO / MANUAL
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-manual">
+
+                <h3>
+                    10. Auto / Manual Mode
+                </h3>
+
+                <p>
+                    Excitation systems may provide automatic and manual
+                    control modes so that excitation can continue to be
+                    controlled if the primary regulation function becomes
+                    unavailable, subject to the actual plant design.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AUTO
+                    →
+                    AVR Controls Excitation
+
+                    <br><br>
+
+                    MANUAL
+                    →
+                    Operator / Field Regulator Controls Excitation
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+                        Do not change excitation control mode casually during
+                        abnormal operation. Follow the approved operating
+                        procedure for the actual excitation system.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 11. FIELD FLASHING
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-flashing">
+
+                <h3>
+                    11. Field Flashing
+                </h3>
+
+                <p>
+                    Field flashing is a method used in some generator
+                    excitation systems to establish or restore the initial
+                    magnetic field required for excitation build-up.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Field Flash Source
+                    →
+                    Initial Rotor Magnetization
+                    →
+                    Excitation Build-Up
+                    →
+                    Generator Voltage Build-Up
+
+                </div>
+
+                <p>
+                    The exact field-flashing arrangement is highly dependent
+                    on the generator and excitation-system design.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Plant Rule
+                    </strong>
+
+                    <p>
+                        Never apply a generic field-flashing procedure to a
+                        generator. Use the manufacturer's instructions and
+                        approved plant procedure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 12. LIMITERS
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-limiters">
+
+                <h3>
+                    12. Excitation Limiters
+                </h3>
+
+                <p>
+                    Excitation limiters prevent the generator from entering
+                    operating regions that could cause excessive heating,
+                    instability or other unacceptable conditions.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            OEL
+                        </strong>
+
+                        <span>
+                            Over Excitation Limiter restricts excessive
+                            excitation according to the configured scheme.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            UEL
+                        </strong>
+
+                        <span>
+                            Under Excitation Limiter prevents operation
+                            beyond the permissible under-excited region.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            V/Hz Limiter
+                        </strong>
+
+                        <span>
+                            Helps prevent excessive magnetic flux associated
+                            with high voltage-to-frequency ratio.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Stator Current Limiter
+                        </strong>
+
+                        <span>
+                            May limit operation when generator stator current
+                            approaches permissible values.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 13. UEL
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-uel">
+
+                <h3>
+                    13. Under Excitation Limiter — UEL
+                </h3>
+
+                <p>
+                    The Under Excitation Limiter prevents the generator from
+                    operating excessively under-excited.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Excitation Decreases
+                    →
+                    Generator Moves Toward Under-Excited Region
+                    →
+                    UEL Acts
+                    →
+                    Excitation Command Limited
+
+                </div>
+
+                <p>
+                    Excessive under-excitation can create stability concerns
+                    and may increase the risk of undesirable operating
+                    conditions involving the generator and connected system.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        A limiter operation is not automatically a generator
+                        fault. First determine which operating limit was
+                        reached and why the generator was moving toward it.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 14. OEL
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-oel">
+
+                <h3>
+                    14. Over Excitation Limiter — OEL
+                </h3>
+
+                <p>
+                    The Over Excitation Limiter restricts excessive field
+                    excitation to protect the generator field system from
+                    prolonged thermal stress.
+                </p>
+
+                <div class="lesson-formula">
+
+                    High Excitation
+                    →
+                    High Field Current
+                    →
+                    Field Heating
+                    →
+                    OEL
+                    →
+                    Excitation Limited
+
+                </div>
+
+                <p>
+                    The limiter may have time-dependent characteristics
+                    because permissible field current can depend on the
+                    duration of the overload.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Practical Point
+                    </strong>
+
+                    <p>
+                        Do not simply increase the excitation reference when
+                        OEL is active. Investigate why high excitation is
+                        required.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 15. AVR FAILURE
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-failure">
+
+                <h3>
+                    15. AVR Failure
+                </h3>
+
+                <p>
+                    An AVR failure can arise from control electronics,
+                    sensing circuits, power supply problems, communication
+                    issues, controller faults or other excitation-system
+                    abnormalities.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Voltage Feedback
+                        </strong>
+
+                        <span>
+                            Check PT / VT supply and the voltage measured
+                            by the AVR.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            AVR Power Supply
+                        </strong>
+
+                        <span>
+                            Check control and auxiliary power supplies.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Controller
+                        </strong>
+
+                        <span>
+                            Check active controller, alarms, diagnostics
+                            and redundancy status.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Field Output
+                        </strong>
+
+                        <span>
+                            Compare field voltage and current with expected
+                            operating conditions.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔎 Troubleshooting Rule
+                    </strong>
+
+                    <p>
+                        Separate the problem into four areas:
+                        <b>sensing → control → power stage → field circuit.</b>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 16. FIELD BREAKER
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-field-breaker">
+
+                <h3>
+                    16. Field Breaker & Field Discharge
+                </h3>
+
+                <p>
+                    Excitation systems may include field switching and
+                    discharge arrangements to safely remove stored magnetic
+                    energy from the generator field circuit.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Field Breaker Open
+                    →
+                    Field Current Reduction
+                    →
+                    Stored Field Energy Discharge
+                    →
+                    Excitation Removed
+
+                </div>
+
+                <p>
+                    The exact discharge circuit may include resistors,
+                    switches or other dedicated equipment depending on the
+                    excitation-system design.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Safety Critical
+                    </strong>
+
+                    <p>
+                        Never assume the field circuit is de-energized merely
+                        because a field breaker has opened. Follow the
+                        approved isolation and discharge procedure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 17. EXCITATION TRIP
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-trip">
+
+                <h3>
+                    17. Excitation Trip Sequence
+                </h3>
+
+                <p>
+                    The actual excitation trip sequence depends on the
+                    generator protection philosophy, excitation design and
+                    plant trip matrix.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Abnormal Condition
+                    →
+                    Protection / Excitation Logic
+                    →
+                    Generator Trip
+                    →
+                    Field Reduction / Discharge
+                    →
+                    Breaker Isolation
+                    →
+                    Lockout / Associated Trip
+
+                </div>
+
+                <p>
+                    During an actual trip, the relay event record, SOE,
+                    DCS sequence and excitation controller event log should
+                    be reviewed together.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Golden Rule
+                    </strong>
+
+                    <p>
+                        Identify the <b>first initiating signal</b>, not
+                        merely the final indication shown after the generator
+                        has tripped.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 18. TROUBLESHOOTING
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-troubleshooting">
+
+                <h3>
+                    18. Practical AVR Troubleshooting
+                </h3>
+
+                <p>
+                    AVR troubleshooting should follow a structured path
+                    instead of replacing components randomly.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AVR Problem
+                    →
+                    Check Alarm
+                    →
+                    Check Voltage Feedback
+                    →
+                    Check Reference
+                    →
+                    Check Controller
+                    →
+                    Check Excitation Output
+                    →
+                    Check Field Circuit
+                    →
+                    Find Root Cause
+
+                </div>
+
+                <h4>
+                    🔎 Practical Checklist
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Check generator terminal voltage.
+                    </li>
+
+                    <li>
+                        Check AVR voltage reference.
+                    </li>
+
+                    <li>
+                        Check AVR actual-voltage feedback.
+                    </li>
+
+                    <li>
+                        Check AVR alarms and diagnostics.
+                    </li>
+
+                    <li>
+                        Check excitation current.
+                    </li>
+
+                    <li>
+                        Check excitation voltage.
+                    </li>
+
+                    <li>
+                        Check PT / VT sensing circuit.
+                    </li>
+
+                    <li>
+                        Check field circuit.
+                    </li>
+
+                    <li>
+                        Check limiter status.
+                    </li>
+
+                    <li>
+                        Check event / SOE records.
+                    </li>
+
+                    <li>
+                        Compare DCS indications with independent field
+                        measurements where available.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Plant Tip
+                    </strong>
+
+                    <p>
+                        If DCS, AVR display and field instruments disagree,
+                        do not immediately assume the generator is faulty.
+                        First determine which measurement chain is incorrect.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 19. MW / MVAR / VOLTAGE
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-mw-mvar">
+
+                <h3>
+                    19. MW–MVAR–Voltage–Excitation Relationship
+                </h3>
+
+                <p>
+                    Understanding the relationship between MW, MVAR, voltage
+                    and excitation is one of the most important skills for
+                    operating and troubleshooting a synchronous generator.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Prime Mover
+                    →
+                    MW
+
+                    <br><br>
+
+                    Excitation
+                    →
+                    MVAR / Power Factor
+
+                    <br><br>
+
+                    AVR
+                    →
+                    Voltage Regulation
+
+                </div>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Increase Turbine Input
+                        </strong>
+
+                        <span>
+                            Normally increases generator active power MW,
+                            subject to generator and system limits.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Increase Excitation
+                        </strong>
+
+                        <span>
+                            Normally changes the generator reactive-power
+                            operating point when grid connected.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Reduce Excitation
+                        </strong>
+
+                        <span>
+                            Moves the generator toward a lower-excitation
+                            operating point, subject to UEL and system limits.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            AVR Reference
+                        </strong>
+
+                        <span>
+                            Changes the voltage-control target according to
+                            the active control mode.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Remember
+                    </strong>
+
+                    <p>
+                        Think of the generator as having two major controls:
+                        <b>MW is mainly controlled by the turbine;</b>
+                        <b>MVAR is mainly controlled by excitation</b>
+                        when the generator is connected to the grid.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 20. PRACTICAL EXAMPLES
+            ====================================== -->
+
+            <div class="lesson-topic" id="avr-practical">
+
+                <h3>
+                    20. Practical Plant Examples
+                </h3>
+
+                <h4>
+                    Example 1 — Generator Voltage Low
+                </h4>
+
+                <div class="lesson-formula">
+
+                    Generator Voltage Low
+                    →
+                    Check AVR Reference
+                    →
+                    Check Voltage Feedback
+                    →
+                    Check Field Current
+                    →
+                    Check Excitation System
+                    →
+                    Check Generator / Grid Condition
+
+                </div>
+
+                <h4>
+                    Example 2 — MVAR Suddenly Changes
+                </h4>
+
+                <div class="lesson-formula">
+
+                    MVAR Change
+                    →
+                    Check Excitation
+                    →
+                    Check AVR Mode
+                    →
+                    Check Voltage
+                    →
+                    Check Grid Voltage
+                    →
+                    Check UEL / OEL
+                    →
+                    Check Relay / Event Record
+
+                </div>
+
+                <h4>
+                    Example 3 — AVR Alarm
+                </h4>
+
+                <div class="lesson-formula">
+
+                    AVR Alarm
+                    →
+                    Identify Alarm
+                    →
+                    Check Controller
+                    →
+                    Check PT / VT Feedback
+                    →
+                    Check Power Supply
+                    →
+                    Check Field Output
+                    →
+                    Corrective Action
+
+                </div>
+
+                <h4>
+                    Example 4 — Excitation Not Increasing
+                </h4>
+
+                <div class="lesson-formula">
+
+                    Excitation Command ↑
+                    →
+                    Field Current Does Not Increase
+                    →
+                    Check Controller Output
+                    →
+                    Check Power Stage
+                    →
+                    Check Exciter
+                    →
+                    Check Field Circuit
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Senior Engineer's Approach
+                    </strong>
+
+                    <p>
+                        Never troubleshoot excitation by looking at only one
+                        parameter. Always correlate:
+                        <b>MW + MVAR + Voltage + Current + Power Factor +
+                        Field Current + Field Voltage + AVR Mode + Limiters.</b>
+                    </p>
+
+                </div>
+
+                <div class="lesson-next">
+
+                    <strong>
+                        ⚡ Excitation & AVR Summary
+                    </strong>
+
+                    <p>
+                        Excitation → Field Current → Generator EMF →
+                        Voltage / MVAR → AVR Control → Limiters →
+                        Protection → Safe Generator Operation
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     MOTORS & MOTOR PROTECTION
+========================================= -->
+
+<section class="lesson-section" id="motors-protection">
+
+    <div class="lesson-header">
+
+        <div class="section-badge">
+            ⚙️ MOTORS & MOTOR PROTECTION
+        </div>
+
+        <h2>
+            Motors & Motor Protection
+        </h2>
+
+        <p>
+            Practical understanding of induction motors, starting methods,
+            starting current, motor protection, insulation testing,
+            single phasing and systematic motor trip troubleshooting.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+        <!-- =========================================
+             LESSON MENU
+        ========================================== -->
+
+        <div class="lesson-menu">
+
+            <a href="#motor-basics">
+                1. Motor Fundamentals
+            </a>
+
+            <a href="#motor-construction">
+                2. Motor Construction
+            </a>
+
+            <a href="#motor-rating">
+                3. Motor Ratings
+            </a>
+
+            <a href="#motor-starting-current">
+                4. Motor Starting Current
+            </a>
+
+            <a href="#motor-dol">
+                5. DOL Starter
+            </a>
+
+            <a href="#motor-star-delta">
+                6. Star-Delta Starter
+            </a>
+
+            <a href="#motor-soft-starter">
+                7. Soft Starter
+            </a>
+
+            <a href="#motor-vfd">
+                8. VFD Starting
+            </a>
+
+            <a href="#motor-protection">
+                9. Motor Protection
+            </a>
+
+            <a href="#motor-overload">
+                10. Overload Protection
+            </a>
+
+            <a href="#motor-earth-fault">
+                11. Earth-Fault Protection
+            </a>
+
+            <a href="#motor-short-circuit">
+                12. Short-Circuit Protection
+            </a>
+
+            <a href="#motor-locked-rotor">
+                13. Locked-Rotor Protection
+            </a>
+
+            <a href="#motor-single-phasing">
+                14. Single Phasing
+            </a>
+
+            <a href="#motor-ir">
+                15. Motor Insulation / IR Testing
+            </a>
+
+            <a href="#motor-trip">
+                16. Motor Trip Troubleshooting
+            </a>
+
+            <a href="#motor-repeated-start">
+                17. Repeated Starting & Incomer Tripping
+            </a>
+
+            <a href="#motor-fire-hydrant">
+                18. Fire Hydrant Motor Example
+            </a>
+
+        </div>
+
+
+        <!-- =========================================
+             LESSON CONTENT
+        ========================================== -->
+
+        <div class="lesson-content">
+
+
+            <!-- =====================================
+                 1. MOTOR FUNDAMENTALS
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-basics">
+
+                <h3>
+                    1. Motor Fundamentals
+                </h3>
+
+                <p>
+                    An induction motor converts electrical energy into
+                    mechanical energy. It is one of the most widely used
+                    motors in power plants for pumps, fans, conveyors,
+                    compressors and auxiliary systems.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Electrical Energy
+                    →
+                    Motor
+                    →
+                    Electromagnetic Torque
+                    →
+                    Mechanical Energy
+
+                </div>
+
+                <p>
+                    A three-phase induction motor consists mainly of a
+                    stator and rotor. The stator produces a rotating magnetic
+                    field and the rotor develops torque through electromagnetic
+                    induction.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Stator
+                        </strong>
+
+                        <span>
+                            Contains the three-phase winding that produces
+                            the rotating magnetic field.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Rotor
+                        </strong>
+
+                        <span>
+                            Rotates inside the stator field and produces
+                            mechanical torque.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Bearings
+                        </strong>
+
+                        <span>
+                            Support the rotating shaft and maintain proper
+                            rotor alignment.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Cooling
+                        </strong>
+
+                        <span>
+                            Removes heat generated by electrical and
+                            mechanical losses.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 2. CONSTRUCTION
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-construction">
+
+                <h3>
+                    2. Motor Construction
+                </h3>
+
+                <p>
+                    A typical industrial three-phase induction motor contains
+                    the following major components.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Stator frame
+                    </li>
+
+                    <li>
+                        Stator core
+                    </li>
+
+                    <li>
+                        Stator winding
+                    </li>
+
+                    <li>
+                        Rotor
+                    </li>
+
+                    <li>
+                        Shaft
+                    </li>
+
+                    <li>
+                        Bearings
+                    </li>
+
+                    <li>
+                        Cooling fan / cooling system
+                    </li>
+
+                    <li>
+                        Terminal box
+                    </li>
+
+                </ul>
+
+                <div class="lesson-formula">
+
+                    Three-Phase Supply
+                    →
+                    Stator Magnetic Field
+                    →
+                    Rotor Current
+                    →
+                    Electromagnetic Torque
+                    →
+                    Shaft Rotation
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Practical Point
+                    </strong>
+
+                    <p>
+                        During motor troubleshooting, separate the problem
+                        into electrical, mechanical, thermal and supply-side
+                        causes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 3. MOTOR RATINGS
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-rating">
+
+                <h3>
+                    3. Motor Ratings
+                </h3>
+
+                <p>
+                    Motor nameplates provide important information required
+                    for operation, protection and maintenance.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Power
+                        </strong>
+
+                        <span>
+                            Motor rated output, commonly expressed in kW
+                            or MW.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Voltage
+                        </strong>
+
+                        <span>
+                            Rated supply voltage of the motor.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Current
+                        </strong>
+
+                        <span>
+                            Rated full-load current used for protection
+                            and operating reference.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Speed
+                        </strong>
+
+                        <span>
+                            Rated operating speed in RPM.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Power Factor
+                        </strong>
+
+                        <span>
+                            Ratio of active power to apparent power at
+                            the specified operating condition.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Efficiency
+                        </strong>
+
+                        <span>
+                            Ratio of mechanical output power to electrical
+                            input power.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Always obtain the actual motor nameplate data before
+                        setting protection or evaluating abnormal current.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 4. STARTING CURRENT
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-starting-current">
+
+                <h3>
+                    4. Motor Starting Current
+                </h3>
+
+                <p>
+                    An induction motor normally draws a high current during
+                    starting because the motor initially has very low
+                    slip-related impedance compared with its normal
+                    operating condition.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Start
+                    →
+                    High Starting Current
+                    →
+                    Voltage Dip / Thermal Stress
+                    →
+                    Current Reduces as Motor Accelerates
+
+                </div>
+
+                <p>
+                    Depending on motor design and starting method, starting
+                    current may be several times the rated full-load current.
+                </p>
+
+                <h4>
+                    Example
+                </h4>
+
+                <p>
+                    For a 415 V, 150 kW motor, the actual starting current
+                    must be determined from the motor characteristics and
+                    starter arrangement.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+                        Do not assume one universal starting-current value
+                        for every motor. Check the motor datasheet and
+                        starting method.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 5. DOL
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-dol">
+
+                <h3>
+                    5. DOL Starter
+                </h3>
+
+                <p>
+                    Direct-On-Line starting connects the motor directly to
+                    the supply through the starter equipment.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Supply
+                    →
+                    Contactor
+                    →
+                    Motor
+
+                    <br><br>
+
+                    DOL
+                    →
+                    High Starting Current
+                    →
+                    High Starting Torque
+
+                </div>
+
+                <p>
+                    DOL starting is simple but can produce a significant
+                    starting-current surge and voltage disturbance,
+                    especially for larger motors connected to relatively
+                    weak electrical systems.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 6. STAR DELTA
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-star-delta">
+
+                <h3>
+                    6. Star-Delta Starter
+                </h3>
+
+                <p>
+                    A star-delta starter reduces the motor starting current
+                    by initially connecting the motor windings in star and
+                    then changing to delta after acceleration.
+                </p>
+
+                <div class="lesson-formula">
+
+                    START
+                    →
+                    STAR Connection
+                    →
+                    Reduced Starting Current
+
+                    <br><br>
+
+                    Acceleration
+                    →
+                    Transition
+                    →
+                    DELTA Connection
+                    →
+                    Normal Operation
+
+                </div>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Star Contactor
+                        </strong>
+
+                        <span>
+                            Provides the initial star connection during
+                            starting.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Delta Contactor
+                        </strong>
+
+                        <span>
+                            Connects the motor for normal running operation.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Timer
+                        </strong>
+
+                        <span>
+                            Controls the transition from star to delta
+                            according to the starter design.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Interlocking
+                        </strong>
+
+                        <span>
+                            Prevents incorrect simultaneous operation of
+                            star and delta contactors.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Practical Point
+                    </strong>
+
+                    <p>
+                        Star-delta starting does not eliminate starting
+                        current. It reduces the initial starting current,
+                        while the motor may experience a transition current
+                        when changing from star to delta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 7. SOFT STARTER
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-soft-starter">
+
+                <h3>
+                    7. Soft Starter
+                </h3>
+
+                <p>
+                    A soft starter uses controlled semiconductor switching
+                    to gradually increase the voltage applied to the motor
+                    during starting.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Controlled Voltage Ramp
+                    →
+                    Controlled Motor Acceleration
+                    →
+                    Reduced Starting Stress
+
+                </div>
+
+                <p>
+                    Soft starters are particularly useful where controlled
+                    acceleration and reduced mechanical or electrical stress
+                    are important.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Practical Point
+                    </strong>
+
+                    <p>
+                        Soft starter settings must consider motor rating,
+                        load torque, acceleration time and the actual
+                        application.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 8. VFD
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-vfd">
+
+                <h3>
+                    8. VFD Starting
+                </h3>
+
+                <p>
+                    A Variable Frequency Drive controls motor speed by
+                    controlling the frequency and voltage supplied to the
+                    motor.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AC Supply
+                    →
+                    Rectifier
+                    →
+                    DC Link
+                    →
+                    Inverter
+                    →
+                    Variable Frequency AC
+                    →
+                    Motor
+
+                </div>
+
+                <p>
+                    Because the motor can be accelerated gradually,
+                    a VFD can significantly reduce mechanical shock and
+                    control starting current compared with direct starting.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        For VFD-driven motors, troubleshoot the complete
+                        system: supply → drive → motor → load.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 9. MOTOR PROTECTION
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-protection">
+
+                <h3>
+                    9. Motor Protection
+                </h3>
+
+                <p>
+                    Motor protection prevents damage caused by electrical,
+                    thermal and mechanical abnormal conditions.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Overload
+                        </strong>
+
+                        <span>
+                            Protects against sustained excessive current
+                            and thermal stress.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Short Circuit
+                        </strong>
+
+                        <span>
+                            Provides rapid protection against severe
+                            electrical faults.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Earth Fault
+                        </strong>
+
+                        <span>
+                            Detects unwanted current flow from the motor
+                            circuit to earth.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Single Phasing
+                        </strong>
+
+                        <span>
+                            Detects or protects against loss of one phase
+                            and resulting motor unbalance.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Locked Rotor
+                        </strong>
+
+                        <span>
+                            Protects against high current when the rotor
+                            cannot accelerate or becomes stalled.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Thermal Protection
+                        </strong>
+
+                        <span>
+                            Protects motor insulation and windings against
+                            excessive thermal stress.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 10. OVERLOAD
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-overload">
+
+                <h3>
+                    10. Overload Protection
+                </h3>
+
+                <p>
+                    Motor overload protection responds to sustained
+                    overcurrent conditions that can cause excessive
+                    temperature rise.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Excess Load
+                    →
+                    Motor Current ↑
+                    →
+                    Heating ↑
+                    →
+                    Overload Protection
+                    →
+                    Trip
+
+                </div>
+
+                <p>
+                    Common causes include excessive mechanical load,
+                    bearing problems, pump problems, low voltage,
+                    unbalanced supply and process abnormalities.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔎 Troubleshooting Tip
+                    </strong>
+
+                    <p>
+                        If a motor overloads, check both the motor and
+                        driven equipment. The electrical motor may be healthy
+                        while the mechanical load is abnormal.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 11. EARTH FAULT
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-earth-fault">
+
+                <h3>
+                    11. Earth-Fault Protection
+                </h3>
+
+                <p>
+                    Earth-fault protection detects current flowing through
+                    an unintended path to earth.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Insulation Failure
+                    →
+                    Earth Leakage / Fault Current
+                    →
+                    Earth-Fault Relay
+                    →
+                    Trip
+
+                </div>
+
+                <p>
+                    Possible causes include winding insulation deterioration,
+                    cable damage, moisture, terminal-box contamination or
+                    mechanical damage.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Safety
+                    </strong>
+
+                    <p>
+                        Before insulation testing, isolate the motor properly
+                        and ensure that electronic equipment such as VFDs
+                        is disconnected according to the manufacturer's
+                        procedure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 12. SHORT CIRCUIT
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-short-circuit">
+
+                <h3>
+                    12. Short-Circuit Protection
+                </h3>
+
+                <p>
+                    Short-circuit protection provides rapid interruption
+                    when a severe fault occurs in the motor circuit.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Phase-Phase / Phase-Earth Fault
+                    →
+                    Very High Fault Current
+                    →
+                    Instantaneous Protection
+                    →
+                    Breaker / Contactor Trip
+
+                </div>
+
+                <p>
+                    Protection coordination should ensure that the nearest
+                    appropriate protective device clears the fault without
+                    unnecessarily tripping upstream equipment.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 13. LOCKED ROTOR
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-locked-rotor">
+
+                <h3>
+                    13. Locked-Rotor Protection
+                </h3>
+
+                <p>
+                    A locked rotor condition occurs when the motor cannot
+                    accelerate normally or the rotor becomes mechanically
+                    stalled.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Start
+                    →
+                    Rotor Does Not Accelerate
+                    →
+                    High Current Continues
+                    →
+                    Rapid Heating
+                    →
+                    Protection Trip
+
+                </div>
+
+                <p>
+                    Possible causes include a jammed pump, seized bearing,
+                    excessive load, mechanical obstruction or motor
+                    mechanical failure.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        If starting current remains high for too long,
+                        investigate motor acceleration and driven-equipment
+                        condition immediately.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 14. SINGLE PHASING
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-single-phasing">
+
+                <h3>
+                    14. Single Phasing
+                </h3>
+
+                <p>
+                    Single phasing occurs when one phase of a three-phase
+                    motor supply is lost while the motor is operating or
+                    attempting to start.
+                </p>
+
+                <div class="lesson-formula">
+
+                    One Phase Lost
+                    →
+                    Current Unbalance
+                    →
+                    Negative Sequence / Heating
+                    →
+                    Motor Damage Risk
+
+                </div>
+
+                <p>
+                    Causes can include blown fuses, loose terminals,
+                    contactor problems, cable faults or upstream supply
+                    abnormalities.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔎 Check
+                    </strong>
+
+                    <p>
+                        Compare all three phase voltages and currents.
+                        Never assume that a healthy reading on one phase
+                        proves that the motor supply is healthy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 15. IR TESTING
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-ir">
+
+                <h3>
+                    15. Motor Insulation / IR Testing
+                </h3>
+
+                <p>
+                    Insulation resistance testing helps assess the condition
+                    of motor winding insulation.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Isolate Motor
+                    →
+                    Verify Safe Condition
+                    →
+                    Disconnect Sensitive Electronics
+                    →
+                    Megger Test
+                    →
+                    Record IR
+                    →
+                    Compare Trends
+
+                </div>
+
+                <h4>
+                    Practical IR Test Sequence
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Isolate and lock out the motor supply.
+                    </li>
+
+                    <li>
+                        Verify absence of voltage.
+                    </li>
+
+                    <li>
+                        Disconnect equipment that should not receive the
+                        test voltage.
+                    </li>
+
+                    <li>
+                        Connect the insulation tester according to the
+                        approved test procedure.
+                    </li>
+
+                    <li>
+                        Measure insulation resistance.
+                    </li>
+
+                    <li>
+                        Record temperature and test conditions.
+                    </li>
+
+                    <li>
+                        Compare the result with previous test records and
+                        applicable manufacturer / plant criteria.
+                    </li>
+
+                    <li>
+                        Discharge the winding safely after testing.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+                        An IR value should not be judged using one universal
+                        number alone. Motor voltage, winding temperature,
+                        test voltage, motor construction and applicable
+                        standards all matter.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 16. MOTOR TRIP
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-trip">
+
+                <h3>
+                    16. Motor Trip Troubleshooting
+                </h3>
+
+                <p>
+                    A motor trip should be investigated systematically
+                    rather than immediately resetting the motor.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Trip
+                    →
+                    Identify Protection
+                    →
+                    Check Relay / Starter
+                    →
+                    Check Current
+                    →
+                    Check Voltage
+                    →
+                    Check Motor
+                    →
+                    Check Mechanical Load
+                    →
+                    Root Cause
+
+                </div>
+
+                <h4>
+                    Recommended Investigation
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Identify the exact trip indication.
+                    </li>
+
+                    <li>
+                        Record motor current before the trip if available.
+                    </li>
+
+                    <li>
+                        Check all three phase currents.
+                    </li>
+
+                    <li>
+                        Check all three phase voltages.
+                    </li>
+
+                    <li>
+                        Check overload relay / protection relay indications.
+                    </li>
+
+                    <li>
+                        Check earth-fault indication.
+                    </li>
+
+                    <li>
+                        Check starter, contactor or VFD status.
+                    </li>
+
+                    <li>
+                        Check motor insulation where appropriate.
+                    </li>
+
+                    <li>
+                        Check bearings and mechanical load.
+                    </li>
+
+                    <li>
+                        Check whether the motor was repeatedly started.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Golden Rule
+                    </strong>
+
+                    <p>
+                        First identify <b>what protection operated</b>.
+                        Then determine <b>why it operated</b>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 17. REPEATED STARTING
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-repeated-start">
+
+                <h3>
+                    17. Repeated Starting & Incomer Tripping
+                </h3>
+
+                <p>
+                    Repeated starting of a large motor can create a serious
+                    electrical and thermal problem. Each start produces a
+                    high-current transient and places additional thermal
+                    stress on the motor and electrical system.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Start
+                    →
+                    High Current
+                    →
+                    Motor Stops
+                    →
+                    Restart
+                    →
+                    High Current Again
+                    →
+                    Repeated Electrical Stress
+                    →
+                    Possible Protection Trip
+
+                </div>
+
+                <h4>
+                    Why Can the Incomer Trip?
+                </h4>
+
+                <p>
+                    If the upstream breaker or incomer protection sees a
+                    sufficiently high current, repeated starting can cause
+                    an unwanted trip depending on the protection settings,
+                    time characteristics and electrical network condition.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Starting Current
+                        </strong>
+
+                        <span>
+                            Motor starting current may be several times
+                            rated current.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Repeated Starts
+                        </strong>
+
+                        <span>
+                            Multiple starts can produce repeated current
+                            surges and additional heating.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Protection Setting
+                        </strong>
+
+                        <span>
+                            Incomer pickup and time characteristics must
+                            coordinate with motor starting current.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Voltage Dip
+                        </strong>
+
+                        <span>
+                            Starting current can cause voltage depression,
+                            especially on a relatively weak supply system.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <h4>
+                    Practical Investigation
+                </h4>
+
+                <ol>
+
+                    <li>
+                        Record motor rated current.
+                    </li>
+
+                    <li>
+                        Record actual starting current.
+                    </li>
+
+                    <li>
+                        Determine how long the motor remains at high current.
+                    </li>
+
+                    <li>
+                        Record the time between motor stop and restart.
+                    </li>
+
+                    <li>
+                        Identify exactly which incomer protection operated.
+                    </li>
+
+                    <li>
+                        Check instantaneous and time-overcurrent settings.
+                    </li>
+
+                    <li>
+                        Check motor overload and restart logic.
+                    </li>
+
+                    <li>
+                        Check pressure-control or automatic-start logic.
+                    </li>
+
+                    <li>
+                        Check whether the driven equipment is causing
+                        excessive starting torque.
+                    </li>
+
+                    <li>
+                        Check the electrical system voltage during starting.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🚒 Fire Hydrant Practical Point
+                    </strong>
+
+                    <p>
+                        For a fire-hydrant pump that repeatedly starts and
+                        stops because of pressure fluctuations, investigate
+                        the pressure-control logic, pressure vessel / sensing
+                        arrangement, minimum run-time and restart delay along
+                        with the electrical protection. Do not solve the
+                        problem only by increasing breaker settings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 18. FIRE HYDRANT EXAMPLE
+            ====================================== -->
+
+            <div class="lesson-topic" id="motor-fire-hydrant">
+
+                <h3>
+                    18. Practical Fire Hydrant Motor Example
+                </h3>
+
+                <p>
+                    Consider a 415 V, 150 kW fire-hydrant pump motor using
+                    a star-delta starter.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Pressure Falls
+                    →
+                    Pump Motor Starts
+                    →
+                    Starting Current Surge
+                    →
+                    Motor Accelerates
+                    →
+                    Pressure Rises
+                    →
+                    Motor Stops
+
+                    <br><br>
+
+                    Pressure Falls Again
+                    →
+                    Motor Restarts
+                    →
+                    Repeated Starting
+
+                </div>
+
+                <p>
+                    If the pressure fluctuates around the start/stop
+                    threshold, the motor may repeatedly cycle. This can
+                    cause unnecessary starting stress and may lead to
+                    protective operation in the motor circuit or upstream
+                    electrical system.
+                </p>
+
+                <h4>
+                    What Should Be Checked?
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Motor rated current
+                    </li>
+
+                    <li>
+                        Actual starting current
+                    </li>
+
+                    <li>
+                        Star-delta transition timing
+                    </li>
+
+                    <li>
+                        Motor acceleration time
+                    </li>
+
+                    <li>
+                        Overload relay setting
+                    </li>
+
+                    <li>
+                        Incomer overcurrent settings
+                    </li>
+
+                    <li>
+                        Pressure switch / transmitter operation
+                    </li>
+
+                    <li>
+                        Start and stop pressure setpoints
+                    </li>
+
+                    <li>
+                        Minimum restart delay
+                    </li>
+
+                    <li>
+                        Pressure vessel / accumulator condition
+                    </li>
+
+                    <li>
+                        Pump discharge condition
+                    </li>
+
+                    <li>
+                        Cable and termination condition
+                    </li>
+
+                </ul>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Golden Rule
+                    </strong>
+
+                    <p>
+                        When a motor repeatedly trips during automatic
+                        operation, investigate the complete chain:
+                        <b>Process → Control Logic → Starter → Motor →
+                        Protection → Incomer.</b>
+                    </p>
+
+                </div>
+
+                <div class="lesson-next">
+
+                    <strong>
+                        ⚙️ Motors & Protection Summary
+                    </strong>
+
+                    <p>
+                        Supply → Starter → Motor → Load →
+                        Protection → Control → Safe Operation
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     VFD & DRIVES
+========================================= -->
+
+<section class="lesson-section" id="vfd-drives">
+
+    <div class="lesson-header">
+
+        <div class="section-badge">
+            🎚️ VFD & DRIVES
+        </div>
+
+        <h2>
+            VFD & Drives
+        </h2>
+
+        <p>
+            Learn variable frequency drives, power conversion,
+            motor speed control, starting methods, protection,
+            parameters and practical VFD troubleshooting used
+            in power plants.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+        <!-- =========================================
+             LEFT MENU
+        ========================================= -->
+
+        <div class="lesson-menu">
+
+            <a href="#vfd-fundamentals">
+                1. VFD Fundamentals
+            </a>
+
+            <a href="#vfd-plant-use">
+                2. Why VFD Is Used in Power Plants
+            </a>
+
+            <a href="#vfd-construction">
+                3. VFD Construction & Main Components
+            </a>
+
+            <a href="#vfd-conversion">
+                4. AC → DC → AC Conversion
+            </a>
+
+            <a href="#vfd-rectifier">
+                5. Rectifier Section
+            </a>
+
+            <a href="#vfd-dclink">
+                6. DC Link / DC Bus
+            </a>
+
+            <a href="#vfd-inverter">
+                7. Inverter Section — IGBT
+            </a>
+
+            <a href="#vfd-pwm">
+                8. PWM & Output Waveform
+            </a>
+
+            <a href="#vfd-frequency-speed">
+                9. Frequency & Motor Speed
+            </a>
+
+            <a href="#vfd-voltage-torque">
+                10. Voltage & Motor Torque
+            </a>
+
+            <a href="#vfd-vf-control">
+                11. V/F Control
+            </a>
+
+            <a href="#vfd-vector-control">
+                12. Vector Control
+            </a>
+
+            <a href="#vfd-starting">
+                13. VFD Starting & Acceleration
+            </a>
+
+            <a href="#vfd-braking">
+                14. Braking & Deceleration
+            </a>
+
+            <a href="#vfd-protection">
+                15. VFD Protection Functions
+            </a>
+
+            <a href="#vfd-faults">
+                16. Common VFD Faults
+            </a>
+
+            <a href="#vfd-parameters">
+                17. Important VFD Parameters
+            </a>
+
+            <a href="#vfd-practical">
+                18. Practical VFD Troubleshooting
+            </a>
+
+        </div>
+
+
+        <!-- =========================================
+             LESSON CONTENT
+        ========================================= -->
+
+        <div class="lesson-content">
+
+
+            <!-- 1. FUNDAMENTALS -->
+
+            <div class="lesson-topic" id="vfd-fundamentals">
+
+                <h3>
+                    1. VFD Fundamentals
+                </h3>
+
+                <p>
+                    VFD stands for Variable Frequency Drive. It is an
+                    electronic drive used to control the speed, torque
+                    and operating characteristics of an AC motor.
+                </p>
+
+                <p>
+                    In power plants, VFDs are commonly used for pumps,
+                    fans, blowers, cooling-water systems, conveyors and
+                    other variable-speed auxiliary equipment.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AC Supply
+                    → VFD
+                    → Variable Frequency / Voltage
+                    → AC Motor
+                    → Variable Speed
+
+                </div>
+
+                <p>
+                    The most important principle is that the VFD controls
+                    motor speed primarily by controlling the frequency
+                    supplied to the motor.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚡ Practical Point
+                    </strong>
+
+                    <p>
+                        A VFD is not simply a starter. It can provide
+                        controlled starting, speed regulation, process
+                        control, protection and energy savings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2. POWER PLANT USE -->
+
+            <div class="lesson-topic" id="vfd-plant-use">
+
+                <h3>
+                    2. Why VFD Is Used in Power Plants
+                </h3>
+
+                <p>
+                    Many power-plant auxiliary motors do not need to run
+                    continuously at full speed. VFDs allow the motor speed
+                    to follow the process requirement.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🌀 Fans
+                        </strong>
+
+                        <span>
+                            Control airflow and reduce unnecessary energy
+                            consumption.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            💧 Pumps
+                        </strong>
+
+                        <span>
+                            Control flow and pressure according to process
+                            demand.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            ⚙️ Conveyors
+                        </strong>
+
+                        <span>
+                            Provide controlled starting and adjustable speed.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔥 Boiler Auxiliaries
+                        </strong>
+
+                        <span>
+                            Useful for selected ID, FD, PA and other
+                            variable-speed applications.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Before selecting a VFD, always understand the
+                        motor rating, load type, required speed range,
+                        starting torque and process requirement.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3. CONSTRUCTION -->
+
+            <div class="lesson-topic" id="vfd-construction">
+
+                <h3>
+                    3. VFD Construction & Main Components
+                </h3>
+
+                <p>
+                    A typical industrial VFD contains several major
+                    electrical and electronic sections.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>1. Input Section</strong>
+                        <span>Receives incoming AC power.</span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>2. Rectifier</strong>
+                        <span>Converts AC into DC.</span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>3. DC Link</strong>
+                        <span>Stores and smooths DC energy.</span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>4. Inverter</strong>
+                        <span>Converts DC back into controlled AC.</span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>5. Control Board</strong>
+                        <span>Controls switching and drive operation.</span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>6. Cooling System</strong>
+                        <span>Removes heat from power electronic components.</span>
+                    </div>
+
+                </div>
+
+                <div class="lesson-formula">
+
+                    3-Phase AC
+                    → Rectifier
+                    → DC Link
+                    → IGBT Inverter
+                    → Variable AC
+                    → Motor
+
+                </div>
+
+            </div>
+
+
+            <!-- 4. AC DC AC -->
+
+            <div class="lesson-topic" id="vfd-conversion">
+
+                <h3>
+                    4. AC → DC → AC Conversion
+                </h3>
+
+                <p>
+                    The basic power-conversion principle of a conventional
+                    VFD is AC to DC followed by DC to controlled AC.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Input AC
+                    → Rectifier
+                    → DC
+                    → Inverter
+                    → Variable-Frequency AC
+
+                </div>
+
+                <p>
+                    The incoming supply frequency may be fixed, for example
+                    50 Hz. The inverter then generates an output waveform
+                    with the required frequency for motor operation.
+                </p>
+
+                <p>
+                    By changing the output frequency, the VFD changes the
+                    operating speed of the motor.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚡ Key Concept
+                    </strong>
+
+                    <p>
+                        The VFD does not mechanically change the motor speed.
+                        It changes the electrical conditions supplied to the
+                        motor.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 5. RECTIFIER -->
+
+            <div class="lesson-topic" id="vfd-rectifier">
+
+                <h3>
+                    5. Rectifier Section
+                </h3>
+
+                <p>
+                    The rectifier section converts incoming AC power into
+                    DC power.
+                </p>
+
+                <p>
+                    In many industrial drives, semiconductor devices such
+                    as diodes or controlled semiconductor devices are used
+                    in the input rectifier stage.
+                </p>
+
+                <div class="lesson-formula">
+
+                    AC Input
+                    → Rectifier
+                    → Pulsating DC
+
+                </div>
+
+                <p>
+                    The rectified output is then supplied to the DC-link
+                    circuit for smoothing and energy storage.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔧 Troubleshooting Point
+                    </strong>
+
+                    <p>
+                        A rectifier problem can result in abnormal DC-link
+                        voltage, input-side faults, high ripple or failure
+                        of the drive to operate.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. DC LINK -->
+
+            <div class="lesson-topic" id="vfd-dclink">
+
+                <h3>
+                    6. DC Link / DC Bus
+                </h3>
+
+                <p>
+                    The DC link is the intermediate DC section between the
+                    rectifier and inverter.
+                </p>
+
+                <p>
+                    It normally contains capacitors and associated
+                    components that smooth the DC voltage and provide
+                    temporary energy storage.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Rectifier
+                    → DC Link
+                    → Inverter
+
+                </div>
+
+                <p>
+                    The DC-link voltage is an important diagnostic value
+                    during VFD troubleshooting.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>DC-Link Undervoltage</strong>
+                        <span>
+                            May indicate input-supply problems or excessive
+                            voltage drop.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>DC-Link Overvoltage</strong>
+                        <span>
+                            Can occur during rapid deceleration or supply
+                            disturbances.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Safety
+                    </strong>
+
+                    <p>
+                        The DC bus can remain charged after the input supply
+                        is switched off. Always follow the manufacturer's
+                        discharge and electrical safety procedure before
+                        working inside a VFD.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 7. INVERTER -->
+
+            <div class="lesson-topic" id="vfd-inverter">
+
+                <h3>
+                    7. Inverter Section — IGBT
+                </h3>
+
+                <p>
+                    The inverter section converts DC-link power into
+                    controlled AC power for the motor.
+                </p>
+
+                <p>
+                    Modern industrial VFDs commonly use IGBTs
+                    (Insulated Gate Bipolar Transistors) as high-speed
+                    switching devices.
+                </p>
+
+                <div class="lesson-formula">
+
+                    DC Link
+                    → IGBT Switching
+                    → Controlled 3-Phase AC
+                    → Motor
+
+                </div>
+
+                <p>
+                    The control system switches the IGBTs in a controlled
+                    sequence to produce the required output voltage and
+                    frequency.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔧 Practical Point
+                    </strong>
+
+                    <p>
+                        Inverter faults may produce output-phase faults,
+                        overcurrent, short-circuit or power-module fault
+                        indications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8. PWM -->
+
+            <div class="lesson-topic" id="vfd-pwm">
+
+                <h3>
+                    8. PWM & Output Waveform
+                </h3>
+
+                <p>
+                    PWM means Pulse Width Modulation. VFDs use high-speed
+                    switching to synthesize an AC output waveform suitable
+                    for motor operation.
+                </p>
+
+                <div class="lesson-formula">
+
+                    DC Voltage
+                    + High-Speed Switching
+                    → PWM Pulses
+                    → Approximate Sinusoidal Motor Current
+
+                </div>
+
+                <p>
+                    The switching pattern controls the effective output
+                    voltage and frequency supplied to the motor.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Important
+                    </strong>
+
+                    <p>
+                        The waveform at the VFD output is produced by
+                        switching power semiconductor devices. It should
+                        not be assumed to be identical to the ideal utility
+                        sine wave.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 9. FREQUENCY SPEED -->
+
+            <div class="lesson-topic" id="vfd-frequency-speed">
+
+                <h3>
+                    9. Frequency & Motor Speed
+                </h3>
+
+                <p>
+                    Motor speed is strongly related to supply frequency.
+                    For an induction motor, synchronous speed is given by:
+                </p>
+
+                <div class="lesson-formula">
+
+                    Ns = 120 × f / P
+
+                    <br><br>
+
+                    Ns = Synchronous Speed (RPM)
+
+                    <br>
+
+                    f = Frequency (Hz)
+
+                    <br>
+
+                    P = Number of Poles
+
+                </div>
+
+                <p>
+                    For example, a four-pole motor at 50 Hz has a
+                    synchronous speed of approximately 1500 RPM.
+                </p>
+
+                <p>
+                    The actual induction-motor speed is slightly lower
+                    because of slip.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Increase Frequency
+                    → Increase Motor Speed
+
+                    <br><br>
+
+                    Decrease Frequency
+                    → Decrease Motor Speed
+
+                </div>
+
+            </div>
+
+
+            <!-- 10. VOLTAGE TORQUE -->
+
+            <div class="lesson-topic" id="vfd-voltage-torque">
+
+                <h3>
+                    10. Voltage & Motor Torque
+                </h3>
+
+                <p>
+                    Frequency alone is not enough. The VFD also controls
+                    motor voltage so that the motor can develop the required
+                    magnetic flux and torque.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Flux
+                    ≈ Voltage / Frequency
+
+                </div>
+
+                <p>
+                    This is why maintaining an appropriate voltage-to-
+                    frequency relationship is important in conventional
+                    V/F control.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Low Frequency
+                        </strong>
+
+                        <span>
+                            Requires appropriately reduced voltage in normal
+                            V/F operation.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Excessive V/F
+                        </strong>
+
+                        <span>
+                            Can result in excessive magnetic flux and heating.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 11. V/F -->
+
+            <div class="lesson-topic" id="vfd-vf-control">
+
+                <h3>
+                    11. V/F Control
+                </h3>
+
+                <p>
+                    V/F or Volts-per-Hertz control is one of the traditional
+                    methods used to control induction motors.
+                </p>
+
+                <div class="lesson-formula">
+
+                    V / f = Approximately Constant
+
+                </div>
+
+                <p>
+                    As frequency increases, the VFD increases motor voltage
+                    within the applicable operating range to maintain the
+                    desired magnetic flux.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>Simple</strong>
+                        <span>
+                            Relatively simple control method.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Reliable</strong>
+                        <span>
+                            Suitable for many general-purpose applications.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Applications</strong>
+                        <span>
+                            Pumps, fans and many standard-load applications.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Limitation</strong>
+                        <span>
+                            Dynamic torque control is less sophisticated than
+                            advanced vector control.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 12. VECTOR CONTROL -->
+
+            <div class="lesson-topic" id="vfd-vector-control">
+
+                <h3>
+                    12. Vector Control
+                </h3>
+
+                <p>
+                    Vector control provides more advanced control of motor
+                    torque and magnetic flux than basic V/F control.
+                </p>
+
+                <p>
+                    Depending on the drive architecture, the control system
+                    uses motor electrical parameters and feedback information
+                    to regulate motor performance more precisely.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Control
+                    → Flux Control
+                    + Torque Control
+                    → Accurate Speed / Torque Response
+
+                </div>
+
+                <p>
+                    Vector control can be useful where higher starting torque,
+                    better speed regulation or improved dynamic response is
+                    required.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Practical Point
+                    </strong>
+
+                    <p>
+                        Correct motor nameplate data and appropriate drive
+                        commissioning are important for advanced motor-control
+                        functions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 13. STARTING -->
+
+            <div class="lesson-topic" id="vfd-starting">
+
+                <h3>
+                    13. VFD Starting & Acceleration
+                </h3>
+
+                <p>
+                    One major advantage of a VFD is controlled motor starting.
+                    The motor does not have to be connected immediately to
+                    the full-frequency supply.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Start
+                    → Low Frequency
+                    → Controlled Acceleration
+                    → Required Speed
+
+                </div>
+
+                <p>
+                    The acceleration ramp determines how quickly the motor
+                    reaches the commanded speed.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>Short Ramp</strong>
+                        <span>
+                            Faster acceleration but potentially higher motor
+                            current and mechanical stress.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Long Ramp</strong>
+                        <span>
+                            Softer acceleration but longer starting time.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚡ Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Never select acceleration time only for electrical
+                        reasons. Check the driven equipment, process
+                        requirements and mechanical limitations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 14. BRAKING -->
+
+            <div class="lesson-topic" id="vfd-braking">
+
+                <h3>
+                    14. Braking & Deceleration
+                </h3>
+
+                <p>
+                    When a motor is commanded to slow down, the stored
+                    mechanical energy may flow back toward the drive.
+                </p>
+
+                <p>
+                    If the motor decelerates too quickly, the DC-link voltage
+                    can rise and produce an overvoltage condition.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Motor Deceleration
+                    → Regenerative Energy
+                    → DC-Link Voltage Rise
+                    → Possible Overvoltage
+
+                </div>
+
+                <p>
+                    Drives may use different braking arrangements depending
+                    on the application, such as controlled ramping,
+                    braking resistors or regenerative systems.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🔧 Troubleshooting Tip
+                    </strong>
+
+                    <p>
+                        If an overvoltage fault occurs mainly during stopping,
+                        check the deceleration ramp and braking arrangement
+                        before assuming the VFD power section has failed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 15. PROTECTION -->
+
+            <div class="lesson-topic" id="vfd-protection">
+
+                <h3>
+                    15. VFD Protection Functions
+                </h3>
+
+                <p>
+                    Industrial VFDs contain multiple protection functions
+                    to protect the drive, motor and connected equipment.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>Overcurrent</strong>
+                        <span>
+                            Protects against excessive output current.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Overvoltage</strong>
+                        <span>
+                            Protects against excessive DC-link voltage.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Undervoltage</strong>
+                        <span>
+                            Detects insufficient input/DC-link voltage.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Overtemperature</strong>
+                        <span>
+                            Protects power components and cooling system.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Motor Overload</strong>
+                        <span>
+                            Protects the motor against excessive thermal load.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Earth Fault</strong>
+                        <span>
+                            Detects abnormal current to earth.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Input Phase Loss</strong>
+                        <span>
+                            Detects abnormal input supply conditions.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Output Phase Fault</strong>
+                        <span>
+                            Detects abnormal motor-side conditions.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 16. COMMON FAULTS -->
+
+            <div class="lesson-topic" id="vfd-faults">
+
+                <h3>
+                    16. Common VFD Faults
+                </h3>
+
+                <p>
+                    VFD troubleshooting should always begin with the actual
+                    fault code, event history and operating conditions.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 Overcurrent
+                        </strong>
+
+                        <span>
+                            Check motor current, acceleration time, motor
+                            condition, load and output wiring.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 DC Overvoltage
+                        </strong>
+
+                        <span>
+                            Check supply condition, deceleration ramp and
+                            braking system.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 DC Undervoltage
+                        </strong>
+
+                        <span>
+                            Check incoming supply, input connections and
+                            voltage stability.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 Motor Overload
+                        </strong>
+
+                        <span>
+                            Check motor load, motor parameters, cooling and
+                            mechanical condition.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 Overtemperature
+                        </strong>
+
+                        <span>
+                            Check cooling fan, ventilation, ambient
+                            temperature and heatsink condition.
+                        </span>
+
+                    </div>
+
+                    <div class="protection-item">
+
+                        <strong>
+                            🔴 Earth Fault
+                        </strong>
+
+                        <span>
+                            Check motor cable, motor insulation and
+                            output-side connections.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Troubleshooting Rule
+                    </strong>
+
+                    <p>
+                        Do not repeatedly reset a VFD without finding the
+                        reason for the trip. Repeated resetting can hide
+                        the original fault and may damage equipment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 17. PARAMETERS -->
+
+            <div class="lesson-topic" id="vfd-parameters">
+
+                <h3>
+                    17. Important VFD Parameters
+                </h3>
+
+                <p>
+                    Correct parameterization is essential for reliable motor
+                    operation. Exact parameter numbers differ between
+                    manufacturers and drive models.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+                        <strong>Motor Rated Voltage</strong>
+                        <span>
+                            Enter according to the motor nameplate.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Motor Rated Current</strong>
+                        <span>
+                            Important for motor protection and control.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Motor Rated Frequency</strong>
+                        <span>
+                            Normally taken from the motor nameplate.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Motor Rated Speed</strong>
+                        <span>
+                            Used by the drive for motor-control functions.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Acceleration Time</strong>
+                        <span>
+                            Controls the rate of speed increase.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Deceleration Time</strong>
+                        <span>
+                            Controls the rate of speed reduction.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Minimum Frequency</strong>
+                        <span>
+                            Defines the lower operating-frequency limit.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Maximum Frequency</strong>
+                        <span>
+                            Defines the upper operating-frequency limit.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Start / Stop Source</strong>
+                        <span>
+                            Defines where the run command originates.
+                        </span>
+                    </div>
+
+                    <div class="protection-item">
+                        <strong>Speed Reference</strong>
+                        <span>
+                            Defines how the frequency command is generated.
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚡ ABB ACS880 Practical Point
+                    </strong>
+
+                    <p>
+                        For an ABB ACS880, always identify the correct
+                        parameter group and drive configuration before
+                        changing any parameter. Record the original value
+                        before modification.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 18. PRACTICAL TROUBLESHOOTING -->
+
+            <div class="lesson-topic" id="vfd-practical">
+
+                <h3>
+                    18. Practical VFD Troubleshooting
+                </h3>
+
+                <p>
+                    A systematic approach is much better than repeatedly
+                    resetting the drive.
+                </p>
+
+                <div class="lesson-formula">
+
+                    VFD Trip
+                    → Record Fault Code
+                    → Check Event History
+                    → Check Input Supply
+                    → Check DC Link
+                    → Check Motor Current
+                    → Check Motor / Cable
+                    → Check Load
+                    → Find Root Cause
+                    → Reset & Test
+
+                </div>
+
+                <h4>
+                    🔧 Step 1 — Check the Fault
+                </h4>
+
+                <p>
+                    Record the exact fault code, time of occurrence and
+                    operating condition.
+                </p>
+
+                <h4>
+                    🔧 Step 2 — Check Input Supply
+                </h4>
+
+                <p>
+                    Verify incoming voltage, phase condition, terminals,
+                    breaker condition and supply stability.
+                </p>
+
+                <h4>
+                    🔧 Step 3 — Check DC Link
+                </h4>
+
+                <p>
+                    Look for abnormal DC-link voltage or related warnings.
+                </p>
+
+                <h4>
+                    🔧 Step 4 — Check Motor
+                </h4>
+
+                <p>
+                    Check motor current, insulation condition, cable,
+                    terminals, cooling and mechanical condition.
+                </p>
+
+                <h4>
+                    🔧 Step 5 — Check the Load
+                </h4>
+
+                <p>
+                    A mechanically overloaded pump, fan, conveyor or other
+                    driven machine can cause repeated VFD trips.
+                </p>
+
+                <h4>
+                    🔧 Step 6 — Check Parameters
+                </h4>
+
+                <p>
+                    Verify motor nameplate data, acceleration, deceleration,
+                    current limits, frequency limits and command sources.
+                </p>
+
+                <h4>
+                    🔧 Step 7 — Correct the Root Cause
+                </h4>
+
+                <p>
+                    After identifying and correcting the cause, reset the
+                    drive and perform a controlled test.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🏭 Power Plant Practical Example
+                    </strong>
+
+                    <p>
+                        Suppose a VFD-driven pump repeatedly trips on
+                        overcurrent. Do not immediately increase the current
+                        limit. First check whether the pump is mechanically
+                        overloaded, the valve condition has changed, the
+                        motor is healthy, the cable is intact and the
+                        acceleration time is appropriate.
+                    </p>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Fault code tells you where to start the investigation;
+                        it does not always identify the final root cause.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 VFD SUMMARY
+            ========================================= -->
+
+            <div class="lesson-next">
+
+                <span>
+                    VFD Learning Complete
+                </span>
+
+                <a href="#electrical">
+                    ↑ Back to Electrical
+                </a>
+
+            </div>
+
 
         </div>
 
