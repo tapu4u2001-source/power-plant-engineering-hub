@@ -1825,7 +1825,7 @@
                 loading, cooling, testing and maintenance.
             </p>
 
-            <a href="#electrical">
+            <a href="#transformer-protection">
                 Learn Transformer →
             </a>
 
@@ -5045,6 +5045,804 @@
                     → Voltage / MVAR
                     → MW / Power
                     → Grid
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================
+     TRANSFORMER PROTECTION LESSON
+========================================= -->
+
+<section class="lesson-section" id="transformer-protection">
+
+    <div class="lesson-header">
+
+        <div class="section-badge">
+            🔌 TRANSFORMER PROTECTION
+        </div>
+
+        <h2>
+            Transformer Protection
+        </h2>
+
+        <p>
+            Learn transformer faults, protection functions, relay operation,
+            trip logic and practical troubleshooting used in power plants.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+        <!-- LESSON MENU -->
+
+        <div class="lesson-menu">
+
+            <a href="#tr-protection-basics">
+                1. Transformer Protection Fundamentals
+            </a>
+
+            <a href="#tr-common-faults">
+                2. Common Transformer Faults
+            </a>
+
+            <a href="#tr-differential">
+                3. Differential Protection — 87T
+            </a>
+
+            <a href="#tr-ref">
+                4. Restricted Earth Fault — REF
+            </a>
+
+            <a href="#tr-buchholz">
+                5. Buchholz Protection
+            </a>
+
+            <a href="#tr-prd">
+                6. Pressure Relief Device
+            </a>
+
+            <a href="#tr-temperature">
+                7. Temperature Protection
+            </a>
+
+            <a href="#tr-overcurrent">
+                8. Overcurrent & Earth Fault
+            </a>
+
+            <a href="#tr-overfluxing">
+                9. Overfluxing Protection — 24
+            </a>
+
+            <a href="#tr-lockout">
+                10. Lockout Relay — 86
+            </a>
+
+            <a href="#tr-trip">
+                11. Transformer Trip Sequence
+            </a>
+
+            <a href="#tr-troubleshooting">
+                12. Transformer Trip Troubleshooting
+            </a>
+
+            <a href="#tr-checklist">
+                13. Transformer Protection Checklist
+            </a>
+
+        </div>
+
+
+        <!-- LESSON CONTENT -->
+
+        <div class="lesson-content">
+
+
+            <!-- 1. FUNDAMENTALS -->
+
+            <div class="lesson-topic" id="tr-protection-basics">
+
+                <h3>
+                    1. Transformer Protection Fundamentals
+                </h3>
+
+                <p>
+                    A power transformer is a critical electrical asset.
+                    Protection systems detect abnormal electrical,
+                    thermal and mechanical conditions and isolate the
+                    transformer before serious damage occurs.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Transformer Protection
+                    →
+                    Detect Fault
+                    →
+                    Initiate Trip
+                    →
+                    Isolate Transformer
+
+                </div>
+
+                <p>
+                    Transformer protection normally combines several
+                    independent protection functions because no single
+                    protection can detect every possible transformer fault.
+                </p>
+
+            </div>
+
+
+            <!-- 2. COMMON FAULTS -->
+
+            <div class="lesson-topic" id="tr-common-faults">
+
+                <h3>
+                    2. Common Transformer Faults
+                </h3>
+
+                <p>
+                    Transformer faults can be broadly divided into internal
+                    faults and external/system faults.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Phase-to-Phase Fault
+                        </strong>
+
+                        <span>
+                            Short circuit between transformer phases.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Phase-to-Earth Fault
+                        </strong>
+
+                        <span>
+                            Fault between winding or internal conductor
+                            and earth.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Inter-Turn Fault
+                        </strong>
+
+                        <span>
+                            Short circuit between turns of the same winding.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Overheating
+                        </strong>
+
+                        <span>
+                            Excessive winding or oil temperature caused by
+                            overload, cooling failure or other conditions.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Oil / Gas Fault
+                        </strong>
+
+                        <span>
+                            Internal deterioration or arcing may produce
+                            gases in transformer oil.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Overfluxing
+                        </strong>
+
+                        <span>
+                            Excessive magnetic flux caused by an excessive
+                            V/Hz condition.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3. DIFFERENTIAL -->
+
+            <div class="lesson-topic" id="tr-differential">
+
+                <h3>
+                    3. Transformer Differential Protection — 87T
+                </h3>
+
+                <p>
+                    Differential protection compares the current entering
+                    and leaving the protected transformer zone after
+                    suitable CT ratio, phase and vector-group compensation.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Differential Current
+                    ≈
+                    Current In − Current Out
+
+                    <br><br>
+
+                    Healthy / External Fault
+                    →
+                    Differential Current Low
+
+                    <br><br>
+
+                    Internal Fault
+                    →
+                    Differential Current Significant
+                    →
+                    Trip
+
+                </div>
+
+                <p>
+                    The protected zone normally extends between the CTs
+                    installed around the transformer. A fault inside this
+                    zone can operate the differential protection.
+                </p>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🧠 Engineer's Rule
+                    </strong>
+
+                    <p>
+                        Before suspecting an actual transformer internal
+                        fault, investigate CT circuits, CT polarity,
+                        ratio compensation, wiring and relay event records.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4. REF -->
+
+            <div class="lesson-topic" id="tr-ref">
+
+                <h3>
+                    4. Restricted Earth Fault — REF
+                </h3>
+
+                <p>
+                    Restricted Earth Fault protection is designed to detect
+                    earth faults within a defined transformer winding zone.
+                    It provides sensitive protection for earth faults that
+                    may not produce sufficient current for other protection
+                    functions.
+                </p>
+
+                <div class="lesson-formula">
+
+                    REF Zone
+                    →
+                    Transformer Winding + Neutral Connection
+
+                    <br><br>
+
+                    Internal Earth Fault
+                    →
+                    Residual / Differential Current
+                    →
+                    REF Operation
+
+                </div>
+
+                <p>
+                    Correct CT connections, polarity and matching are
+                    important for reliable REF protection.
+                </p>
+
+            </div>
+
+
+            <!-- 5. BUCHHOLZ -->
+
+            <div class="lesson-topic" id="tr-buchholz">
+
+                <h3>
+                    5. Buchholz Protection
+                </h3>
+
+                <p>
+                    A Buchholz relay is used on suitable oil-immersed
+                    transformers with a conservator arrangement. It detects
+                    gas accumulation and oil movement associated with
+                    internal faults.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Alarm
+                        </strong>
+
+                        <span>
+                            Gas accumulation or abnormal condition may
+                            initiate an alarm.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Trip
+                        </strong>
+
+                        <span>
+                            Sudden oil movement associated with a serious
+                            internal fault may initiate transformer trip.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Practical Point
+                    </strong>
+
+                    <p>
+                        Never simply reset a Buchholz trip without
+                        investigating the cause and following the approved
+                        plant procedure.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. PRD -->
+
+            <div class="lesson-topic" id="tr-prd">
+
+                <h3>
+                    6. Pressure Relief Device — PRD
+                </h3>
+
+                <p>
+                    The Pressure Relief Device protects the transformer tank
+                    against excessive internal pressure.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Internal Fault
+                    →
+                    Rapid Gas Generation
+                    →
+                    Pressure Rise
+                    →
+                    PRD Operation
+
+                </div>
+
+                <p>
+                    PRD operation should be treated as a serious abnormal
+                    event and investigated according to the transformer
+                    manufacturer's instructions and plant SOP.
+                </p>
+
+            </div>
+
+
+            <!-- 7. TEMPERATURE -->
+
+            <div class="lesson-topic" id="tr-temperature">
+
+                <h3>
+                    7. Temperature Protection
+                </h3>
+
+                <p>
+                    Transformer temperature protection monitors conditions
+                    that can accelerate insulation ageing or cause thermal
+                    damage.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            OTI
+                        </strong>
+
+                        <span>
+                            Oil Temperature Indicator / protection.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            WTI
+                        </strong>
+
+                        <span>
+                            Winding Temperature Indicator / protection.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Cooling Failure
+                        </strong>
+
+                        <span>
+                            Failure of fans or pumps can increase transformer
+                            temperature.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            Overload
+                        </strong>
+
+                        <span>
+                            Excessive loading can increase winding and oil
+                            temperatures.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 8. OVERCURRENT -->
+
+            <div class="lesson-topic" id="tr-overcurrent">
+
+                <h3>
+                    8. Overcurrent & Earth Fault Protection
+                </h3>
+
+                <p>
+                    Overcurrent and earth-fault protection can provide
+                    backup protection for transformer faults and associated
+                    system faults.
+                </p>
+
+                <div class="protection-grid">
+
+                    <div class="protection-item">
+
+                        <strong>
+                            50 / 51
+                        </strong>
+
+                        <span>
+                            Instantaneous and time overcurrent protection,
+                            depending on the relay application.
+                        </span>
+
+                    </div>
+
+
+                    <div class="protection-item">
+
+                        <strong>
+                            50N / 51N
+                        </strong>
+
+                        <span>
+                            Neutral / residual overcurrent earth-fault
+                            protection depending on the scheme.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Relay pickup and time settings must be coordinated with
+                    downstream and upstream protection.
+                </p>
+
+            </div>
+
+
+            <!-- 9. OVERFLUXING -->
+
+            <div class="lesson-topic" id="tr-overfluxing">
+
+                <h3>
+                    9. Overfluxing Protection — 24
+                </h3>
+
+                <p>
+                    Transformer magnetic flux is approximately proportional
+                    to the ratio of voltage to frequency.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Flux ∝ V / f
+
+                    <br><br>
+
+                    Increasing V/Hz
+                    →
+                    Increasing Magnetic Flux
+                    →
+                    Core Heating
+                    →
+                    Possible Damage
+
+                </div>
+
+                <p>
+                    Overfluxing protection monitors the V/Hz condition and
+                    operates when the transformer is subjected to an
+                    excessive flux condition.
+                </p>
+
+            </div>
+
+
+            <!-- 10. LOCKOUT -->
+
+            <div class="lesson-topic" id="tr-lockout">
+
+                <h3>
+                    10. Lockout Relay — 86
+                </h3>
+
+                <p>
+                    A lockout relay is commonly used in protection schemes
+                    where a serious fault requires controlled isolation and
+                    prevents immediate automatic re-energization until the
+                    cause has been investigated.
+                </p>
+
+                <div class="lesson-formula">
+
+                    Transformer Protection
+                    →
+                    86 Lockout
+                    →
+                    Breaker Trip
+                    →
+                    Transformer Isolated
+
+                </div>
+
+                <p>
+                    The exact 86 logic depends on the plant protection
+                    philosophy and approved control schematic.
+                </p>
+
+            </div>
+
+
+            <!-- 11. TRIP SEQUENCE -->
+
+            <div class="lesson-topic" id="tr-trip">
+
+                <h3>
+                    11. Transformer Trip Sequence
+                </h3>
+
+                <p>
+                    A typical transformer protection trip sequence may be
+                    represented as:
+                </p>
+
+                <div class="lesson-formula">
+
+                    Transformer Fault
+                    →
+                    Protection Relay
+                    →
+                    Trip Logic
+                    →
+                    86 Lockout
+                    →
+                    HV/LV Breaker Trip
+                    →
+                    Transformer Isolated
+
+                </div>
+
+                <p>
+                    Depending on the transformer arrangement, additional
+                    breakers, interlocks or associated equipment may be
+                    included in the trip scheme.
+                </p>
+
+            </div>
+
+
+            <!-- 12. TROUBLESHOOTING -->
+
+            <div class="lesson-topic" id="tr-troubleshooting">
+
+                <h3>
+                    12. Transformer Trip Troubleshooting
+                </h3>
+
+                <p>
+                    When a transformer trips, do not immediately assume that
+                    the transformer itself has failed. First identify which
+                    protection function operated.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Record the transformer loading and electrical
+                        parameters before the trip.
+                    </li>
+
+                    <li>
+                        Check relay target / indication.
+                    </li>
+
+                    <li>
+                        Check SOE and relay event records.
+                    </li>
+
+                    <li>
+                        Identify whether the operation was 87T, REF,
+                        Buchholz, PRD, temperature, overcurrent, earth fault
+                        or another protection.
+                    </li>
+
+                    <li>
+                        Check CT and associated protection circuits where
+                        applicable.
+                    </li>
+
+                    <li>
+                        Check transformer oil, temperature, cooling system
+                        and visible abnormalities.
+                    </li>
+
+                    <li>
+                        Check breaker and trip circuit status.
+                    </li>
+
+                    <li>
+                        Determine the root cause before reset and
+                        re-energization.
+                    </li>
+
+                </ol>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        🛠️ Practical Plant Tip
+                    </strong>
+
+                    <p>
+                        The first question after a transformer trip should
+                        be: <b>"Which protection operated?"</b>
+                        Then follow the protection logic and event records
+                        systematically.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 13. CHECKLIST -->
+
+            <div class="lesson-topic" id="tr-checklist">
+
+                <h3>
+                    13. Transformer Protection Checklist
+                </h3>
+
+                <ul>
+
+                    <li>87T Differential Protection</li>
+
+                    <li>REF Protection</li>
+
+                    <li>Buchholz Relay</li>
+
+                    <li>Pressure Relief Device</li>
+
+                    <li>Oil Temperature Protection</li>
+
+                    <li>Winding Temperature Protection</li>
+
+                    <li>Overcurrent Protection</li>
+
+                    <li>Earth Fault Protection</li>
+
+                    <li>Overfluxing / V/Hz Protection</li>
+
+                    <li>Lockout Relay</li>
+
+                    <li>Breaker Trip Circuit</li>
+
+                    <li>CT / PT Protection Circuits</li>
+
+                    <li>Relay Event / SOE Records</li>
+
+                    <li>Transformer Cooling System</li>
+
+                </ul>
+
+                <div class="lesson-note">
+
+                    <strong>
+                        ⚠️ Safety Note
+                    </strong>
+
+                    <p>
+                        Actual protection settings, trip logic and
+                        re-energization procedures must always follow the
+                        approved plant protection philosophy, OEM
+                        documentation and plant SOP.
+                    </p>
 
                 </div>
 
