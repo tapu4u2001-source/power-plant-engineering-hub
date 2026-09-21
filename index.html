@@ -804,7 +804,24 @@
     .engineering-card {
         padding: 23px;
     }
+}
 
+/* ========================================= */
+/* ENGINEERING CARD IMAGES */
+/* ========================================= */
+
+.engineering-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.engineering-card:hover .engineering-card-image {
+    transform: scale(1.03);
 }
 /* ========================================= */
 /* ELECTRICAL ENGINEERING LEARNING SECTION */
@@ -1337,7 +1354,20 @@
     text-align: center;
     margin-bottom: 40px;
 }
+/* ========================================= */
+/* CALCULATOR HUB IMAGE */
+/* ========================================= */
 
+.calculator-hub-image {
+    width: 100%;
+    max-width: 1100px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto 28px auto;
+}
 .calculator-hub-header h2 {
     margin: 8px 0 12px;
     color: #173f68;
@@ -1490,6 +1520,680 @@
     }
 
 }
+/* =========================================================
+   POWER PLANT ENGINEERING HUB
+   PREMIUM VISUAL UPGRADE - PHASE 1
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(30, 100, 180, 0.05),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(20, 150, 180, 0.04),
+            transparent 30%
+        ),
+        #f5f8fc;
+
+    color: #172b3f;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid #dce6f0;
+
+    box-shadow:
+        0 4px 20px rgba(20, 55, 90, 0.08);
+
+    transition:
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.header-container {
+    max-width: 1180px;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.brand-icon {
+    box-shadow:
+        0 6px 18px rgba(24, 78, 120, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.brand:hover .brand-icon {
+    transform: rotate(-5deg) scale(1.05);
+
+    box-shadow:
+        0 8px 22px rgba(24, 78, 120, 0.30);
+}
+
+.brand-title {
+    letter-spacing: 0.1px;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.main-nav a {
+    position: relative;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #1d72c9,
+        #36a9e1
+    );
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.25s ease;
+}
+
+.main-nav a:hover {
+    color: #1768ad;
+
+    transform: translateY(-1px);
+}
+
+.main-nav a:hover::after {
+    width: 65%;
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
+
+section > h2,
+.section-title,
+.calculator-hub-header h2 {
+    letter-spacing: -0.3px;
+}
+
+
+/* ---------- GENERAL CARDS ---------- */
+
+.engineering-card,
+.calculator-category {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f9fbfe 100%
+        );
+
+    box-shadow:
+        0 8px 24px rgba(25, 65, 100, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.engineering-card:hover,
+.calculator-category:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 38px rgba(25, 65, 100, 0.13);
+}
+
+
+/* ---------- ENGINEERING IMAGES ---------- */
+
+.engineering-card-image {
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.engineering-card:hover .engineering-card-image {
+    transform: scale(1.045);
+
+    filter: brightness(1.04);
+}
+
+
+/* ---------- ENGINEERING ICON ---------- */
+
+.engineering-icon {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.engineering-card:hover .engineering-icon {
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+/* ---------- CALCULATOR BANNER ---------- */
+
+.calculator-hub-image {
+    box-shadow:
+        0 14px 35px rgba(20, 60, 100, 0.13);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.calculator-hub-image:hover {
+    transform: scale(1.01);
+
+    box-shadow:
+        0 20px 45px rgba(20, 60, 100, 0.18);
+}
+
+
+/* ---------- CALCULATOR CATEGORY ICON ---------- */
+
+.calculator-category-icon {
+    box-shadow:
+        inset 0 0 0 1px rgba(40, 100, 160, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.calculator-category:hover
+.calculator-category-icon {
+    transform: translateY(-3px) scale(1.05);
+
+    background: #e2f0fc;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+button,
+.hero-btn {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+button:hover,
+.hero-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(20, 70, 110, 0.16);
+}
+
+button:active,
+.hero-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ---------- FORM INPUTS ---------- */
+
+input,
+select,
+textarea {
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #328bd0;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(50, 139, 208, 0.11);
+}
+
+
+/* ---------- RESULT BOX ---------- */
+
+.result {
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 24px rgba(25, 70, 105, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.result:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(25, 70, 105, 0.12);
+}
+
+
+/* ---------- TABLES ---------- */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+th {
+    letter-spacing: 0.2px;
+}
+
+tbody tr {
+    transition:
+        background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f1f7fc;
+}
+
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eef3f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9db6cc;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #668ca8;
+}
+
+
+/* ---------- SELECTION ---------- */
+
+::selection {
+    background: #cfe8fb;
+    color: #123b5f;
+}
+/* =========================================================
+   PREMIUM ENGINEERING CARDS - PHASE 2
+   ========================================================= */
+
+.engineering-card {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff 0%,
+        #f7fbff 100%
+    );
+
+    border: 1px solid #d8e4ef;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(20, 60, 100, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* CARD TOP GLOW */
+
+.engineering-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #1769aa,
+        #36a9e1
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* HOVER */
+
+.engineering-card:hover {
+    transform: translateY(-9px);
+
+    border-color: #9fc5e2;
+
+    box-shadow:
+        0 20px 45px rgba(20, 65, 105, 0.15);
+}
+
+.engineering-card:hover::before {
+    opacity: 1;
+}
+
+
+/* IMAGE */
+
+.engineering-card-image {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    margin-bottom: 20px;
+
+    display: block;
+
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease;
+}
+
+.engineering-card:hover
+.engineering-card-image {
+    transform: scale(1.045);
+
+    filter: brightness(1.06);
+}
+
+
+/* ICON */
+
+.engineering-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f3fc,
+            #d8ecfa
+        );
+
+    border: 1px solid #c9dfef;
+
+    border-radius: 14px;
+
+    font-size: 26px;
+
+    margin-bottom: 17px;
+
+    box-shadow:
+        0 5px 15px rgba(30, 90, 135, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.engineering-card:hover
+.engineering-icon {
+    transform: translateY(-3px) scale(1.06);
+
+    box-shadow:
+        0 8px 20px rgba(30, 90, 135, 0.14);
+}
+
+
+/* TITLE */
+
+.engineering-card h3 {
+    transition: color 0.25s ease;
+}
+
+.engineering-card:hover h3 {
+    color: #1268a5;
+}
+
+
+/* TOPIC TAGS */
+
+.engineering-topics span {
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.engineering-topics span:hover {
+    background: #e5f2fb;
+
+    border-color: #a9cce5;
+
+    transform: translateY(-2px);
+}
+
+
+/* EXPLORE LINK */
+
+.category-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.category-link:hover {
+    transform: translateX(5px);
+
+    color: #0b5b96;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .engineering-card-image {
+        height: 190px;
+    }
+
+    .engineering-card {
+        border-radius: 16px;
+    }
+
+}
+    /* =========================================================
+   ENGINEERING STATISTICS
+   ========================================================= */
+
+.engineering-stats {
+    width: 100%;
+
+    padding: 28px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #12355b,
+            #1f4e79
+        );
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.engineering-stats-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 0;
+}
+
+
+.stat-item {
+    text-align: center;
+
+    padding: 10px 20px;
+
+    border-right:
+        1px solid rgba(255,255,255,0.18);
+}
+
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+
+.stat-icon {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-number {
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.stat-label {
+    margin-top: 5px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* HOVER */
+
+.stat-item {
+    transition:
+        transform 0.25s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .engineering-stats-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px 0;
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(3) {
+        border-right:
+            1px solid rgba(255,255,255,0.18);
+    }
+
+}
+    /* =========================================================
+   TIGHTEN ENGINEERING → LEARNING SPACING
+   ========================================================= */
+
+.engineering-stats {
+    margin-bottom: 0;
+}
+
+#electrical {
+    padding-top: 45px;
+}
     </style>
 
 </head>
@@ -1616,7 +2320,10 @@
         <!-- ELECTRICAL -->
 
         <div class="engineering-card">
-
+        <img
+           src="images/electrical.jpg"
+           alt="Power plant electrical engineering"
+           class="engineering-card-image">
             <div class="engineering-icon">
                 ⚡
             </div>
@@ -1651,7 +2358,10 @@
         <!-- BOILER -->
 
         <div class="engineering-card">
-
+             <img
+                src="images/boiler.jpg"
+                alt="Power plant boiler and combustion"
+                class="engineering-card-image">
             <div class="engineering-icon">
                 🔥
             </div>
@@ -1686,7 +2396,10 @@
         <!-- TURBINE -->
 
         <div class="engineering-card">
-
+            <img
+                 src="images/turbine.jpg"
+                 alt="Steam turbine power plant"
+                 class="engineering-card-image">
             <div class="engineering-icon">
                 🌀
             </div>
@@ -1721,7 +2434,10 @@
         <!-- MAINTENANCE -->
 
         <div class="engineering-card">
-
+             <img
+                 src="images/maintenance.jpg"
+                 alt="Power plant maintenance"
+                 class="engineering-card-image">
             <div class="engineering-icon">
                 🧰
             </div>
@@ -1756,6 +2472,45 @@
     </div>
 
 </section>
+      </section>
+
+
+<!-- ========================================= -->
+<!-- ENGINEERING STATISTICS -->
+<!-- ========================================= -->
+
+<section class="engineering-stats">
+
+    <div class="engineering-stats-container">
+
+        <div class="stat-item">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Electrical Modules</div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-number">20</div>
+            <div class="stat-label">Boiler Lessons</div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon">🌀</div>
+            <div class="stat-number">20</div>
+            <div class="stat-label">Turbine Lessons</div>
+        </div>
+
+        <div class="stat-item">
+            <div class="stat-icon">📐</div>
+            <div class="stat-number">7+</div>
+            <div class="stat-label">Engineering Calculators</div>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- ========================================= -->
 <!-- ELECTRICAL ENGINEERING SECTION -->
 <!-- ========================================= -->
@@ -19067,7 +19822,12 @@
 <section class="calculator-hub" id="calculators">
 
     <div class="calculator-hub-header">
+        <div class="calculator-hub-header">
 
+    <img
+        src="images/calculators.png"
+        alt="Power plant engineering calculators"
+        class="calculator-hub-image">  
         <div class="section-badge">
             📐 ENGINEERING CALCULATORS
         </div>
@@ -19453,10 +20213,6 @@
         Calculate MVAR
 
     </button>
-    <button onclick="recommendCable()">
-    Recommend Cable Size
-</button>
-
 
     <div
         id="generatorResult"
@@ -20423,9 +21179,11 @@ function updateCableSizes() {
     // ==========================================
 
     if (
-        (voltage === "415" || voltage === "690") &&
-        construction === "4C"
-    ) {
+    voltage === "415" ||
+    voltage === "690"
+) {
+
+    if (construction === "4C") {
 
         if (material === "Cu") {
 
@@ -20437,8 +21195,39 @@ function updateCableSizes() {
             database =
                 cableDatabase.Al_LV;
         }
+
     }
 
+    else if (construction === "3C") {
+
+        if (material === "Cu") {
+
+            database =
+                cableDatabase.Cu_LV_3C;
+
+        } else {
+
+            database =
+                cableDatabase.Al_LV_3C;
+        }
+
+    }
+
+    else if (construction === "3.5C") {
+
+        if (material === "Cu") {
+
+            database =
+                cableDatabase.Cu_LV_3_5C;
+
+        } else {
+
+            database =
+                cableDatabase.Al_LV_3_5C;
+        }
+
+    }
+}
 
     // ==========================================
     // MV DATA
@@ -20577,16 +21366,37 @@ function updateCableData() {
     // ==========================================
 
     if (
-        (voltage === "415" || voltage === "690") &&
-        construction === "4C"
-    ) {
+    voltage === "415" ||
+    voltage === "690"
+) {
+
+    if (construction === "4C") {
 
         database =
             material === "Cu"
             ? cableDatabase.Cu_LV
             : cableDatabase.Al_LV;
+
     }
 
+    else if (construction === "3C") {
+
+        database =
+            material === "Cu"
+            ? cableDatabase.Cu_LV_3C
+            : cableDatabase.Al_LV_3C;
+
+    }
+
+    else if (construction === "3.5C") {
+
+        database =
+            material === "Cu"
+            ? cableDatabase.Cu_LV_3_5C
+            : cableDatabase.Al_LV_3_5C;
+
+    }
+}
 
     // ==========================================
     // MV SINGLE CORE
@@ -20845,7 +21655,8 @@ function recommendCable() {
 
     const material =
         document.getElementById("cableMaterial").value;
-
+    const construction =
+        document.getElementById("cableConstruction").value;
     const current =
         parseFloat(
             document.getElementById("vdCurrent").value
@@ -20904,21 +21715,50 @@ function recommendCable() {
     // LV DATABASE ONLY
     // ==========================================
 
-    let database = null;
+   let database = null;
 
-    if (voltage === "415" || voltage === "690") {
 
-        if (material === "Cu") {
+// ==========================================
+// SELECT LV DATABASE BY CONSTRUCTION
+// ==========================================
+
+if (voltage === "415" || voltage === "690") {
+
+    if (material === "Cu") {
+
+        if (construction === "4C") {
 
             database = cableDatabase.Cu_LV;
 
-        } else {
+        } else if (construction === "3C") {
 
-            database = cableDatabase.Al_LV;
+            database = cableDatabase.Cu_LV_3C;
+
+        } else if (construction === "3.5C") {
+
+            database = cableDatabase.Cu_LV_3_5C;
+
         }
 
     } else {
 
+        if (construction === "4C") {
+
+            database = cableDatabase.Al_LV;
+
+        } else if (construction === "3C") {
+
+            database = cableDatabase.Al_LV_3C;
+
+        } else if (construction === "3.5C") {
+
+            database = cableDatabase.Al_LV_3_5C;
+
+        }
+
+    }
+
+} else {
         result.className = "result high";
 
         result.innerHTML =
