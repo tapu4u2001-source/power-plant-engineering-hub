@@ -4700,7 +4700,5419 @@ section[id] {
     }
 
 }
+    /* =========================================================
+   PREMIUM TURBINE & STEAM CYCLE - PHASE 11
+   ========================================================= */
 
+
+/* ---------- TURBINE SECTION ---------- */
+
+#turbine.learning-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-top: 65px;
+    padding-bottom: 70px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(70,145,230,0.11),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 75%,
+            rgba(70,190,220,0.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f6fbff 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* ---------- TURBINE BACKGROUND GLOW ---------- */
+
+#turbine.learning-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -260px;
+    top: 60px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(55,150,225,0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------- HEADER ---------- */
+
+#turbine .learning-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin:
+        0 auto 42px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ---------- BADGE ---------- */
+
+#turbine .learning-header .section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 16px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid #c7deef;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    color: #23618d;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+
+    backdrop-filter: blur(7px);
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+#turbine .learning-header h2 {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0;
+
+    color: #173f68;
+
+    font-size:
+        clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.15;
+}
+
+
+/* ---------- TURBINE ACCENT ---------- */
+
+#turbine .learning-header h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 62px;
+    height: 4px;
+
+    margin:
+        14px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+#turbine .learning-header p {
+
+    max-width: 760px;
+
+    margin:
+        17px auto 0;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* ---------- GRID ---------- */
+
+#turbine .learning-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    gap: 20px;
+}
+
+
+/* ---------- TURBINE CARD ---------- */
+
+#turbine .learning-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d4e5f1;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 24px rgba(25,70,105,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TURBINE TOP ACCENT ---------- */
+
+#turbine .learning-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+
+    opacity: 0.55;
+
+    transition:
+        opacity 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+#turbine .learning-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #a9cce3;
+
+    box-shadow:
+        0 18px 38px rgba(25,75,115,0.14);
+}
+
+
+#turbine .learning-card:hover::before {
+
+    opacity: 1;
+
+    height: 5px;
+}
+
+
+/* ---------- ICON ---------- */
+
+#turbine .learning-card-icon {
+
+    position: relative;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid #c7e0ef;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7fd,
+            #d9edf9
+        );
+
+    font-size: 24px;
+
+    box-shadow:
+        0 6px 16px rgba(35,90,130,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ---------- ICON HOVER ---------- */
+
+#turbine .learning-card:hover
+.learning-card-icon {
+
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2f4fc,
+            #cde8f6
+        );
+
+    box-shadow:
+        0 9px 22px rgba(35,90,130,0.14);
+}
+
+
+/* ---------- CARD TITLE ---------- */
+
+#turbine .learning-card h3 {
+
+    margin:
+        0 0 10px;
+
+    color: #173f68;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#turbine .learning-card:hover h3 {
+
+    color: #176ba5;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+#turbine .learning-card p {
+
+    margin:
+        0 0 18px;
+
+    color: #64788b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* ---------- LEARN LINK ---------- */
+
+#turbine .learning-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid #e3edf4;
+
+    color: #1976d2;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#turbine .learning-card a:hover {
+
+    color: #0b5b96;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    #turbine.learning-section {
+
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+
+    #turbine .learning-header h2 {
+
+        font-size: 29px;
+    }
+
+
+    #turbine .learning-header p {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    #turbine .learning-card {
+
+        min-height: 0;
+    }
+
+}
+    /* =========================================================
+   FIX: LEARNING SECTION HEADERS
+   Badge above title, title above description
+   ========================================================= */
+
+.learning-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.learning-header .section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.learning-header h2 {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+
+.learning-header p {
+    display: block;
+    width: 100%;
+}
+   
+    /* =========================================================
+   PHASE 11 — PREMIUM TURBINE & STEAM CYCLE
+   ========================================================= */
+
+#turbine.learning-section {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 65px;
+    padding-bottom: 70px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(60,150,225,0.11),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 75%,
+            rgba(60,190,220,0.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f6fbff 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* ---------- TURBINE HEADER ---------- */
+
+#turbine .learning-header {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------- BADGE ---------- */
+
+#turbine .learning-header .section-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 16px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #c7deef;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.82);
+
+    color: #23618d;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+}
+
+
+/* ---------- TITLE ---------- */
+
+#turbine .learning-header h2 {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #173f68;
+
+    font-size: clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.15;
+}
+
+
+/* ---------- BLUE TURBINE ACCENT ---------- */
+
+#turbine .learning-header h2::after {
+    content: "";
+
+    display: block;
+
+    width: 62px;
+    height: 4px;
+
+    margin: 14px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+#turbine .learning-header p {
+    display: block;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 17px auto 0;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* ---------- CARD GRID ---------- */
+
+#turbine .learning-grid {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    gap: 20px;
+}
+
+
+/* ---------- TURBINE CARD ---------- */
+
+#turbine .learning-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border: 1px solid #d4e5f1;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 24px rgba(25,70,105,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TURBINE TOP LINE ---------- */
+
+#turbine .learning-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+
+    opacity: 0.55;
+
+    transition:
+        opacity 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* ---------- HOVER ---------- */
+
+#turbine .learning-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #a9cce3;
+
+    box-shadow:
+        0 18px 38px rgba(25,75,115,0.14);
+}
+
+#turbine .learning-card:hover::before {
+    opacity: 1;
+    height: 5px;
+}
+
+
+/* ---------- ICON ---------- */
+
+#turbine .learning-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #c7e0ef;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7fd,
+            #d9edf9
+        );
+
+    font-size: 24px;
+
+    box-shadow:
+        0 6px 16px rgba(35,90,130,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+#turbine .learning-card:hover
+.learning-card-icon {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2f4fc,
+            #cde8f6
+        );
+
+    box-shadow:
+        0 9px 22px rgba(35,90,130,0.14);
+}
+
+
+/* ---------- CARD TITLE ---------- */
+
+#turbine .learning-card h3 {
+    margin: 0 0 10px;
+
+    color: #173f68;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#turbine .learning-card:hover h3 {
+    color: #176ba5;
+
+    transform: translateX(2px);
+}
+
+
+/* ---------- CARD DESCRIPTION ---------- */
+
+#turbine .learning-card p {
+    margin: 0 0 18px;
+
+    color: #64788b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* ---------- LEARN LINK ---------- */
+
+#turbine .learning-card a {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e3edf4;
+
+    color: #1976d2;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#turbine .learning-card a:hover {
+    color: #0b5b96;
+
+    transform: translateX(5px);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    #turbine.learning-section {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    #turbine .learning-header h2 {
+        font-size: 29px;
+    }
+
+    #turbine .learning-header p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    #turbine .learning-card {
+        min-height: 0;
+    }
+
+}
+    /* =========================================================
+   PHASE 12 — PREMIUM MAINTENANCE & TROUBLESHOOTING
+   ========================================================= */
+
+#maintenance.learning-section {
+
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 65px;
+    padding-bottom: 70px;
+
+    background:
+        radial-gradient(
+            circle at 12% 18%,
+            rgba(70,145,210,0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 75%,
+            rgba(80,175,220,0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f5faff 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* ---------- BACKGROUND GLOW ---------- */
+
+#maintenance.learning-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 440px;
+    height: 440px;
+
+    left: -260px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(45,135,205,0.09),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAINTENANCE HEADER
+   ========================================================= */
+
+#maintenance .learning-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ---------- BADGE ---------- */
+
+#maintenance .learning-header .section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 16px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid #c9deec;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.84);
+
+    color: #28628a;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+}
+
+
+/* ---------- TITLE ---------- */
+
+#maintenance .learning-header h2 {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    color: #173f68;
+
+    font-size:
+        clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.15;
+}
+
+
+/* ---------- TITLE ACCENT ---------- */
+
+#maintenance .learning-header h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 62px;
+    height: 4px;
+
+    margin:
+        14px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2675ad,
+            #62b9df
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+#maintenance .learning-header p {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin:
+        17px auto 0;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   MAINTENANCE CARD GRID
+   ========================================================= */
+
+#maintenance .learning-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   MAINTENANCE CARDS
+   ========================================================= */
+
+#maintenance .learning-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d5e4ee;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 24px rgba(25,70,105,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TOP SERVICE ACCENT ---------- */
+
+#maintenance .learning-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2675ad,
+            #62b9df
+        );
+
+    opacity: 0.55;
+
+    transition:
+        opacity 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* ---------- HOVER ---------- */
+
+#maintenance .learning-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #aacce0;
+
+    box-shadow:
+        0 18px 38px rgba(25,75,115,0.14);
+}
+
+
+#maintenance .learning-card:hover::before {
+
+    opacity: 1;
+
+    height: 5px;
+}
+
+
+/* =========================================================
+   MAINTENANCE ICON
+   ========================================================= */
+
+#maintenance .learning-card-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid #c9e0ed;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf6fc,
+            #d9edf8
+        );
+
+    font-size: 24px;
+
+    box-shadow:
+        0 6px 16px rgba(35,90,130,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+#maintenance .learning-card:hover
+.learning-card-icon {
+
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e1f3fb,
+            #cde7f5
+        );
+
+    box-shadow:
+        0 9px 22px rgba(35,90,130,0.14);
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+#maintenance .learning-card h3 {
+
+    margin:
+        0 0 10px;
+
+    color: #173f68;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#maintenance .learning-card:hover h3 {
+
+    color: #176ba5;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+#maintenance .learning-card p {
+
+    margin:
+        0 0 18px;
+
+    color: #64788b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* =========================================================
+   LEARN LINK
+   ========================================================= */
+
+#maintenance .learning-card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid #e3edf4;
+
+    color: #1976d2;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+#maintenance .learning-card a:hover {
+
+    color: #0b5b96;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #maintenance.learning-section {
+
+        padding-top: 55px;
+
+        padding-bottom: 60px;
+    }
+
+
+    #maintenance .learning-header h2 {
+
+        font-size: 29px;
+    }
+
+
+    #maintenance .learning-header p {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    #maintenance .learning-card {
+
+        min-height: 0;
+    }
+
+}
+    /* =========================================================
+   GLOBAL STICKY HEADER ANCHOR FIX
+   ========================================================= */
+
+section[id] {
+    scroll-margin-top: 110px;
+}
+    /* =========================================================
+   PHASE 13 — PREMIUM ENGINEERING CALCULATORS
+   ========================================================= */
+
+
+/* ---------- CALCULATOR HUB ---------- */
+
+.calculator-hub {
+
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 75px 25px 65px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(45,140,220,0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 75%,
+            rgba(60,170,225,0.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f6faff 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* ---------- BACKGROUND GLOW ---------- */
+
+.calculator-hub::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -250px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(50,150,225,0.09),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CALCULATOR HEADER
+   ========================================================= */
+
+.calculator-hub-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 42px;
+}
+
+
+/* ---------- BANNER ---------- */
+
+.calculator-hub-image {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    margin: 0 auto 28px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid #d4e5f1;
+
+    box-shadow:
+        0 14px 35px rgba(20,60,100,0.13);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.calculator-hub-image:hover {
+
+    transform:
+        scale(1.01);
+
+    box-shadow:
+        0 20px 45px rgba(20,60,100,0.18);
+}
+
+
+/* ---------- BADGE ---------- */
+
+.calculator-hub-header .section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 17px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid #c8dfef;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.84);
+
+    color: #23618d;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+}
+
+
+/* ---------- TITLE ---------- */
+
+.calculator-hub-header h2 {
+
+    position: relative;
+
+    margin: 0;
+
+    color: #173f68;
+
+    font-size:
+        clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.15;
+}
+
+
+/* ---------- TITLE ACCENT ---------- */
+
+.calculator-hub-header h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 62px;
+    height: 4px;
+
+    margin: 14px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.calculator-hub-header p {
+
+    max-width: 760px;
+
+    margin:
+        17px auto 0;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   CALCULATOR CATEGORY GRID
+   ========================================================= */
+
+.calculator-category-grid {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CALCULATOR CATEGORY CARD
+   ========================================================= */
+
+.calculator-category {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d6e5ef;
+
+    border-radius: 16px;
+
+    padding: 26px 24px;
+
+    box-shadow:
+        0 8px 24px rgba(25,70,105,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TOP ACCENT ---------- */
+
+.calculator-category::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+
+    opacity: 0.55;
+
+    transition:
+        opacity 0.3s ease,
+        height 0.3s ease;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.calculator-category:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #a9cce3;
+
+    box-shadow:
+        0 18px 38px rgba(25,75,115,0.14);
+}
+
+
+.calculator-category:hover::before {
+
+    opacity: 1;
+
+    height: 5px;
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+   ========================================================= */
+
+.calculator-category-icon {
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid #c8e0ee;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7fd,
+            #d9edf9
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 6px 16px rgba(35,90,130,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.calculator-category:hover
+.calculator-category-icon {
+
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 9px 22px rgba(35,90,130,0.14);
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+   ========================================================= */
+
+.calculator-category h3 {
+
+    margin:
+        0 0 10px;
+
+    color: #173f68;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.calculator-category:hover h3 {
+
+    color: #176ba5;
+}
+
+
+/* =========================================================
+   CATEGORY DESCRIPTION
+   ========================================================= */
+
+.calculator-category p {
+
+    margin:
+        0 0 18px;
+
+    color: #64788b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* =========================================================
+   CALCULATOR LINKS
+   ========================================================= */
+
+.calculator-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: auto;
+}
+
+
+.calculator-list a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border:
+        1px solid #d4e5f1;
+
+    border-radius: 999px;
+
+    background:
+        #f4f9fd;
+
+    color: #21628f;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.calculator-list a:hover {
+
+    background:
+        #e6f4fc;
+
+    border-color:
+        #afd3e9;
+
+    color:
+        #0b5b96;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   CALCULATOR HUB MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .calculator-category-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .calculator-hub {
+
+        padding:
+            55px 18px 50px;
+    }
+
+
+    .calculator-hub-image {
+
+        height: 190px;
+
+        border-radius: 14px;
+    }
+
+
+    .calculator-hub-header h2 {
+
+        font-size: 29px;
+    }
+
+
+    .calculator-hub-header p {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .calculator-category-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .calculator-category {
+
+        min-height: 0;
+    }
+
+} 
+   /* =========================================================
+   PHASE 14 — PREMIUM CALCULATOR PANELS
+   ========================================================= */
+
+
+/* ---------- CALCULATOR PANEL ---------- */
+
+#calculators + .container .card,
+.container .card[id^="calc-"],
+.container .card#cable-reference {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d6e5ef;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    margin-bottom: 28px;
+
+    box-shadow:
+        0 10px 30px rgba(25,70,105,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TOP BLUE ACCENT ---------- */
+
+.container .card[id^="calc-"]::before,
+.container .card#cable-reference::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius:
+        18px 18px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+
+    opacity: 0.75;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.container .card[id^="calc-"]:hover,
+.container .card#cable-reference:hover {
+
+    border-color:
+        #b8d5e7;
+
+    box-shadow:
+        0 16px 38px rgba(25,75,115,0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ---------- CALCULATOR TITLE ---------- */
+
+.container .card[id^="calc-"] h2,
+.container .card#cable-reference h2 {
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+    color:
+        #173f68;
+
+    font-size:
+        clamp(22px, 3vw, 28px);
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.3px;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.container .card[id^="calc-"] > p,
+.container .card#cable-reference > p {
+
+    margin-bottom: 24px;
+
+    color:
+        #64788b;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* ---------- LABEL ---------- */
+
+.container .card[id^="calc-"] label,
+.container .card#cable-reference label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 7px;
+
+    color:
+        #244e73;
+
+    font-size:
+        13px;
+
+    font-weight:
+        750;
+}
+
+
+/* ---------- INPUTS ---------- */
+
+.container .card[id^="calc-"] input,
+.container .card[id^="calc-"] select,
+.container .card#cable-reference input,
+.container .card#cable-reference select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #cbdde9;
+
+    border-radius: 9px;
+
+    background:
+        #fbfdff;
+
+    color:
+        #173f68;
+
+    font-size:
+        14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* ---------- INPUT FOCUS ---------- */
+
+.container .card[id^="calc-"] input:focus,
+.container .card[id^="calc-"] select:focus,
+.container .card#cable-reference input:focus,
+.container .card#cable-reference select:focus {
+
+    border-color:
+        #5da9d4;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(66,155,210,0.11);
+}
+
+
+/* ---------- CALCULATE BUTTON ---------- */
+
+.container .card[id^="calc-"] button,
+.container .card#cable-reference button {
+
+    margin-top: 22px;
+
+    padding:
+        12px 24px;
+
+    border:
+        1px solid #1976d2;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1976d2,
+            #258bd0
+        );
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        750;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 7px 18px rgba(25,118,210,0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.container .card[id^="calc-"] button:hover,
+.container .card#cable-reference button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(25,118,210,0.24);
+
+    filter:
+        brightness(1.04);
+}
+
+
+/* ---------- RESULT ---------- */
+
+.container .card[id^="calc-"] .result {
+
+    margin-top:
+        22px;
+
+    padding:
+        18px 20px;
+
+    border:
+        1px solid #cfe2ef;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f7fbff
+        );
+
+    color:
+        #173f68;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.7;
+
+    box-shadow:
+        0 6px 18px rgba(25,70,105,0.06);
+}
+
+
+/* ---------- RESULT HOVER ---------- */
+
+.container .card[id^="calc-"] .result:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(25,70,105,0.10);
+}
+
+
+/* ---------- CABLE TABLE ---------- */
+
+#cable-reference table {
+
+    border-radius:
+        10px;
+
+    overflow:
+        hidden;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .container .card[id^="calc-"],
+    .container .card#cable-reference {
+
+        padding:
+            22px 18px;
+
+        border-radius:
+            14px;
+    }
+
+
+    .container .card[id^="calc-"] h2,
+    .container .card#cable-reference h2 {
+
+        font-size:
+            22px;
+    }
+
+
+    .container .card[id^="calc-"] button,
+    .container .card#cable-reference button {
+
+        width:
+            100%;
+    }
+
+} 
+    /* =========================================================
+   PHASE 14B — CABLE REFERENCE & SMART CABLE TOOLS
+   ========================================================= */
+
+
+/* =========================================================
+   VOLTAGE DROP / CABLE SELECTION
+   ========================================================= */
+
+#calc-voltage-drop {
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7fcff 100%
+        );
+}
+
+
+/* ---------- CABLE SELECTS ---------- */
+
+#calc-voltage-drop select {
+
+    cursor: pointer;
+}
+
+
+/* ---------- TWO ACTION BUTTONS ---------- */
+
+#calc-voltage-drop button {
+
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+
+/* First button — Voltage Drop */
+
+#calc-voltage-drop button:first-of-type {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1976d2,
+            #258bd0
+        );
+}
+
+
+/* Second button — Smart Recommendation */
+
+#calc-voltage-drop button:nth-of-type(2) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b6f9f,
+            #168dbd
+        );
+}
+
+
+/* ---------- CABLE RESULT ---------- */
+
+#voltageDropResult {
+
+    margin-top: 24px;
+
+    padding: 20px 22px;
+
+    border:
+        1px solid #c8dfed;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f8fcff
+        );
+
+    color:
+        #173f68;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 7px 20px rgba(25,70,105,0.07);
+}
+
+
+/* =========================================================
+   CABLE REFERENCE CARD
+   ========================================================= */
+
+#cable-reference {
+
+    margin-top: 30px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d2e4ef;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 30px rgba(25,70,105,0.08);
+}
+
+
+/* ---------- CABLE REFERENCE TITLE ---------- */
+
+#cable-reference h2 {
+
+    color:
+        #173f68;
+
+    margin-bottom:
+        10px;
+}
+
+
+/* ---------- CABLE REFERENCE DESCRIPTION ---------- */
+
+#cable-reference > .info {
+
+    color:
+        #64788b;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   REFERENCE FILTERS
+   ========================================================= */
+
+#cable-reference .reference-filters {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-template-rows:
+        auto auto;
+
+    column-gap:
+        18px;
+
+    row-gap:
+        7px;
+
+    margin:
+        25px 0;
+
+    padding:
+        20px;
+
+    border:
+        1px solid #d8e8f1;
+
+    border-radius:
+        13px;
+
+    background:
+        #f7fbfe;
+}
+
+
+/* ---------- FILTER LABELS ---------- */
+
+#cable-reference .reference-filters label {
+
+    margin:
+        0;
+
+    color:
+        #244e73;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.2px;
+}
+
+
+/* Place labels in first row */
+
+#cable-reference .reference-filters label:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#cable-reference .reference-filters label:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#cable-reference .reference-filters label:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+/* Place selects in second row */
+
+#cable-reference .reference-filters select:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#cable-reference .reference-filters select:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#cable-reference .reference-filters select:nth-child(6) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+
+/* ---------- FILTER SELECTS ---------- */
+
+#cable-reference .reference-filters select {
+
+    width:
+        100%;
+
+    padding:
+        11px 12px;
+
+    border:
+        1px solid #cbdde9;
+
+    border-radius:
+        9px;
+
+    background:
+        white;
+
+    color:
+        #173f68;
+
+    font-size:
+        13px;
+
+    cursor:
+        pointer;
+
+    outline:
+        none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+#cable-reference .reference-filters select:focus {
+
+    border-color:
+        #5da9d4;
+
+    box-shadow:
+        0 0 0 4px rgba(66,155,210,0.10);
+}
+
+
+/* =========================================================
+   CABLE TABLE
+   ========================================================= */
+
+#cable-reference .table-container {
+
+    overflow-x:
+        auto;
+
+    border:
+        1px solid #d7e6ef;
+
+    border-radius:
+        12px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 5px 18px rgba(25,70,105,0.05);
+}
+
+
+/* ---------- TABLE ---------- */
+
+#cable-reference .cable-reference-table {
+
+    width:
+        100%;
+
+    min-width:
+        900px;
+
+    border-collapse:
+        collapse;
+
+    font-size:
+        12px;
+}
+
+
+/* ---------- TABLE HEADER ---------- */
+
+#cable-reference .cable-reference-table thead th {
+
+    padding:
+        13px 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173f68,
+            #225d88
+        );
+
+    color:
+        white;
+
+    font-weight:
+        750;
+
+    text-align:
+        left;
+
+    white-space:
+        nowrap;
+}
+
+
+/* ---------- TABLE CELLS ---------- */
+
+#cable-reference .cable-reference-table tbody td {
+
+    padding:
+        11px 12px;
+
+    border-bottom:
+        1px solid #e4edf3;
+
+    color:
+        #526b80;
+
+    white-space:
+        nowrap;
+}
+
+
+/* ---------- ALTERNATE ROW ---------- */
+
+#cable-reference .cable-reference-table tbody tr:nth-child(even) {
+
+    background:
+        #f7fbfe;
+}
+
+
+/* ---------- ROW HOVER ---------- */
+
+#cable-reference .cable-reference-table tbody tr:hover {
+
+    background:
+        #edf7fc;
+}
+
+
+/* =========================================================
+   REFERENCE WARNING
+   ========================================================= */
+
+#cable-reference > .info:last-child {
+
+    margin-top:
+        18px;
+
+    padding:
+        14px 16px;
+
+    border-left:
+        4px solid #f0a43c;
+
+    border-radius:
+        8px;
+
+    background:
+        #fff8ed;
+
+    color:
+        #765522;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #calc-voltage-drop button {
+
+        width:
+            100%;
+
+        margin-right:
+            0;
+    }
+
+
+    #cable-reference {
+
+        padding:
+            20px 16px;
+    }
+
+
+    #cable-reference .reference-filters {
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            auto auto auto auto auto auto;
+
+        padding:
+            16px;
+    }
+
+
+    #cable-reference .reference-filters label:nth-child(1),
+    #cable-reference .reference-filters label:nth-child(3),
+    #cable-reference .reference-filters label:nth-child(5),
+    #cable-reference .reference-filters select:nth-child(2),
+    #cable-reference .reference-filters select:nth-child(4),
+    #cable-reference .reference-filters select:nth-child(6) {
+
+        grid-column:
+            1;
+    }
+
+
+    #cable-reference .reference-filters label:nth-child(1) {
+        grid-row: 1;
+    }
+
+    #cable-reference .reference-filters select:nth-child(2) {
+        grid-row: 2;
+    }
+
+    #cable-reference .reference-filters label:nth-child(3) {
+        grid-row: 3;
+    }
+
+    #cable-reference .reference-filters select:nth-child(4) {
+        grid-row: 4;
+    }
+
+    #cable-reference .reference-filters label:nth-child(5) {
+        grid-row: 5;
+    }
+
+    #cable-reference .reference-filters select:nth-child(6) {
+        grid-row: 6;
+    }
+
+
+    #cable-reference .cable-reference-table {
+
+        min-width:
+            900px;
+    }
+
+}
+    /* =========================================================
+   PHASE 15 — PREMIUM LEARNING CENTER
+   ========================================================= */
+
+
+/* =========================================================
+   LEARNING CENTER BACKGROUND
+   ========================================================= */
+
+.learning-center {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(50,145,220,0.09),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(50,180,225,0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f6faff 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* =========================================================
+   LEARNING HEADER
+   ========================================================= */
+
+.learning-center-header {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ---------- BADGE ---------- */
+
+.learning-center-header .section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 8px 17px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid #c8dfef;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.86);
+
+    color:
+        #23618d;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.3px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+.learning-center-header h2 {
+
+    margin:
+        0;
+
+    color:
+        #173f68;
+
+    font-size:
+        clamp(30px, 4vw, 42px);
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        -0.8px;
+
+    line-height:
+        1.15;
+}
+
+
+/* ---------- TITLE ACCENT ---------- */
+
+.learning-center-header h2::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        64px;
+
+    height:
+        4px;
+
+    margin:
+        14px auto 0;
+
+    border-radius:
+        10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.learning-center-header p {
+
+    max-width:
+        720px;
+
+    margin:
+        17px auto 0;
+
+    color:
+        #64788b;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.75;
+}
+
+
+/* =========================================================
+   COURSE GRID
+   ========================================================= */
+
+.learning-center-grid {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        1150px;
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        22px;
+}
+
+
+/* =========================================================
+   COURSE CARD
+   ========================================================= */
+
+.learning-center-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-height:
+        335px;
+
+    padding:
+        25px 23px 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fcff 100%
+        );
+
+    border:
+        1px solid #d5e4ee;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 9px 26px rgba(25,70,105,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- COURSE TOP ACCENT ---------- */
+
+.learning-center-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769aa,
+            #36a9e1
+        );
+
+    opacity:
+        0.65;
+
+    transition:
+        height 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ---------- COURSE NUMBER ---------- */
+
+.learning-center-card::after {
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        18px;
+
+    color:
+        #dcecf6;
+
+    font-size:
+        26px;
+
+    font-weight:
+        850;
+
+    line-height:
+        1;
+
+    pointer-events:
+        none;
+}
+
+
+/* ---------- NUMBERING ---------- */
+
+.learning-center-card:nth-child(1)::after {
+    content: "01";
+}
+
+.learning-center-card:nth-child(2)::after {
+    content: "02";
+}
+
+.learning-center-card:nth-child(3)::after {
+    content: "03";
+}
+
+.learning-center-card:nth-child(4)::after {
+    content: "04";
+}
+
+.learning-center-card:nth-child(5)::after {
+    content: "05";
+}
+
+.learning-center-card:nth-child(6)::after {
+    content: "06";
+}
+
+.learning-center-card:nth-child(7)::after {
+    content: "07";
+}
+
+.learning-center-card:nth-child(8)::after {
+    content: "08";
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+.learning-center-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #a8cce2;
+
+    box-shadow:
+        0 20px 42px rgba(25,65,100,0.14);
+}
+
+
+.learning-center-card:hover::before {
+
+    height:
+        5px;
+
+    opacity:
+        1;
+}
+
+
+/* =========================================================
+   COURSE ICON
+   ========================================================= */
+
+.learning-center-icon {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        18px;
+
+    border:
+        1px solid #c8e0ee;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5fc,
+            #d7edf9
+        );
+
+    font-size:
+        26px;
+
+    box-shadow:
+        0 7px 17px rgba(35,90,130,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.learning-center-card:hover
+.learning-center-icon {
+
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 10px 23px rgba(30,90,135,0.15);
+}
+
+
+/* =========================================================
+   COURSE TITLE
+   ========================================================= */
+
+.learning-center-card h3 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0 0 10px;
+
+    color:
+        #173f68;
+
+    font-size:
+        18px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.3;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.learning-center-card:hover h3 {
+
+    color:
+        #1268a5;
+}
+
+
+/* =========================================================
+   COURSE DESCRIPTION
+   ========================================================= */
+
+.learning-center-card p {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex-grow:
+        1;
+
+    margin:
+        0 0 18px;
+
+    color:
+        #64788b;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   LEARNING TAGS
+   ========================================================= */
+
+.learning-tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        auto;
+
+    margin-bottom:
+        18px;
+}
+
+
+.learning-tags span {
+
+    padding:
+        5px 9px;
+
+    border:
+        1px solid #d4e5ef;
+
+    border-radius:
+        999px;
+
+    background:
+        #f3f9fd;
+
+    color:
+        #3d607a;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.learning-center-card:hover
+.learning-tags span {
+
+    background:
+        #eaf5fc;
+
+    border-color:
+        #bdd8ea;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   START LEARNING BUTTON
+   ========================================================= */
+
+.learning-center-card a {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    margin-top:
+        3px;
+
+    padding:
+        12px 0 0;
+
+    border-top:
+        1px solid #e3edf4;
+
+    color:
+        #1976d2;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    text-decoration:
+        none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.learning-center-card a:hover {
+
+    color:
+        #0b5b96;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .learning-center-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .learning-center {
+
+        padding:
+            55px 18px;
+    }
+
+
+    .learning-center-header {
+
+        margin-bottom:
+            35px;
+    }
+
+
+    .learning-center-header h2 {
+
+        font-size:
+            29px;
+    }
+
+
+    .learning-center-header p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.65;
+    }
+
+
+    .learning-center-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            18px;
+    }
+
+
+    .learning-center-card {
+
+        min-height:
+            0;
+
+        padding:
+            23px 20px;
+    }
+
+
+    .learning-center-card::after {
+
+        display:
+            none;
+    }
+
+}
+    /* =========================================================
+   PHASE 15 — COURSE NUMBER VISIBILITY FIX
+   ========================================================= */
+
+.learning-center-card::after {
+
+    z-index: 3;
+
+    top: 16px;
+    right: 16px;
+
+    min-width: 28px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    border: 1px solid #d5e8f3;
+
+    border-radius: 999px;
+
+    background: #edf7fc;
+
+    color: #4d7f9e;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    box-sizing: border-box;
+}
+    /* =========================================================
+   PREMIUM HERO - PHASE 6
+   POWER PLANT ENGINEERING HUB
+   ========================================================= */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 430px;
+    padding: 85px 20px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(70,150,230,0.28),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(0,190,255,0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0b2745 0%,
+            #123f68 48%,
+            #0c3155 100%
+        );
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 12px 35px rgba(12,39,69,0.16);
+}
+
+
+/* ---------- HERO GRID ---------- */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+
+/* ---------- HERO GLOW ---------- */
+
+.hero-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(70,180,255,0.22),
+            rgba(70,180,255,0.05) 45%,
+            transparent 70%
+        );
+
+    filter: blur(4px);
+
+    pointer-events: none;
+}
+
+
+/* ---------- HERO CONTENT ---------- */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ---------- BADGE ---------- */
+
+.hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: rgba(255,255,255,0.92);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.12);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+.hero-section h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.08;
+
+    font-weight: 850;
+
+    letter-spacing: -1.2px;
+
+    text-shadow:
+        0 4px 18px rgba(0,0,0,0.22);
+}
+
+
+/* ---------- TAGLINE ---------- */
+
+.hero-tagline {
+    margin: 18px 0 10px;
+
+    color: #8ed8ff;
+
+    font-size: clamp(20px, 2.5vw, 27px);
+
+    font-weight: 750;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.hero-description {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* ---------- HERO BUTTONS ---------- */
+
+.hero-buttons {
+    margin-top: 32px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.hero-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 205px;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* ---------- PRIMARY BUTTON ---------- */
+
+.hero-btn.primary {
+    color: #10385e;
+
+    background: white;
+
+    border: 1px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.16);
+}
+
+
+/* ---------- SECONDARY BUTTON ---------- */
+
+.hero-btn.secondary {
+    color: white;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.32);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* ---------- BUTTON HOVER ---------- */
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(0,0,0,0.20);
+}
+
+.hero-btn.primary:hover {
+    background: #eef8ff;
+}
+
+.hero-btn.secondary:hover {
+    background: rgba(255,255,255,0.16);
+}
+
+
+/* ---------- BADGE ANIMATION ---------- */
+
+@keyframes heroFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.hero-badge {
+    animation:
+        heroFloat 4s ease-in-out infinite;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .hero-section {
+        min-height: 400px;
+
+        padding:
+            65px 18px 65px;
+    }
+
+    .hero-section h1 {
+        font-size: 34px;
+
+        letter-spacing: -0.6px;
+    }
+
+    .hero-tagline {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+}
+    /* =========================================================
+   PREMIUM REFERENCE HUB - PHASE 16
+   POWER PLANT ENGINEERING HUB
+   ========================================================= */
+
+
+/* ---------- REFERENCE SECTION ---------- */
+
+.reference-hub-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 85px 20px;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(70,150,230,0.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(0,180,255,0.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #f5f9fd 0%,
+            #edf5fb 100%
+        );
+}
+
+
+/* ---------- SUBTLE GRID ---------- */
+
+.reference-hub-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(30,100,160,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(30,100,160,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    pointer-events: none;
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.reference-hub-container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ---------- REFERENCE GRID ---------- */
+
+.reference-grid {
+    gap: 24px;
+}
+
+
+/* ---------- REFERENCE CARD ---------- */
+
+.reference-card {
+    min-height: 275px;
+
+    padding: 28px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.98),
+            rgba(246,251,255,0.98)
+        );
+
+    border: 1px solid rgba(150,190,220,0.42);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(20,65,105,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- TOP ACCENT ---------- */
+
+.reference-card::before {
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1677c8,
+            #58c7ff
+        );
+
+    opacity: 0.9;
+
+    transform: scaleX(0.35);
+    transform-origin: left;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+.reference-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #a9d3ee;
+
+    box-shadow:
+        0 18px 40px rgba(20,70,110,0.15);
+}
+
+.reference-card:hover::before {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+
+/* ---------- ICON ---------- */
+
+.reference-icon {
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf8ff,
+            #dceffc
+        );
+
+    border: 1px solid #c6e1f3;
+
+    box-shadow:
+        0 7px 18px rgba(35,105,155,0.10);
+
+    font-size: 26px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ---------- ICON HOVER ---------- */
+
+.reference-card:hover .reference-icon {
+    transform: translateY(-3px) scale(1.06);
+
+    background:
+        linear-gradient(
+            145deg,
+            #e2f5ff,
+            #d2ebfa
+        );
+
+    box-shadow:
+        0 10px 24px rgba(35,105,155,0.16);
+}
+
+
+/* ---------- TITLE ---------- */
+
+.reference-card h3 {
+    margin-bottom: 10px;
+
+    color: #173f68;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.2px;
+
+    transition: color 0.25s ease;
+}
+
+
+.reference-card:hover h3 {
+    color: #0879d1;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.reference-card p {
+    color: #607b96;
+
+    font-size: 14px;
+
+    line-height: 1.72;
+}
+
+
+/* ---------- LINK ---------- */
+
+.reference-card a {
+    margin-top: 22px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #dceaf5;
+
+    color: #0879d1;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.reference-card a:hover {
+    color: #005ca8;
+
+    transform: translateX(5px);
+}
+
+
+/* ---------- DIFFERENT CARD ACCENTS ---------- */
+
+.reference-card:nth-child(2)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #3459c7,
+            #7b9cff
+        );
+}
+
+.reference-card:nth-child(3)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #178a9d,
+            #58d6df
+        );
+}
+
+.reference-card:nth-child(4)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #7a55b8,
+            #b38bea
+        );
+}
+
+.reference-card:nth-child(5)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #e27824,
+            #ffb45c
+        );
+}
+
+.reference-card:nth-child(6)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #167c72,
+            #5bd2c1
+        );
+}
+
+.reference-card:nth-child(7)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #596b7c,
+            #91a6b8
+        );
+}
+
+.reference-card:nth-child(8)::before {
+    background:
+        linear-gradient(
+            90deg,
+            #2368b5,
+            #62b9f5
+        );
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+    .reference-card {
+        min-height: 260px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .reference-hub-section {
+        padding:
+            65px 18px;
+    }
+
+    .reference-grid {
+        gap: 18px;
+    }
+
+    .reference-card {
+        min-height: 0;
+
+        padding: 24px 21px;
+    }
+
+    .reference-card h3 {
+        font-size: 18px;
+    }
+
+    .reference-card p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+}
+    /* =========================================================
+   PREMIUM ABOUT SECTION - PHASE 17
+   POWER PLANT ENGINEERING HUB
+   ========================================================= */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+
+    padding: 90px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(70,150,230,0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(0,180,255,0.07),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #f8fbfe 0%,
+            #eef6fc 100%
+        );
+}
+
+
+/* ---------- SUBTLE GRID ---------- */
+
+.about-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(30,100,160,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(30,100,160,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    pointer-events: none;
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.about-container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ---------- MAIN ABOUT CARD ---------- */
+
+.about-main-card {
+    position: relative;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.98),
+            rgba(246,251,255,0.98)
+        );
+
+    border: 1px solid rgba(150,190,220,0.42);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(20,65,105,0.09),
+        inset 0 1px 0 rgba(255,255,255,0.85);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- MAIN CARD ACCENT ---------- */
+
+.about-main-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 20px 20px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1677c8,
+            #58c7ff
+        );
+}
+
+
+/* ---------- MAIN CARD HOVER ---------- */
+
+.about-main-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #acd5ef;
+
+    box-shadow:
+        0 18px 42px rgba(20,70,110,0.14);
+}
+
+
+/* ---------- MAIN ICON ---------- */
+
+.about-main-icon {
+    width: 78px;
+    height: 78px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123f68,
+            #267dbb
+        );
+
+    box-shadow:
+        0 12px 26px rgba(20,70,110,0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.about-main-card:hover .about-main-icon {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 16px 30px rgba(20,70,110,0.24);
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+.about-main-card h3 {
+    color: #173f68;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* ---------- MAIN TEXT ---------- */
+
+.about-main-card p {
+    color: #607b96;
+
+    font-size: 15px;
+
+    line-height: 1.78;
+}
+
+
+/* ---------- ABOUT CARDS ---------- */
+
+.about-grid {
+    gap: 24px;
+}
+
+
+.about-card {
+    position: relative;
+
+    padding: 30px 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f7fbff
+        );
+
+    border: 1px solid #d5e7f4;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 28px rgba(20,60,100,0.07);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ---------- CARD TOP ACCENT ---------- */
+
+.about-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2f80c9,
+            #65c7ff
+        );
+
+    transform: scaleX(0.3);
+
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+
+.about-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+.about-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #b4d8ed;
+
+    box-shadow:
+        0 17px 35px rgba(20,70,110,0.13);
+}
+
+
+/* ---------- CARD ICON ---------- */
+
+.about-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e9f6ff,
+            #dceefa
+        );
+
+    border: 1px solid #c8e2f4;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 6px 16px rgba(40,110,160,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.about-card:hover .about-card-icon {
+    transform: translateY(-3px) scale(1.06);
+
+    box-shadow:
+        0 10px 22px rgba(40,110,160,0.14);
+}
+
+
+/* ---------- CARD TITLE ---------- */
+
+.about-card h3 {
+    color: #173f68;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    transition: color 0.25s ease;
+}
+
+
+.about-card:hover h3 {
+    color: #0879d1;
+}
+
+
+/* ---------- CARD TEXT ---------- */
+
+.about-card p {
+    color: #607b96;
+
+    font-size: 14px;
+
+    line-height: 1.72;
+}
+
+
+/* ---------- DISCLAIMER ---------- */
+
+.about-disclaimer {
+    position: relative;
+
+    margin-top: 30px;
+
+    padding: 23px 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f8fd,
+            #f8fbfe
+        );
+
+    border: 1px solid #d6e8f4;
+
+    border-left: 4px solid #2f80c9;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 7px 20px rgba(20,60,100,0.05);
+}
+
+
+.about-disclaimer strong {
+    color: #173f68;
+
+    font-size: 15px;
+}
+
+
+.about-disclaimer p {
+    color: #647c94;
+
+    line-height: 1.72;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .about-section {
+        padding: 65px 18px;
+    }
+
+    .about-main-card {
+        padding: 28px 22px;
+    }
+
+    .about-main-card h3 {
+        font-size: 22px;
+    }
+
+    .about-card {
+        padding: 26px 22px;
+    }
+
+    .about-disclaimer {
+        padding: 20px 21px;
+    }
+
+}
+    /* =========================================================
+   PREMIUM FOOTER - PHASE 18
+   POWER PLANT ENGINEERING HUB
+   ========================================================= */
+
+.site-footer {
+    position: relative;
+    overflow: hidden;
+
+    padding: 48px 20px 22px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(70,150,230,0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(0,190,255,0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #081f38 0%,
+            #0d3154 50%,
+            #092744 100%
+        );
+
+    border-top: 1px solid rgba(120,200,255,0.16);
+
+    box-shadow:
+        0 -12px 35px rgba(8,35,60,0.12);
+}
+
+
+/* ---------- FOOTER GLOW ---------- */
+
+.site-footer::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -220px;
+    bottom: -260px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(60,170,255,0.16),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.footer-container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* ---------- BRAND ---------- */
+
+.footer-brand {
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+.footer-brand-icon {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.14),
+            rgba(255,255,255,0.06)
+        );
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.16);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.footer-brand:hover .footer-brand-icon {
+    transform: translateY(-3px) scale(1.05);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.20),
+            rgba(255,255,255,0.08)
+        );
+}
+
+
+/* ---------- BRAND TITLE ---------- */
+
+.footer-brand h3 {
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.2px;
+}
+
+
+.footer-brand p {
+    color: rgba(255,255,255,0.62);
+
+    font-size: 13px;
+}
+
+
+/* ---------- FOOTER LINKS ---------- */
+
+.footer-links {
+    gap: 10px 22px;
+
+    padding: 20px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.12);
+}
+
+
+.footer-links a {
+    position: relative;
+
+    padding: 5px 0;
+
+    color: rgba(255,255,255,0.76);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* ---------- LINK UNDERLINE ---------- */
+
+.footer-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #69cfff;
+
+    transition:
+        width 0.25s ease;
+}
+
+
+.footer-links a:hover {
+    color: #8ed8ff;
+
+    transform: translateY(-1px);
+}
+
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ---------- BOTTOM BAR ---------- */
+
+.footer-bottom {
+    padding-top: 22px;
+
+    color: rgba(255,255,255,0.52);
+
+    font-size: 12px;
+}
+
+
+/* ---------- BOTTOM RIGHT ---------- */
+
+.footer-bottom span:last-child {
+    color: rgba(255,255,255,0.62);
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding:
+            40px 18px 20px;
+    }
+
+    .footer-brand {
+        margin-bottom: 24px;
+    }
+
+    .footer-links {
+        gap: 10px 18px;
+    }
+
+    .footer-bottom {
+        padding-top: 18px;
+
+        gap: 10px;
+    }
+
+}
+     /* ========================================= */
+/* PHASE 19 — PREMIUM LESSON PAGE            */
+/* ========================================= */
+
+.lesson-section {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 20px 90px;
+    background:
+        radial-gradient(circle at 8% 10%, rgba(40, 130, 220, 0.10), transparent 28%),
+        radial-gradient(circle at 92% 82%, rgba(0, 180, 255, 0.07), transparent 30%),
+        linear-gradient(180deg, #f7fbfe 0%, #edf5fb 100%);
+}
+
+.lesson-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.34;
+    background-image:
+        linear-gradient(rgba(30, 100, 160, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 100, 160, 0.045) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+
+.lesson-header,
+.lesson-container {
+    position: relative;
+    z-index: 1;
+}
+
+.lesson-header {
+    max-width: 1150px;
+    margin: 0 auto 28px;
+    padding: 28px 30px 30px;
+    border: 1px solid #d8e6f0;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.98),
+        rgba(246,250,253,0.98)
+    );
+    box-shadow: 0 14px 34px rgba(25, 73, 112, 0.08);
+}
+
+.lesson-header::before {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 4px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #0879d1, #37b8ff);
+}
+
+.lesson-header .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    border: 1px solid #cfe4f2;
+    border-radius: 999px;
+    background: #edf7fc;
+    color: #0879d1;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.lesson-header h2 {
+    margin: 0 0 10px;
+    color: #12243d;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.lesson-header p {
+    max-width: 850px;
+    margin: 0;
+    color: #5a7088;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.lesson-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 255px minmax(0, 1fr);
+    gap: 26px;
+    align-items: start;
+}
+
+.lesson-menu {
+    position: sticky;
+    top: 96px;
+    padding: 15px;
+    border: 1px solid #d5e4ee;
+    border-radius: 18px;
+    background: linear-gradient(
+        180deg,
+        #f8fbfd 0%,
+        #edf4f9 100%
+    );
+    box-shadow: 0 12px 28px rgba(24, 68, 104, 0.09);
+}
+
+.lesson-menu::before {
+    content: "COURSE CONTENT";
+    display: block;
+    padding: 5px 10px 12px;
+    color: #6a8095;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+}
+
+.lesson-menu a {
+    position: relative;
+    display: block;
+    margin: 3px 0;
+    padding: 11px 12px 11px 16px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #30445c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.lesson-menu a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    bottom: 9px;
+    width: 3px;
+    border-radius: 999px;
+    background: #168bd8;
+    transform: scaleY(0);
+    transition: transform 0.25s ease;
+}
+
+.lesson-menu a:hover {
+    transform: translateX(4px);
+    border-color: #cfe2ef;
+    background: #ffffff;
+    color: #0879d1;
+    box-shadow: 0 5px 14px rgba(30, 95, 140, 0.08);
+}
+
+.lesson-menu a:hover::before {
+    transform: scaleY(1);
+}
+
+.lesson-content {
+    min-width: 0;
+}
+
+.lesson-topic {
+    position: relative;
+    margin-bottom: 22px;
+    padding: 30px 30px 28px;
+    border: 1px solid #d9e6ef;
+    border-radius: 19px;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #fbfdff 100%
+    );
+    box-shadow: 0 10px 28px rgba(22, 64, 98, 0.07);
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+    scroll-margin-top: 100px;
+}
+
+.lesson-topic::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(
+        180deg,
+        #0879d1,
+        #42b9ff
+    );
+}
+
+.lesson-topic:hover {
+    transform: translateY(-3px);
+    border-color: #c9dfea;
+    box-shadow: 0 16px 34px rgba(22, 64, 98, 0.10);
+}
+
+.lesson-topic:target {
+    border-color: #9dc9e4;
+    box-shadow:
+        0 0 0 3px rgba(8, 121, 209, 0.08),
+        0 16px 34px rgba(22, 64, 98, 0.10);
+}
+
+.lesson-topic h3 {
+    margin: 0 0 15px;
+    color: #14243b;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+.lesson-topic p,
+.lesson-topic li {
+    color: #586e85;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.lesson-topic p {
+    margin-top: 0;
+}
+
+.lesson-topic ul {
+    margin-top: 10px;
+    padding-left: 22px;
+}
+
+.lesson-formula {
+    margin: 20px 0;
+    padding: 17px 20px;
+    border: 1px solid #cfe3ef;
+    border-left: 4px solid #0b8bd8;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #edf6fb,
+        #f7fbfd
+    );
+    color: #17304b;
+    font-weight: 800;
+    line-height: 1.7;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.lesson-note {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border: 1px solid #d8e7f0;
+    border-radius: 13px;
+    background: #f7fafc;
+}
+
+.lesson-note strong {
+    color: #17324f;
+}
+
+.lesson-note p {
+    margin: 8px 0 0;
+}
+
+.lesson-next {
+    border: 1px solid #cfe2ee;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        #eef8fd,
+        #ffffff
+    );
+    box-shadow: 0 10px 24px rgba(22, 64, 98, 0.07);
+}
+
+.lesson-next a {
+    color: #0879d1;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+
+    .lesson-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-menu {
+        position: relative;
+        top: auto;
+    }
+
+    .lesson-menu::before {
+        padding-bottom: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .lesson-section {
+        padding: 45px 14px 60px;
+    }
+
+    .lesson-header {
+        padding: 22px 20px 24px;
+        border-radius: 16px;
+    }
+
+    .lesson-header h2 {
+        font-size: 28px;
+    }
+
+    .lesson-header p {
+        font-size: 14px;
+    }
+
+    .lesson-container {
+        gap: 16px;
+    }
+
+    .lesson-menu {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .lesson-menu a {
+        padding: 10px 11px 10px 14px;
+        font-size: 12px;
+    }
+
+    .lesson-topic {
+        padding: 24px 20px 22px;
+        margin-bottom: 16px;
+        border-radius: 16px;
+    }
+
+    .lesson-topic h3 {
+        font-size: 19px;
+    }
+
+    .lesson-topic p,
+    .lesson-topic li {
+        font-size: 13.5px;
+    }
+
+    .lesson-formula {
+        padding: 14px 15px;
+        font-size: 13px;
+    }
+
+}
+    /* ========================================= */
+/* PHASE 19.1 — LESSON PAGE POLISH           */
+/* ========================================= */
+
+/* TIGHTER LESSON HEADER */
+
+.lesson-header {
+    padding: 22px 30px 24px;
+    margin-bottom: 22px;
+}
+
+.lesson-header::before {
+    margin-bottom: 12px;
+}
+
+.lesson-header h2 {
+    font-size: clamp(27px, 3.5vw, 36px);
+}
+
+.lesson-header p {
+    line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* ACTIVE LESSON HIGHLIGHT                   */
+/* ========================================= */
+
+/* Generator Fundamentals */
+
+.lesson-container:has(#gen-study-basics:target)
+.lesson-menu a[href="#gen-study-basics"],
+
+/* Generator Construction */
+
+.lesson-container:has(#gen-study-construction:target)
+.lesson-menu a[href="#gen-study-construction"],
+
+/* Generator Ratings */
+
+.lesson-container:has(#gen-study-rating:target)
+.lesson-menu a[href="#gen-study-rating"],
+
+/* Working Principle */
+
+.lesson-container:has(#gen-study-working:target)
+.lesson-menu a[href="#gen-study-working"],
+
+/* Synchronization */
+
+.lesson-container:has(#gen-study-synchronization:target)
+.lesson-menu a[href="#gen-study-synchronization"],
+
+/* Generator Loading */
+
+.lesson-container:has(#gen-study-loading:target)
+.lesson-menu a[href="#gen-study-loading"],
+
+/* Operating Parameters */
+
+.lesson-container:has(#gen-study-parameters:target)
+.lesson-menu a[href="#gen-study-parameters"],
+
+/* MW / MVAR */
+
+.lesson-container:has(#gen-study-mw-mvar:target)
+.lesson-menu a[href="#gen-study-mw-mvar"],
+
+/* Power Factor */
+
+.lesson-container:has(#gen-study-pf-capability:target)
+.lesson-menu a[href="#gen-study-pf-capability"],
+
+/* Excitation */
+
+.lesson-container:has(#gen-study-excitation:target)
+.lesson-menu a[href="#gen-study-excitation"],
+
+/* Practical Synchronization */
+
+.lesson-container:has(#gen-study-synchronization-practical:target)
+.lesson-menu a[href="#gen-study-synchronization-practical"],
+
+/* Start-Up */
+
+.lesson-container:has(#gen-study-startup:target)
+.lesson-menu a[href="#gen-study-startup"],
+
+/* Shutdown */
+
+.lesson-container:has(#gen-study-shutdown:target)
+.lesson-menu a[href="#gen-study-shutdown"] {
+
+    border-color: #b9dbef;
+    background: linear-gradient(
+        135deg,
+        #e7f5fd,
+        #f7fcff
+    );
+    color: #0879d1;
+    box-shadow:
+        0 5px 14px rgba(8, 121, 209, 0.10);
+    transform: translateX(3px);
+}
+
+
+/* Active lesson blue indicator */
+
+.lesson-container:has(#gen-study-basics:target)
+.lesson-menu a[href="#gen-study-basics"]::before,
+
+.lesson-container:has(#gen-study-construction:target)
+.lesson-menu a[href="#gen-study-construction"]::before,
+
+.lesson-container:has(#gen-study-rating:target)
+.lesson-menu a[href="#gen-study-rating"]::before,
+
+.lesson-container:has(#gen-study-working:target)
+.lesson-menu a[href="#gen-study-working"]::before,
+
+.lesson-container:has(#gen-study-synchronization:target)
+.lesson-menu a[href="#gen-study-synchronization"]::before,
+
+.lesson-container:has(#gen-study-loading:target)
+.lesson-menu a[href="#gen-study-loading"]::before,
+
+.lesson-container:has(#gen-study-parameters:target)
+.lesson-menu a[href="#gen-study-parameters"]::before,
+
+.lesson-container:has(#gen-study-mw-mvar:target)
+.lesson-menu a[href="#gen-study-mw-mvar"]::before,
+
+.lesson-container:has(#gen-study-pf-capability:target)
+.lesson-menu a[href="#gen-study-pf-capability"]::before,
+
+.lesson-container:has(#gen-study-excitation:target)
+.lesson-menu a[href="#gen-study-excitation"]::before,
+
+.lesson-container:has(#gen-study-synchronization-practical:target)
+.lesson-menu a[href="#gen-study-synchronization-practical"]::before,
+
+.lesson-container:has(#gen-study-startup:target)
+.lesson-menu a[href="#gen-study-startup"]::before,
+
+.lesson-container:has(#gen-study-shutdown:target)
+.lesson-menu a[href="#gen-study-shutdown"]::before {
+
+    transform: scaleY(1);
+}
+    /* ========================================= */
+/* PHASE 19.2 — STICKY HEADER OFFSET         */
+/* ========================================= */
+
+.lesson-section {
+    scroll-margin-top: 95px;
+}
+
+.lesson-topic {
+    scroll-margin-top: 110px;
+}
+    
     </style>
 
 </head>
