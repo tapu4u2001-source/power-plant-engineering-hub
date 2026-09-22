@@ -2194,6 +2194,1008 @@ tbody tr:hover {
 #electrical {
     padding-top: 45px;
 }
+    /* =========================================================
+   PREMIUM LEARNING CENTER - PHASE 4
+   ========================================================= */
+
+.learning-center {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7faff 0%,
+            #eef5fb 100%
+        );
+}
+
+
+/* ---------- HEADER ---------- */
+
+.learning-center-header {
+    position: relative;
+}
+
+.learning-center-header .section-badge {
+    box-shadow:
+        0 5px 15px rgba(30, 100, 160, 0.08);
+}
+
+.learning-center-header h2 {
+    letter-spacing: -0.5px;
+}
+
+
+/* ---------- COURSE GRID ---------- */
+
+.learning-center-grid {
+    align-items: stretch;
+}
+
+
+/* ---------- COURSE CARD ---------- */
+
+.learning-center-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 330px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fbfe 100%
+        );
+
+    border:
+        1px solid #d8e4ef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 24px rgba(25, 65, 100, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* ---------- TOP ACCENT ---------- */
+
+.learning-center-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769aa,
+            #36a9e1
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+.learning-center-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #9fc5e2;
+
+    box-shadow:
+        0 20px 42px rgba(25, 65, 100, 0.14);
+}
+
+.learning-center-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ---------- ICON ---------- */
+
+.learning-center-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f3fc,
+            #d9edf9
+        );
+
+    border:
+        1px solid #c9dfef;
+
+    border-radius: 15px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 6px 16px rgba(30, 90, 135, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.learning-center-card:hover
+.learning-center-icon {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 9px 22px rgba(30, 90, 135, 0.15);
+}
+
+
+/* ---------- TITLE ---------- */
+
+.learning-center-card h3 {
+    transition:
+        color 0.25s ease;
+}
+
+.learning-center-card:hover h3 {
+    color: #1268a5;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.learning-center-card p {
+    flex-grow: 1;
+}
+
+
+/* ---------- TAGS ---------- */
+
+.learning-tags {
+    margin-top: auto;
+}
+
+.learning-tags span {
+    border:
+        1px solid #d8e5ef;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.learning-center-card:hover
+.learning-tags span {
+    background: #edf6fc;
+    border-color: #bdd8ea;
+}
+
+
+/* ---------- START LEARNING ---------- */
+
+.learning-center-card a {
+    margin-top: 5px;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid #e5edf4;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.learning-center-card a:hover {
+    transform: translateX(5px);
+
+    color: #0b5b96;
+}
+
+
+/* ---------- SUBTLE COURSE LABEL ---------- */
+
+.learning-center-card:nth-child(1)::after,
+.learning-center-card:nth-child(2)::after,
+.learning-center-card:nth-child(3)::after,
+.learning-center-card:nth-child(4)::after,
+.learning-center-card:nth-child(5)::after,
+.learning-center-card:nth-child(6)::after,
+.learning-center-card:nth-child(7)::after,
+.learning-center-card:nth-child(8)::after {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    background: #edf5fb;
+
+    color: #4b6b84;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    opacity: 0;
+
+    transform: translateY(-4px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.learning-center-card:hover::after {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* Individual labels */
+
+.learning-center-card:nth-child(1)::after {
+    content: "FOUNDATION";
+}
+
+.learning-center-card:nth-child(2)::after {
+    content: "PROTECTION";
+}
+
+.learning-center-card:nth-child(3)::after {
+    content: "EXCITATION";
+}
+
+.learning-center-card:nth-child(4)::after {
+    content: "BOILER";
+}
+
+.learning-center-card:nth-child(5)::after {
+    content: "TURBINE";
+}
+
+.learning-center-card:nth-child(6)::after {
+    content: "MAINTENANCE";
+}
+
+.learning-center-card:nth-child(7)::after {
+    content: "PRACTICAL";
+}
+
+.learning-center-card:nth-child(8)::after {
+    content: "INTERVIEW";
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .learning-center-card {
+        min-height: 0;
+    }
+
+    .learning-center-card::after {
+        display: none;
+    }
+
+}
+   @media (max-width: 600px) {
+
+    .learning-center-card {
+        min-height: 0;
+    }
+
+    .learning-center-card::after {
+        display: none;
+    }
+
+}
+    /* =========================================================
+   PREMIUM ENGINEERING SECTION - PHASE 5
+   ========================================================= */
+
+.engineering-section {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 70px;
+    padding-bottom: 75px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(55,145,215,0.10),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #f7fbff 0%,
+            #eef5fb 100%
+        );
+}
+
+
+/* ---------- SUBTLE BACKGROUND GLOW ---------- */
+
+.engineering-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -220px;
+    top: 40px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(40,145,220,0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ---------- SECTION CONTENT ---------- */
+
+.engineering-section .section-heading,
+.engineering-section .engineering-grid {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ---------- PREMIUM BADGE ---------- */
+
+.engineering-section .section-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 15px;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid #c9deee;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.75);
+
+    color: #175886;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* ---------- MAIN HEADING ---------- */
+
+.engineering-section .section-heading h2 {
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0;
+
+    color: #173f68;
+
+    font-size: clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.15;
+}
+
+
+/* ---------- DECORATIVE LINE ---------- */
+
+.engineering-section .section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 62px;
+    height: 4px;
+
+    margin: 14px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769aa,
+            #42b4e8
+        );
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.engineering-section .section-heading p {
+    max-width: 720px;
+
+    margin:
+        17px auto 0;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .engineering-section {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .engineering-section .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .engineering-section .section-heading p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+}
+    /* =========================================================
+   ENGINEERING HEADING ALIGNMENT FIX
+   ========================================================= */
+
+.engineering-section .section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.engineering-section .section-badge {
+    margin-bottom: 14px;
+}
+
+.engineering-section .section-heading h2 {
+    display: block;
+}
+    /* =========================================================
+   PREMIUM ENGINEERING CARDS - PHASE 6
+   ========================================================= */
+
+/* ---------- CARD DEPTH ---------- */
+
+.engineering-card {
+    isolation: isolate;
+
+    box-shadow:
+        0 10px 28px rgba(20, 60, 100, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* ---------- TOP ACCENT ---------- */
+
+.engineering-card::before {
+    height: 5px;
+
+    opacity: 0.35;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769aa 0%,
+            #36a9e1 50%,
+            #69c9f2 100%
+        );
+
+    transition:
+        opacity 0.35s ease,
+        height 0.35s ease;
+}
+
+
+/* ---------- CARD HOVER ---------- */
+
+.engineering-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #9fc5e2;
+
+    box-shadow:
+        0 24px 50px rgba(20, 65, 105, 0.16);
+}
+
+.engineering-card:hover::before {
+    opacity: 1;
+
+    height: 6px;
+}
+
+
+/* ---------- IMAGE POLISH ---------- */
+
+.engineering-card-image {
+    position: relative;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(20, 60, 100, 0.08);
+
+    transition:
+        transform 0.55s ease,
+        filter 0.55s ease,
+        box-shadow 0.55s ease;
+}
+
+.engineering-card:hover
+.engineering-card-image {
+    transform: scale(1.035);
+
+    filter:
+        brightness(1.05)
+        saturate(1.04);
+
+    box-shadow:
+        0 10px 25px rgba(20, 70, 110, 0.14);
+}
+
+
+/* ---------- ICON POLISH ---------- */
+
+.engineering-icon {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef7fd,
+            #dceefa
+        );
+
+    border:
+        1px solid #c7dfef;
+
+    box-shadow:
+        0 6px 18px rgba(30, 90, 135, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.engineering-card:hover
+.engineering-icon {
+    transform:
+        translateY(-4px)
+        scale(1.07);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f4fd,
+            #cfe8f8
+        );
+
+    box-shadow:
+        0 10px 25px rgba(30, 90, 135, 0.16);
+}
+
+
+/* ---------- ICON SHINE ---------- */
+
+.engineering-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 18px;
+
+    top: -10px;
+    left: -35px;
+
+    background:
+        rgba(255,255,255,0.45);
+
+    transform:
+        rotate(-35deg);
+
+    opacity: 0;
+
+    transition:
+        left 0.55s ease,
+        opacity 0.3s ease;
+}
+
+.engineering-card:hover
+.engineering-icon::after {
+    left: 70px;
+
+    opacity: 1;
+}
+
+
+/* ---------- CARD TITLE ---------- */
+
+.engineering-card h3 {
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.engineering-card:hover h3 {
+    color: #1268a5;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.engineering-card p {
+    transition:
+        color 0.25s ease;
+}
+
+.engineering-card:hover p {
+    color: #536b80;
+}
+
+
+/* ---------- TOPIC TAGS ---------- */
+
+.engineering-topics span {
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.engineering-card:hover
+.engineering-topics span {
+    border-color: #c4ddec;
+}
+
+.engineering-topics span:hover {
+    background: #e5f2fb;
+
+    border-color: #a9cce5;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 3px 8px rgba(30, 90, 135, 0.08);
+}
+
+
+/* ---------- EXPLORE LINK ---------- */
+
+.category-link {
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.category-link:hover {
+    transform:
+        translateX(6px);
+
+    color: #0b5b96;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .engineering-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .engineering-card-image {
+        transform: none;
+    }
+
+    .engineering-card:hover
+    .engineering-card-image {
+        transform: none;
+    }
+
+}
+    /* =========================================================
+   PREMIUM ENGINEERING STATISTICS - PHASE 7
+   ========================================================= */
+
+.engineering-stats {
+    position: relative;
+    overflow: hidden;
+
+    padding: 32px 20px;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(80,170,235,0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(0,190,255,0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #0c3155 0%,
+            #123f68 50%,
+            #0b2d4d 100%
+        );
+
+    border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 10px 30px rgba(10,45,75,0.12);
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.engineering-stats-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 0;
+}
+
+
+/* ---------- METRIC ITEM ---------- */
+
+.engineering-stats .stat-item {
+    position: relative;
+
+    padding: 10px 24px;
+
+    border-right:
+        1px solid rgba(255,255,255,0.16);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ---------- REMOVE LAST BORDER ---------- */
+
+.engineering-stats .stat-item:last-child {
+    border-right: none;
+}
+
+
+/* ---------- ICON ---------- */
+
+.engineering-stats .stat-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 7px;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    font-size: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ---------- NUMBER ---------- */
+
+.engineering-stats .stat-number {
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 850;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,0.18);
+}
+
+
+/* ---------- LABEL ---------- */
+
+.engineering-stats .stat-label {
+    margin-top: 6px;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.35px;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.engineering-stats .stat-item:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.035);
+}
+
+.engineering-stats .stat-item:hover
+.stat-icon {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    background:
+        rgba(255,255,255,0.14);
+}
+
+
+/* ---------- SUBTLE TOP LINE ---------- */
+
+.engineering-stats::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 180px;
+    height: 2px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(100,210,255,0.75),
+            transparent
+        );
+
+    opacity: 0.7;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .engineering-stats {
+        padding: 28px 15px;
+    }
+
+    .engineering-stats-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px 0;
+    }
+
+    .engineering-stats .stat-item {
+        padding: 10px 15px;
+    }
+
+    .engineering-stats
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .engineering-stats
+    .stat-item:nth-child(3) {
+        border-right:
+            1px solid rgba(255,255,255,0.16);
+    }
+
+    .engineering-stats .stat-number {
+        font-size: 27px;
+    }
+
+}
+
     </style>
 
 </head>
