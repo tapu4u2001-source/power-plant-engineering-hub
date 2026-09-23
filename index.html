@@ -10112,7 +10112,1075 @@ section[id] {
 .lesson-topic {
     scroll-margin-top: 110px;
 }
-    
+
+   /* ========================================= */
+/* PHASE 20 — PREMIUM ENGINEERING TOOLBOX    */
+/* ========================================= */
+
+.engineering-toolbox {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px 85px;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(30,130,220,0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0,180,255,0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #f7fbfe 0%,
+            #edf5fb 100%
+        );
+}
+
+.engineering-toolbox::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.32;
+
+    background-image:
+        linear-gradient(
+            rgba(30,100,160,0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(30,100,160,0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+}
+
+
+.toolbox-container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+.toolbox-header {
+    text-align: center;
+    max-width: 780px;
+
+    margin: 0 auto 42px;
+}
+
+
+.toolbox-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 16px;
+
+    margin-bottom: 14px;
+
+    border: 1px solid #c9dfef;
+
+    border-radius: 999px;
+
+    background: #edf7fc;
+
+    color: #0879d1;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    box-shadow:
+        0 5px 16px rgba(30,80,120,0.07);
+}
+
+
+.toolbox-header h2 {
+    margin: 0 0 12px;
+
+    color: #173f68;
+
+    font-size:
+        clamp(30px, 4vw, 40px);
+
+    font-weight: 850;
+
+    letter-spacing: -0.6px;
+
+    line-height: 1.15;
+}
+
+
+.toolbox-header p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #64788b;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================= */
+/* TOOLBOX GRID                              */
+/* ========================================= */
+
+.toolbox-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ========================================= */
+/* TOOLBOX CARD                              */
+/* ========================================= */
+
+.toolbox-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 285px;
+
+    padding: 26px 23px;
+
+    border:
+        1px solid #d8e4ef;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8fbfe 100%
+        );
+
+    box-shadow:
+        0 8px 25px rgba(20,60,100,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* TOP ACCENT */
+
+.toolbox-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1769aa,
+            #36a9e1
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.toolbox-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color: #9fc5e2;
+
+    box-shadow:
+        0 18px 40px rgba(20,65,105,0.14);
+}
+
+
+.toolbox-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ========================================= */
+/* TOOLBOX ICON                              */
+/* ========================================= */
+
+.toolbox-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border:
+        1px solid #c9dfef;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f3fc,
+            #d9edf9
+        );
+
+    font-size: 26px;
+
+    box-shadow:
+        0 6px 16px rgba(30,90,135,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.toolbox-card:hover .toolbox-icon {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 9px 22px rgba(30,90,135,0.15);
+}
+
+
+/* ========================================= */
+/* TOOLBOX TITLE                             */
+/* ========================================= */
+
+.toolbox-card h3 {
+    margin: 0 0 10px;
+
+    color: #173f68;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.toolbox-card:hover h3 {
+    color: #1268a5;
+}
+
+
+/* ========================================= */
+/* TOOLBOX DESCRIPTION                       */
+/* ========================================= */
+
+.toolbox-card p {
+    margin: 0 0 18px;
+
+    color: #64788b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    flex-grow: 1;
+}
+
+
+/* ========================================= */
+/* TOOLBOX LINKS                             */
+/* ========================================= */
+
+.toolbox-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: auto;
+}
+
+
+.toolbox-links a {
+    display: flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 5px 0;
+
+    color: #1976d2;
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.toolbox-links a:hover {
+    color: #0b5b96;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* ========================================= */
+/* TABLET                                    */
+/* ========================================= */
+
+@media (max-width: 1000px) {
+
+    .toolbox-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================= */
+/* MOBILE                                    */
+/* ========================================= */
+
+@media (max-width: 600px) {
+
+    .engineering-toolbox {
+        padding: 60px 18px 65px;
+    }
+
+    .toolbox-header h2 {
+        font-size: 28px;
+    }
+
+    .toolbox-header p {
+        font-size: 14px;
+    }
+
+    .toolbox-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .toolbox-card {
+        min-height: 0;
+        padding: 23px 20px;
+    }
+
+} 
+    /* ========================================= */
+/* PHASE 21A — PROFESSIONAL CALCULATOR GRID */
+/* ========================================= */
+
+#calculators + .container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================= */
+/* CALCULATOR CARDS                          */
+/* ========================================= */
+
+#calculators + .container .card[id^="calc-"] {
+    margin-bottom: 0;
+}
+
+
+/* ========================================= */
+/* CABLE REFERENCE — FULL WIDTH              */
+/* ========================================= */
+
+#calculators + .container .card#cable-reference {
+    grid-column: 1 / -1;
+
+    margin-bottom: 0;
+}
+
+
+/* ========================================= */
+/* MOBILE                                    */
+/* ========================================= */
+
+@media (max-width: 850px) {
+
+    #calculators + .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #calculators + .container .card#cable-reference {
+        grid-column: auto;
+    }
+
+}
+    /* ========================================= */
+/* PHASE 21B — CALCULATOR CARD POLISH       */
+/* ========================================= */
+
+
+/* ========================================= */
+/* CALCULATOR CARD HEADER                    */
+/* ========================================= */
+
+.container .card[id^="calc-"] h2,
+.container .card#cable-reference h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 34px;
+}
+
+
+/* ========================================= */
+/* INPUT GROUP VISUAL SEPARATION             */
+/* ========================================= */
+
+.container .card[id^="calc-"] label {
+
+    position: relative;
+
+    padding-left: 3px;
+}
+
+
+/* ========================================= */
+/* INPUT HOVER                               */
+/* ========================================= */
+
+.container .card[id^="calc-"] input:hover,
+.container .card[id^="calc-"] select:hover,
+.container .card#cable-reference input:hover,
+.container .card#cable-reference select:hover {
+
+    border-color: #9fc9e3;
+
+    background: #ffffff;
+}
+
+
+/* ========================================= */
+/* RESULT AREA — STRONGER VISUAL HIERARCHY  */
+/* ========================================= */
+
+.container .card[id^="calc-"] .result {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 24px;
+
+    border-left: 4px solid #3da6df;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff 0%,
+            #f8fcff 100%
+        );
+
+    font-weight: 650;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* RESULT TOP GLOW */
+
+.container .card[id^="calc-"] .result::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2479b8,
+            #63c8ed
+        );
+
+    opacity: 0.7;
+}
+
+
+/* ========================================= */
+/* NORMAL RESULT                             */
+/* ========================================= */
+
+.container .card[id^="calc-"] .result.normal {
+
+    border-left-color: #35a66f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #effaf5,
+            #f8fdfb
+        );
+}
+
+
+/* ========================================= */
+/* HIGH RESULT                               */
+/* ========================================= */
+
+.container .card[id^="calc-"] .result.high {
+
+    border-left-color: #e0a52f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9e9,
+            #fffdf7
+        );
+}
+
+
+/* ========================================= */
+/* OVERLOAD / WARNING RESULT                 */
+/* ========================================= */
+
+.container .card[id^="calc-"] .result.overload,
+.container .card[id^="calc-"] .result.warning {
+
+    border-left-color: #d95c5c;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff2f2,
+            #fffafa
+        );
+}
+
+
+/* ========================================= */
+/* CALCULATOR INFO TEXT                      */
+/* ========================================= */
+
+.container .card[id^="calc-"] .info {
+
+    margin-top: 18px;
+
+    padding-top: 14px;
+
+    border-top:
+        1px solid #e0ebf3;
+
+    color: #71859a;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================= */
+/* BUTTON PRESS EFFECT                       */
+/* ========================================= */
+
+.container .card[id^="calc-"] button:active {
+
+    transform:
+        translateY(1px);
+
+    box-shadow:
+        0 4px 10px rgba(25,118,210,0.16);
+}
+
+
+/* ========================================= */
+/* CALCULATOR CARD MOBILE                    */
+/* ========================================= */
+
+@media (max-width: 700px) {
+
+    .container .card[id^="calc-"] h2 {
+
+        align-items: flex-start;
+
+        font-size: 21px;
+    }
+
+    .container .card[id^="calc-"] .result {
+
+        padding:
+            16px 17px;
+    }
+
+}
+    /* ========================================= */
+/* PHASE 21C — CALCULATOR DASHBOARD         */
+/* ========================================= */
+
+.calculator-dashboard {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+
+    max-width: 1100px;
+
+    margin: 28px auto 38px;
+
+    padding: 16px;
+
+    border:
+        1px solid #d5e5ef;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.96),
+            rgba(242,249,253,0.96)
+        );
+
+    box-shadow:
+        0 8px 24px rgba(25,70,105,0.07);
+}
+
+
+/* ========================================= */
+/* DASHBOARD ITEM                            */
+/* ========================================= */
+
+.dashboard-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 62px;
+
+    padding:
+        10px 13px;
+
+    border:
+        1px solid #e0ebf3;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.dashboard-item:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #afd0e5;
+
+    box-shadow:
+        0 8px 20px rgba(25,75,115,0.10);
+}
+
+
+/* ========================================= */
+/* DASHBOARD ICON                            */
+/* ========================================= */
+
+.dashboard-icon {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid #c9dfef;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5fc,
+            #dceefa
+        );
+
+    font-size: 19px;
+
+    box-shadow:
+        0 4px 12px rgba(30,90,135,0.07);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.dashboard-item:hover .dashboard-icon {
+
+    transform:
+        scale(1.06);
+}
+
+
+/* ========================================= */
+/* DASHBOARD NUMBER                          */
+/* ========================================= */
+
+.dashboard-number {
+
+    color:
+        #1769a6;
+
+    font-size:
+        20px;
+
+    font-weight:
+        850;
+
+    line-height:
+        1;
+}
+
+
+/* ========================================= */
+/* DASHBOARD LABEL                           */
+/* ========================================= */
+
+.dashboard-label {
+
+    margin-top:
+        4px;
+
+    color:
+        #667c90;
+
+    font-size:
+        10px;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.25;
+}
+
+
+/* ========================================= */
+/* TABLET                                    */
+/* ========================================= */
+
+@media (max-width: 1000px) {
+
+    .calculator-dashboard {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* ========================================= */
+/* MOBILE                                    */
+/* ========================================= */
+
+@media (max-width: 650px) {
+
+    .calculator-dashboard {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+        margin:
+            22px auto 30px;
+
+        padding:
+            12px;
+    }
+
+
+    .dashboard-item {
+
+        min-height:
+            58px;
+
+        padding:
+            9px 10px;
+    }
+
+
+    .dashboard-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        font-size:
+            17px;
+    }
+
+
+    .dashboard-number {
+
+        font-size:
+            18px;
+    }
+
+
+    .dashboard-label {
+
+        font-size:
+            9px;
+    }
+
+}
+    /* ========================================= */
+/* PHASE 21D — CALCULATOR CATEGORY BADGES   */
+/* ========================================= */
+
+
+/* ---------- COMMON BADGE ---------- */
+
+.container .card[id^="calc-"]::after,
+.container .card#cable-reference::after {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 22px;
+
+    padding:
+        4px 9px;
+
+    border:
+        1px solid #d1e4ef;
+
+    border-radius: 999px;
+
+    background:
+        #eef7fc;
+
+    color:
+        #4c7898;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.7px;
+
+    line-height:
+        1;
+
+    box-sizing:
+        border-box;
+
+    pointer-events:
+        none;
+
+    z-index:
+        4;
+}
+
+
+/* ========================================= */
+/* INDIVIDUAL CATEGORIES                     */
+/* ========================================= */
+
+#calc-mva::after {
+    content: "⚡ POWER";
+}
+
+#calc-transformer::after {
+    content: "🔌 EQUIPMENT";
+}
+
+#calc-motor::after {
+    content: "⚙️ EQUIPMENT";
+}
+
+#calc-mvar::after {
+    content: "📊 GENERATOR";
+}
+
+#calc-pf::after {
+    content: "📐 POWER FACTOR";
+}
+
+#calc-voltage-drop::after {
+    content: "📏 CABLE DESIGN";
+}
+
+#cable-reference::after {
+    content: "📋 REFERENCE";
+}
+
+
+/* ========================================= */
+/* BADGE HOVER                              */
+/* ========================================= */
+
+.container .card[id^="calc-"]:hover::after,
+.container .card#cable-reference:hover::after {
+
+    border-color:
+        #afd3e9;
+
+    background:
+        #e5f4fc;
+
+    color:
+        #1769a6;
+}
+
+
+/* ========================================= */
+/* MOBILE                                   */
+/* ========================================= */
+
+@media (max-width: 700px) {
+
+    .container .card[id^="calc-"]::after,
+    .container .card#cable-reference::after {
+
+        top:
+            14px;
+
+        right:
+            15px;
+
+        font-size:
+            8px;
+
+        padding:
+            4px 7px;
+    }
+
+}
+    /* =========================================================
+   PHASE 22B — MOBILE / TABLET OVERFLOW FIX
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Learning sections */
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+        min-width: 0;
+    }
+
+    /* Calculator category cards */
+    .calculator-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Prevent cards from forcing page width */
+    .card {
+        min-width: 0;
+    }
+
+}
     </style>
 
 </head>
@@ -10159,6 +11227,7 @@ section[id] {
             <a href="#turbine">🌀 Turbine</a>
             <a href="#maintenance">🧰 Maintenance</a>
             <a href="#calculators">📐 Calculators</a>
+            <a href="#toolbox">🧰 Toolbox</a>
             <a href="#learning">📚 Learning</a>
             <a href="#reference">📋 Reference</a>
             <a href="#about">ℹ️ About</a>
@@ -24004,7 +25073,7 @@ section[id] {
                 fluidization, fuel feeding and operating principles.
             </p>
 
-            <a href="#">
+            <a href="#boiler-combustion">
                 Learn AFBC / CFBC →
             </a>
 
@@ -24028,7 +25097,7 @@ section[id] {
                 excess air, oxygen level and combustion efficiency.
             </p>
 
-            <a href="#">
+            <a href="#boiler-combustion">
                 Learn Combustion →
             </a>
 
@@ -24052,7 +25121,7 @@ section[id] {
                 air balance and common draft-related problems.
             </p>
 
-            <a href="#">
+            <a href="#boiler-draft">
                 Learn Furnace Draft →
             </a>
 
@@ -24076,7 +25145,7 @@ section[id] {
                 electrodes, rappers, transformers, controls and troubleshooting.
             </p>
 
-            <a href="#">
+            <a href="#boiler-troubleshooting">
                 Learn ESP →
             </a>
 
@@ -24100,7 +25169,7 @@ section[id] {
                 airflow, pressure, current and common fan problems.
             </p>
 
-            <a href="#">
+            <a href="#boiler-fans">
                 Learn Fans →
             </a>
 
@@ -24124,7 +25193,7 @@ section[id] {
                 feeder operation, interlocks and common problems.
             </p>
 
-            <a href="#">
+            <a href="#boiler-feeders">
                 Learn Feeders →
             </a>
 
@@ -24148,7 +25217,7 @@ section[id] {
                 high furnace pressure, combustion problems and boiler trips.
             </p>
 
-            <a href="#">
+            <a href="#boiler-troubleshooting">
                 Troubleshoot Boiler →
             </a>
 
@@ -27734,6 +28803,300 @@ section[id] {
 </section> 
 
 </section>
+ <!-- ========================================= -->
+<!-- PHASE 20 — ENGINEERING TOOLBOX -->
+<!-- ========================================= -->
+
+<section class="engineering-toolbox" id="toolbox">
+
+    <div class="toolbox-container">
+
+        <div class="toolbox-header">
+
+            <div class="toolbox-badge">
+                🧰 ENGINEERING TOOLBOX
+            </div>
+
+            <h2>
+                Power Plant Engineering Toolbox
+            </h2>
+
+            <p>
+                Quick access to practical calculators, equipment
+                knowledge and plant engineering resources.
+            </p>
+
+        </div>
+
+
+        <div class="toolbox-grid">
+
+
+            <!-- ELECTRICAL POWER -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrical Power
+                </h3>
+
+                <p>
+                    Quickly calculate MW, MVA, MVAR and
+                    power factor for generator and plant systems.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#calc-mva">
+                        MW / MVA →
+                    </a>
+
+                    <a href="#calc-mvar">
+                        Generator MVAR →
+                    </a>
+
+                    <a href="#calc-pf">
+                        Power Factor →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ELECTRICAL EQUIPMENT -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    🔌
+                </div>
+
+                <h3>
+                    Electrical Equipment
+                </h3>
+
+                <p>
+                    Practical calculations for transformers,
+                    motors and major electrical equipment.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#calc-transformer">
+                        Transformer Loading →
+                    </a>
+
+                    <a href="#calc-motor">
+                        Motor Current →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CABLE DESIGN -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    📏
+                </div>
+
+                <h3>
+                    Cable & Design
+                </h3>
+
+                <p>
+                    Check voltage drop, cable arrangements
+                    and reference cable data.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#calc-voltage-drop">
+                        Voltage Drop →
+                    </a>
+
+                    <a href="#cable-reference">
+                        Cable Reference →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GENERATOR -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    Generator Engineering
+                </h3>
+
+                <p>
+                    Study generator construction, ratings,
+                    synchronization and excitation systems.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#generator-studies">
+                        Generator Studies →
+                    </a>
+
+                    <a href="#electrical">
+                        Electrical Engineering →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOILER -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    🔥
+                </div>
+
+                <h3>
+                    Boiler Engineering
+                </h3>
+
+                <p>
+                    Explore combustion, furnace draft, ESP,
+                    fans, feeders and boiler troubleshooting.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#boiler">
+                        Boiler Studies →
+                    </a>
+
+                    <a href="#boiler-troubleshooting">
+                        Troubleshooting →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- TURBINE -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    🌀
+                </div>
+
+                <h3>
+                    Turbine Engineering
+                </h3>
+
+                <p>
+                    Learn turbine operation, governing,
+                    valves, steam cycle and practical parameters.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#turbine">
+                        Turbine Studies →
+                    </a>
+
+                    <a href="#turbine-governing">
+                        Governing →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAINTENANCE -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Maintenance & Testing
+                </h3>
+
+                <p>
+                    Practical troubleshooting and maintenance
+                    knowledge for plant equipment.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#maintenance">
+                        Maintenance →
+                    </a>
+
+                    <a href="#calculators">
+                        Engineering Tools →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- REFERENCE -->
+
+            <div class="toolbox-card">
+
+                <div class="toolbox-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Engineering Reference
+                </h3>
+
+                <p>
+                    Quickly access generator, protection,
+                    transformer, cable, boiler and turbine references.
+                </p>
+
+                <div class="toolbox-links">
+
+                    <a href="#reference">
+                        Reference Hub →
+                    </a>
+
+                    <a href="#learning">
+                        Learning Center →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 <!-- ========================================= -->
 <!-- ENGINEERING CALCULATORS HUB -->
 <!-- ========================================= -->
@@ -27741,8 +29104,7 @@ section[id] {
 <section class="calculator-hub" id="calculators">
 
     <div class="calculator-hub-header">
-        <div class="calculator-hub-header">
-
+    
     <img
         src="images/calculators.png"
         alt="Power plant engineering calculators"
@@ -27851,6 +29213,117 @@ section[id] {
 
 
     </div>
+    <!-- ========================================= -->
+<!-- PHASE 21C — CALCULATOR DASHBOARD SUMMARY -->
+<!-- ========================================= -->
+
+<div class="calculator-dashboard">
+
+    <div class="dashboard-item">
+
+        <div class="dashboard-icon">
+            📐
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="dashboard-number">
+                7
+            </div>
+
+            <div class="dashboard-label">
+                Engineering Tools
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <div class="dashboard-icon">
+            ⚡
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="dashboard-number">
+                3
+            </div>
+
+            <div class="dashboard-label">
+                Electrical Power
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <div class="dashboard-icon">
+            🔌
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="dashboard-number">
+                2
+            </div>
+
+            <div class="dashboard-label">
+                Equipment Tools
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <div class="dashboard-icon">
+            📏
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="dashboard-number">
+                2
+            </div>
+
+            <div class="dashboard-label">
+                Cable & Design
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-item">
+
+        <div class="dashboard-icon">
+            📋
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="dashboard-number">
+                1
+            </div>
+
+            <div class="dashboard-label">
+                Cable Reference
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -28283,6 +29756,8 @@ section[id] {
 
     <div id="voltageDropResult" class="result">
         Select cable details.
+    </div>
+
     </div>
 
 <!-- ========================================= -->
