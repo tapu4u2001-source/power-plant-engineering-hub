@@ -11181,6 +11181,23 @@ section[id] {
     }
 
 }
+    /* =========================================================
+   PHASE 23B-3 — DEFER BELOW-FOLD RENDERING
+   Helps reduce initial Style & Layout work on long pages
+   ========================================================= */
+
+#electrical,
+#boiler,
+#turbine,
+#maintenance,
+#toolbox,
+#calculators,
+#learning,
+#reference,
+#about {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+}
     </style>
 
 </head>
