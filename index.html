@@ -10733,7 +10733,7 @@ section[id] {
     border-top:
         1px solid #e0ebf3;
 
-    color: #71859a;
+    color: #4f6678;
 
     font-size: 12px;
 
@@ -11254,7 +11254,8 @@ section[id] {
     </div>
 
 </header>
-  <!-- ========================================= -->
+<main>
+ !-- ======================================== -->
 <!-- HERO SECTION -->
 <!-- ========================================= -->
 
@@ -29721,7 +29722,7 @@ section[id] {
     manufacturer reference data is available.
 </p>
 
-    <label>Voltage Level</label>
+    <label for="voltageLevel">Voltage Level</label>
     <select id="voltageLevel" onchange="updateCableSizes()">
         <option value="415">415 V</option>
         <option value="690">690 V</option>
@@ -29731,12 +29732,12 @@ section[id] {
         <option value="22000">22 kV</option>
     </select>
 
-    <label>Cable Material</label>
+    <label for="cableMaterial">Cable Material</label>
     <select id="cableMaterial" onchange="updateCableSizes()">
         <option value="Cu">Copper</option>
         <option value="Al">Aluminium</option>
     </select>
-  <label>Cable Construction</label>
+ <label for="cableConstruction">Cable Construction</label>
 
 <select id="cableConstruction" onchange="updateCableSizes()">
 
@@ -29747,25 +29748,23 @@ section[id] {
 
 </select>  
 
-    <label>Cable Size</label>
+   <label for="cableSize">Cable Size</label>
     <select id="cableSize" onchange="updateCableData()">
         <option value="">Select Cable Size</option>
     </select>
 
-    <label>Load Current (A)</label>
-    <input type="number" id="vdCurrent" placeholder="Example: 600">
-
-    <label>Cable Length (m)</label>
+   <label for="vdCurrent">Load Current (A)</label>
+   <input type="number" id="vdCurrent" placeholder="Example: 600">
+    <label for="vdLength">Cable Length (m)</label>
     <input type="number" id="vdLength" placeholder="Example: 100">
+    <label for="vdPF">Power Factor</label>
+<input type="number" id="vdPF" step="0.01" placeholder="Example: 0.8">
 
-    <label>Power Factor</label>
-    <input type="number" id="vdPF" step="0.01" placeholder="Example: 0.8">
+   <label for="vdResistance">Resistance (Ω/km)</label>
+<input type="number" id="vdResistance" step="0.0001">
 
-    <label>Resistance (Ω/km)</label>
-    <input type="number" id="vdResistance" step="0.0001">
-
-    <label>Reactance (Ω/km)</label>
-    <input type="number" id="vdReactance" step="0.0001">
+<label for="vdReactance">Reactance (Ω/km)</label>
+<input type="number" id="vdReactance" step="0.0001">
 
     <button onclick="calculateVoltageDrop()">
         Calculate Voltage Drop
@@ -29796,7 +29795,7 @@ section[id] {
 
     <div class="reference-filters">
 
-        <label>Voltage</label>
+        <label for="referenceVoltage">Voltage</label>
         <select id="referenceVoltage" onchange="updateReferenceTable()">
             <option value="ALL">All Voltage Levels</option>
             <option value="LV">415 / 690 V</option>
@@ -29804,14 +29803,14 @@ section[id] {
             <option value="MV_22">22 kV Class</option>
         </select>
 
-        <label>Material</label>
+        <label for="referenceMaterial">Material</label>
         <select id="referenceMaterial" onchange="updateReferenceTable()">
             <option value="ALL">All Materials</option>
             <option value="Cu">Copper</option>
             <option value="Al">Aluminium</option>
         </select>
 
-        <label>Construction</label>
+        <label for="referenceConstruction">Construction</label>
         <select id="referenceConstruction" onchange="updateReferenceTable()">
             <option value="ALL">All Constructions</option>
             <option value="1C">1 Core</option>
@@ -30238,6 +30237,7 @@ section[id] {
     </div>
 
 </section>
+</main>>
 
 
 <!-- ========================================= -->
