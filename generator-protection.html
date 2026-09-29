@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generator Protection Masterclass | Power Plant Engineering Hub</title>
+
+<meta name="description"
+      content="Detailed Generator Protection Masterclass covering 87G, 64G, 64F, 46, 40, 32, 24, 27/59, 81, 50/51, 86 lockout, CT/PT failure and practical generator trip analysis.">
+
+<link rel="canonical"
+      href="https://tapu4u2001-source.github.io/power-plant-engineering-hub/generator-protection.html">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#18212f;line-height:1.65}
+a{color:inherit}
+.header{position:sticky;top:0;z-index:1000;background:#071a2b;color:white;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.header-inner{max-width:1200px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-weight:800;text-decoration:none}
+.home{padding:9px 14px;border:1px solid #5ca8d8;border-radius:8px;text-decoration:none;font-weight:700}
+.hero{background:linear-gradient(135deg,#0b2740,#12638a);color:white;padding:58px 20px}
+.hero-inner{max-width:1200px;margin:auto}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:#f0c75e;color:#15202b;font-weight:800;font-size:13px}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.12;margin:18px 0}
+.hero p{max-width:900px;font-size:18px;margin:0}
+.container{max-width:1200px;margin:28px auto;padding:0 20px}
+.roadmap,.topic,.note,.warning{background:white;border:1px solid #dbe4ee;border-radius:12px;box-shadow:0 4px 14px rgba(20,45,70,.06)}
+.roadmap{padding:24px;margin-bottom:24px}
+.roadmap h2{margin-top:0}
+.roadmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.roadmap-grid a{padding:11px;border-radius:8px;background:#edf5fb;text-decoration:none;font-weight:700;font-size:14px}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:22px;align-items:start}
+.menu{position:sticky;top:82px;background:#fff;border:1px solid #dbe4ee;border-radius:12px;padding:12px;box-shadow:0 4px 14px rgba(20,45,70,.06)}
+.menu h3{margin:8px 10px 12px;font-size:16px}
+.menu a{display:block;text-decoration:none;padding:9px 10px;border-radius:7px;font-size:14px}
+.menu a:hover{background:#e9f3fb}
+.topic{padding:28px;margin-bottom:22px}
+.topic h2{margin-top:0;color:#0a4f7c}
+.topic h3{color:#153f5b;margin-bottom:8px}
+.topic h4{margin-bottom:5px;color:#1a587e}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.card{background:#f7fafc;border-left:4px solid #3d8bb8;padding:15px;border-radius:8px}
+.formula{background:#0c2235;color:#fff;border-radius:8px;padding:15px;margin:15px 0;font-family:Consolas,monospace;overflow:auto}
+.note{padding:15px 18px;margin:15px 0;background:#f4fbff}
+.warning{padding:15px 18px;margin:15px 0;background:#fff8e7;border-color:#e8cc82}
+ul{margin-top:6px}
+table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff}
+th,td{border:1px solid #d7e0e8;padding:9px;text-align:left;vertical-align:top}
+th{background:#edf4f8}
+.footer{text-align:center;padding:35px 20px;color:#5d6874}
+.small{font-size:13px;color:#5d6874}
+@media(max-width:850px){
+  .layout{grid-template-columns:1fr}
+  .menu{position:static}
+  .roadmap-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .roadmap-grid,.grid{grid-template-columns:1fr}
+  .topic{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">⚡ Power Plant Engineering Hub</a>
+    <a class="home" href="index.html">← Back to Home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">🛡️ GENERATOR PROTECTION MASTERCLASS</span>
+    <h1>Generator Protection — Practical & Detailed Guide</h1>
+    <p>
+      Learn not only the ANSI protection number, but also what the protection
+      watches, how the relay detects the abnormal condition, what can cause
+      operation, what normally happens in the trip circuit, and how an
+      engineer can investigate the event safely.
+    </p>
+  </div>
+</section>
+
+<main class="container">
+
+<section class="roadmap">
+  <h2>📚 Masterclass Roadmap</h2>
+  <div class="roadmap-grid">
+    <a href="#g87">1. 87G Differential</a>
+    <a href="#g64g">2. 64G Stator Earth Fault</a>
+    <a href="#g64f">3. 64F Rotor Earth Fault</a>
+    <a href="#g46">4. 46 Negative Sequence</a>
+    <a href="#g40">5. 40 Loss of Excitation</a>
+    <a href="#g32">6. 32 Reverse Power</a>
+    <a href="#g24">7. 24 Overfluxing</a>
+    <a href="#g2759">8. 27 / 59 Voltage</a>
+    <a href="#g81">9. 81 Frequency</a>
+    <a href="#g5051">10. 50 / 51 Overcurrent</a>
+    <a href="#g86">11. 86 Lockout & Trip Matrix</a>
+    <a href="#gctpt">12. CT / PT Failure</a>
+    <a href="#ganalysis">13. Practical Trip Analysis</a>
+    <a href="#interactive-zone">14. Protection Zone</a>
+    <a href="#trip-decision">15. Decision Tree</a>
+    <a href="#trip-worksheet">16. Trip Worksheet</a>
+    <a href="#case-studies">17. Case Studies</a>
+    <a href="#relay-record-reading">18. Relay Event Record</a>
+  </div>
+</section>
+
+<div class="layout">
+
+<nav class="menu">
+  <h3>GENERATOR PROTECTION</h3>
+  <a href="#g87">87G — Differential</a>
+  <a href="#g64g">64G — Stator Earth Fault</a>
+  <a href="#g64f">64F — Rotor Earth Fault</a>
+  <a href="#g46">46 — Negative Sequence</a>
+  <a href="#g40">40 — Loss of Excitation</a>
+  <a href="#g32">32 — Reverse Power</a>
+  <a href="#g24">24 — Overfluxing / V/Hz</a>
+  <a href="#g2759">27 / 59 — Voltage</a>
+  <a href="#g81">81 — Frequency</a>
+  <a href="#g5051">50 / 51 — Overcurrent</a>
+  <a href="#g86">Trip Matrix & 86</a>
+  <a href="#gctpt">CT / PT Failure</a>
+  <a href="#ganalysis">Practical Trip Analysis</a>
+  <a href="#interactive-zone">Protection Zone</a>
+  <a href="#trip-decision">Decision Tree</a>
+  <a href="#trip-worksheet">Trip Worksheet</a>
+  <a href="#case-studies">Case Studies</a>
+  <a href="#relay-record-reading">Relay Event Record</a>
+</nav>
+
+<div>
+
+<section class="topic" id="g87">
+<h2>1. 87G — Generator Differential Protection</h2>
+
+<p>
+87G is the principal high-speed protection for many internal stator faults.
+It compares the currents measured at the two boundaries of the protected
+generator zone. For a healthy condition or an external fault, the currents
+should balance after allowing for CT ratio, phase shift and relay
+compensation. For a fault inside the zone, a differential current develops.
+</p>
+
+<div class="formula">
+Differential current: Idiff ≈ |I1 − I2|<br>
+A common restraint quantity: Irest ≈ (|I1| + |I2|) / 2
+</div>
+
+<div class="grid">
+<div class="card"><h4>What does it protect?</h4>
+<p>Primarily the generator stator winding and the electrical equipment inside
+the defined differential zone between the associated CT locations.</p></div>
+
+<div class="card"><h4>Typical internal faults</h4>
+<ul>
+<li>Phase-to-phase fault</li>
+<li>Phase-to-earth fault inside the zone</li>
+<li>Inter-turn faults, where the protection scheme can detect them</li>
+<li>Winding insulation failure</li>
+</ul></div>
+
+<div class="card"><h4>Why restraint is important</h4>
+<p>Large through-fault currents can produce CT errors. Modern differential
+relays therefore use restraint/bias characteristics so that an external fault
+does not unnecessarily operate the relay.</p></div>
+
+<div class="card"><h4>Engineer checks after operation</h4>
+<ul>
+<li>Relay event record and oscillography</li>
+<li>Phase currents and differential/restraint quantities</li>
+<li>CT secondary circuits and polarity</li>
+<li>Trip target / lockout indication</li>
+<li>Generator insulation and fault investigation as required</li>
+</ul></div>
+</div>
+
+<div class="note"><b>Practical idea:</b> Think of 87G as a “zone boundary guard”.
+It asks: <b>“Is the current entering this zone equal to the current leaving
+it?”</b> A significant unexplained mismatch can indicate an internal fault or
+a measurement/protection problem.</div>
+
+<div class="warning"><b>Important:</b> Differential pickup, bias slopes and
+trip logic are application-specific. Do not use generic values as protection
+settings for a real generator.</div>
+</section>
+
+<section class="topic" id="g64g">
+<h2>2. 64G — Stator Earth Fault Protection</h2>
+
+<p>
+64G detects insulation failure between the generator stator winding and earth.
+The exact detection method depends strongly on the generator neutral grounding
+arrangement and the protection scheme.
+</p>
+
+<h3>Why an earth fault is dangerous</h3>
+<p>
+A stator earth fault can damage winding insulation, core laminations and other
+parts of the generator. The protection objective is to detect the fault and
+separate the generator before damage becomes more severe.
+</p>
+
+<div class="grid">
+<div class="card"><h4>Possible detection principles</h4>
+<ul>
+<li>Neutral voltage displacement / zero-sequence voltage</li>
+<li>Neutral current or residual current measurement</li>
+<li>Neutral fundamental-frequency voltage/current methods</li>
+<li>Third-harmonic based methods</li>
+<li>Combined methods for wider stator coverage</li>
+</ul></div>
+
+<div class="card"><h4>Why 100% coverage matters</h4>
+<p>Some earth-fault methods have reduced sensitivity near the generator neutral
+end. Additional schemes may therefore be used to increase coverage of the
+entire stator winding.</p></div>
+</div>
+
+<h3>Typical causes</h3>
+<ul>
+<li>Winding insulation deterioration</li>
+<li>Moisture or contamination</li>
+<li>Thermal ageing</li>
+<li>Mechanical damage or vibration-related insulation damage</li>
+<li>Foreign material or conductive contamination</li>
+</ul>
+
+<h3>After a 64G operation</h3>
+<p>
+Record the relay element that operated, neutral quantities, zero-sequence
+quantities if available, event waveform and trip sequence. The generator
+should not simply be re-energized because the visible fault indication has
+disappeared; the cause must be investigated according to the plant procedure.
+</p>
+</section>
+
+<section class="topic" id="g64f">
+<h2>3. 64F — Rotor Earth Fault Protection</h2>
+
+<p>
+64F protects the field/rotor circuit against insulation breakdown between the
+rotor field circuit and earth. A first rotor earth fault may not produce a
+large fault current because the field circuit can be electrically isolated
+from earth, but it reduces the insulation margin and a second earth fault can
+be much more serious.
+</p>
+
+<div class="grid">
+<div class="card"><h4>Basic principle</h4>
+<p>Rotor insulation monitoring detects an abnormal connection between the
+field circuit and earth. The actual method varies by excitation system and
+relay design.</p></div>
+
+<div class="card"><h4>Possible causes</h4>
+<ul>
+<li>Rotor winding insulation deterioration</li>
+<li>Moisture or contamination</li>
+<li>Brush/slip-ring contamination where applicable</li>
+<li>Mechanical movement or vibration damage</li>
+<li>Field lead insulation problems</li>
+</ul></div>
+</div>
+
+<h3>Why the second earth fault is a major concern</h3>
+<p>
+A second earth fault at another rotor location can effectively short part of
+the field winding or create abnormal mechanical/electromagnetic forces. The
+exact consequence depends on the rotor design and fault locations.
+</p>
+
+<h3>Practical investigation</h3>
+<ul>
+<li>Check relay insulation trend and event history.</li>
+<li>Check field circuit, slip rings/brushes where applicable.</li>
+<li>Follow the OEM-approved rotor insulation test procedure.</li>
+<li>Check whether the indication is continuous or intermittent.</li>
+<li>Do not bypass the protection merely to clear an alarm without an approved procedure.</li>
+</ul>
+</section>
+
+<section class="topic" id="g46">
+<h2>4. 46 — Negative Sequence Protection</h2>
+
+<p>
+46 protects the generator from excessive negative-sequence current caused by
+unbalanced three-phase conditions. Negative-sequence current produces a
+magnetic field that rotates opposite to the rotor and can induce heating in
+the rotor body and retaining components.
+</p>
+
+<div class="formula">
+Unbalance → Negative-sequence current I₂ → Rotor heating
+</div>
+
+<div class="grid">
+<div class="card"><h4>Typical causes</h4>
+<ul>
+<li>Unbalanced system voltage</li>
+<li>Unequal phase loading</li>
+<li>Open phase / conductor problem</li>
+<li>Unbalanced external fault</li>
+<li>Breaker or connection problems</li>
+</ul></div>
+
+<div class="card"><h4>Why it is often time dependent</h4>
+<p>Generator negative-sequence withstand is limited by heating. The relay can
+therefore use a current-dependent thermal characteristic rather than only a
+single instantaneous pickup.</p></div>
+</div>
+
+<h3>What to check</h3>
+<ul>
+<li>Ia, Ib, Ic and calculated I₂</li>
+<li>Phase voltage balance</li>
+<li>Generator terminal and bus conditions</li>
+<li>External feeder faults or phase imbalance</li>
+<li>Relay event record</li>
+</ul>
+
+<div class="warning"><b>Important:</b> The allowable negative-sequence level
+and time are machine-specific. Use the generator manufacturer's capability
+curve and the approved protection study for actual settings.</div>
+</section>
+
+<section class="topic" id="g40">
+<h2>5. 40 — Loss of Excitation Protection</h2>
+
+<p>
+Loss of excitation occurs when the synchronous generator loses all or part of
+its field excitation. The generator can move into an underexcited operating
+condition and may begin absorbing reactive power from the grid. Depending on
+system conditions, this can affect stability and cause heating in parts of the
+machine.
+</p>
+
+<h3>What can cause loss of excitation?</h3>
+<ul>
+<li>Exciter failure</li>
+<li>AVR malfunction or loss of control power</li>
+<li>Field circuit interruption</li>
+<li>Field breaker operation, where applicable</li>
+<li>Severe excitation-system faults</li>
+</ul>
+
+<h3>How is it commonly detected?</h3>
+<p>
+Many schemes use an impedance-based characteristic looking into the generator
+terminals. The relay interprets the apparent impedance trajectory and operating
+condition against a defined characteristic. Exact implementation varies by
+relay and generator application.
+</p>
+
+<div class="note"><b>Practical clue:</b> When investigating a 40 operation,
+look at field current, field voltage, terminal voltage, MW, MVAR, power factor,
+AVR status and the relay impedance trajectory together rather than looking at
+only one value.</div>
+</section>
+
+<section class="topic" id="g32">
+<h2>6. 32 — Reverse Power Protection</h2>
+
+<p>
+32 reverse-power protection protects the prime mover from motoring. If the
+turbine or engine stops supplying mechanical power while the generator remains
+connected to the electrical system, real power can reverse direction and the
+generator can draw power from the grid.
+</p>
+
+<div class="formula">
+Normal generator operation: Mechanical power → Generator → Grid<br>
+Motoring condition: Grid → Generator → Prime mover
+</div>
+
+<div class="grid">
+<div class="card"><h4>Typical causes</h4>
+<ul>
+<li>Loss of steam/prime-mover input</li>
+<li>Governor or control problem</li>
+<li>Fuel/steam valve closure</li>
+<li>Mechanical trip while generator breaker remains closed</li>
+</ul></div>
+
+<div class="card"><h4>Why time delay is normally used</h4>
+<p>Small transient or measurement effects can briefly produce low or slightly
+negative real power. Application-specific pickup and delay help distinguish a
+true motoring condition from a transient.</p></div>
+</div>
+
+<h3>Investigation</h3>
+<p>
+Compare MW, steam/fuel input, governor position, generator breaker status,
+reverse-power relay element, turbine trip signal and sequence-of-events
+timestamps.
+</p>
+</section>
+
+<section class="topic" id="g24">
+<h2>7. 24 — Overfluxing / V/Hz Protection</h2>
+
+<p>
+24 protects the generator and connected magnetic equipment against excessive
+magnetic flux. A useful relationship is that magnetic flux is approximately
+proportional to voltage divided by frequency.
+</p>
+
+<div class="formula">
+Flux ∝ V / f<br>
+Therefore: V/Hz ↑ → magnetic flux ↑
+</div>
+
+<p>
+Overfluxing can occur when voltage becomes too high, frequency becomes too
+low, or both occur together. Excessive flux can cause abnormal core heating
+and increased magnetizing current.
+</p>
+
+<h3>Typical causes</h3>
+<ul>
+<li>High generator voltage</li>
+<li>Low system frequency</li>
+<li>Incorrect AVR operation</li>
+<li>Improper voltage build-up during startup</li>
+<li>Control-system or measurement problems</li>
+</ul>
+
+<div class="note"><b>Remember:</b> A normal voltage reading by itself does not
+guarantee normal V/Hz. Frequency must be considered at the same time.</div>
+
+<div class="warning">V/Hz pickup levels and time delays must follow the generator
+and transformer manufacturer limits and the approved coordination study.</div>
+</section>
+
+<section class="topic" id="g2759">
+<h2>8. 27 / 59 — Under / Over Voltage Protection</h2>
+
+<p>
+ANSI 27 monitors for undervoltage and ANSI 59 monitors for overvoltage.
+Voltage protection can be applied for generator, bus, auxiliary or system
+protection depending on the measurement point and protection philosophy.
+</p>
+
+<div class="grid">
+<div class="card"><h4>27 — Undervoltage</h4>
+<ul>
+<li>Generator or bus voltage collapse</li>
+<li>Severe system fault</li>
+<li>Loss of excitation or abnormal operating condition</li>
+<li>PT measurement problems</li>
+</ul></div>
+
+<div class="card"><h4>59 — Overvoltage</h4>
+<ul>
+<li>AVR/control abnormality</li>
+<li>Sudden load rejection</li>
+<li>System voltage rise</li>
+<li>PT or measurement problems</li>
+</ul></div>
+</div>
+
+<h3>Key engineering point</h3>
+<p>
+Always identify <b>which voltage is being measured</b>, the PT source, phase
+selection, relay element and whether the protection is intended as an alarm,
+trip or part of another control sequence.
+</p>
+</section>
+
+<section class="topic" id="g81">
+<h2>9. 81 — Frequency Protection</h2>
+
+<p>
+ANSI 81 covers frequency protection. Underfrequency (81U) and overfrequency
+(81O) functions can protect the generator and support system stability.
+Frequency is closely related to synchronous speed.
+</p>
+
+<div class="formula">
+For a synchronous machine: nₛ = 120 f / P
+</div>
+
+<p>
+where <b>nₛ</b> is synchronous speed in rpm, <b>f</b> is frequency in Hz and
+<b>P</b> is the number of poles.
+</p>
+
+<h3>Typical causes</h3>
+<ul>
+<li>Generation-load imbalance</li>
+<li>Large system disturbance</li>
+<li>Grid separation</li>
+<li>Governor/turbine control problems</li>
+<li>Measurement/PT issues</li>
+</ul>
+
+<p>
+Frequency schemes commonly use pickup thresholds and time delays, and some
+systems use multiple stages for controlled load shedding or generator/system
+protection. Exact stages are plant/system specific.
+</p>
+</section>
+
+<section class="topic" id="g5051">
+<h2>10. 50 / 51 — Overcurrent Protection</h2>
+
+<p>
+ANSI 50 represents instantaneous overcurrent and ANSI 51 represents
+time-delayed/inverse-time overcurrent. The exact implementation depends on the
+relay and protection coordination philosophy.
+</p>
+
+<div class="grid">
+<div class="card"><h4>50 — Instantaneous</h4>
+<p>Operates when current exceeds a defined instantaneous threshold, subject to
+the relay's logic and measurement conditions.</p></div>
+
+<div class="card"><h4>51 — Time Overcurrent</h4>
+<p>Uses a time-current characteristic so higher current generally results in
+faster operation within the selected characteristic.</p></div>
+</div>
+
+<h3>Why generator overcurrent is not usually considered alone</h3>
+<p>
+A generator can supply very high fault current during an external fault, so
+coordination with generator differential, feeder protection, transformer
+protection and system protection is essential. CT saturation and fault
+location also affect the measured current.
+</p>
+
+<h3>Practical checks</h3>
+<ul>
+<li>Which phase operated?</li>
+<li>What was the current magnitude?</li>
+<li>Was the fault inside or outside the generator protection zone?</li>
+<li>Did another protection operate first?</li>
+<li>Was CT saturation or wiring trouble possible?</li>
+</ul>
+</section>
+
+<section class="topic" id="g86">
+<h2>11. Trip Matrix & 86 Lockout</h2>
+
+<p>
+Protection detection is only one part of generator protection. The trip matrix
+defines what happens after a protection element operates. ANSI 86 is commonly
+associated with a lockout function that requires deliberate reset after a
+serious trip, depending on the plant design.
+</p>
+
+<h3>Typical protection chain</h3>
+<div class="formula">
+Fault / abnormal condition
+→ Protection relay element
+→ Trip logic
+→ 86 lockout / direct trip as designed
+→ Generator breaker trip
+→ Prime mover / field / auxiliary actions as designed
+→ Alarm & event recording
+→ Investigation
+</div>
+
+<table>
+<tr>
+<th>Stage</th><th>Question for the engineer</th>
+</tr>
+<tr><td>Protection</td><td>Which relay element detected the condition?</td></tr>
+<tr><td>Logic</td><td>What permissive/interlock logic operated?</td></tr>
+<tr><td>Breaker</td><td>Did the generator breaker actually open?</td></tr>
+<tr><td>Lockout</td><td>Did 86 operate and remain latched?</td></tr>
+<tr><td>Prime mover</td><td>Was turbine/engine trip initiated?</td></tr>
+<tr><td>Excitation</td><td>Was field/excitation removed according to the scheme?</td></tr>
+<tr><td>Evidence</td><td>What do SOE, relay targets and oscillography show?</td></tr>
+</table>
+
+<div class="warning"><b>Critical:</b> Never assume that every generator has
+the same 86 logic. Use the actual plant trip matrix, cause-and-effect diagram,
+relay logic and approved operating procedure.</div>
+</section>
+
+<section class="topic" id="gctpt">
+<h2>12. CT / PT Failure & Protection Misoperation</h2>
+
+<p>
+A protection relay can only make a correct decision if its measurement inputs
+are correct. CT and PT/VT problems can therefore create false operation,
+failure to operate, or misleading indications.
+</p>
+
+<div class="grid">
+<div class="card"><h4>CT-related problems</h4>
+<ul>
+<li>Open CT secondary circuit</li>
+<li>Wrong polarity</li>
+<li>Incorrect ratio/tap configuration</li>
+<li>Loose termination</li>
+<li>Wiring/core selection problems</li>
+<li>CT saturation during faults</li>
+</ul></div>
+
+<div class="card"><h4>PT/VT-related problems</h4>
+<ul>
+<li>Fuse/MCB failure where applicable</li>
+<li>Loose wiring</li>
+<li>Wrong phase connection</li>
+<li>Incorrect ratio</li>
+<li>Loss of one phase</li>
+<li>Abnormal secondary voltage</li>
+</ul></div>
+</div>
+
+<h3>How to distinguish a real fault from measurement trouble</h3>
+<p>
+Compare the relay record with independent plant measurements. For example,
+compare relay voltage/current with another healthy meter, check the affected
+phase, examine sudden step changes, inspect alarms for VT/CT supervision and
+review the event waveform. This does not replace physical inspection or the
+approved test procedure.
+</p>
+
+<div class="note">
+<b>Golden rule:</b> Never disconnect or open a live CT secondary circuit.
+Follow the plant's approved isolation and test procedure and use appropriate
+test equipment.
+</div>
+</section>
+
+<section class="topic" id="ganalysis">
+<h2>13. Practical Generator Trip Analysis</h2>
+
+<p>
+When a generator trips, the most important task is to identify the
+<b>first initiating protection or abnormal condition</b>, not simply the last
+alarm seen on the operator screen.
+</p>
+
+<h3>Recommended investigation sequence</h3>
+<table>
+<tr><th>Step</th><th>What to examine</th></tr>
+<tr><td>1</td><td>Exact trip time and sequence-of-events timestamps</td></tr>
+<tr><td>2</td><td>First protection element / relay target</td></tr>
+<tr><td>3</td><td>Generator MW, MVAR, voltage, current and frequency immediately before trip</td></tr>
+<tr><td>4</td><td>Field voltage/current and AVR/excitation status</td></tr>
+<tr><td>5</td><td>Breaker status and 86 lockout status</td></tr>
+<tr><td>6</td><td>Turbine/prime-mover condition and governor response</td></tr>
+<tr><td>7</td><td>Relay oscillography and event record</td></tr>
+<tr><td>8</td><td>CT/PT supervision and measurement integrity</td></tr>
+<tr><td>9</td><td>Plant process conditions and operator actions</td></tr>
+<tr><td>10</td><td>Root-cause investigation before reset/re-energization</td></tr>
+</table>
+
+<h3>Example: apparent 87G trip</h3>
+<p>
+Suppose the generator trips and 87G appears on the alarm screen. Do not
+immediately conclude that the stator has failed. Check whether the relay saw
+a genuine differential current, whether restraint was normal, whether CT
+circuits were healthy, and what the oscillography shows. A CT circuit problem,
+wiring/polarity issue or relay/measurement problem can produce a protection
+operation or misleading indication.
+</p>
+
+<h3>Example: 32 reverse power</h3>
+<p>
+If 32 operates, compare MW direction with turbine input. Then check governor
+position, steam/fuel input, turbine trip signals and breaker status. The goal
+is to determine whether the generator genuinely entered motoring or whether
+the measurement/protection chain produced the indication.
+</p>
+
+<div class="note">
+<b>Engineer mindset:</b><br>
+Do not ask only “Which relay tripped?”<br>
+Ask: <b>“What happened first, what did the relay actually measure, what logic
+acted next, and what physical condition caused the measurement?”</b>
+</div>
+
+<h3>Protection investigation checklist</h3>
+<ul>
+<li>Relay target / element</li>
+<li>SOE timestamps</li>
+<li>Oscillography</li>
+<li>MW / MVAR / PF</li>
+<li>Generator voltage and current</li>
+<li>Field voltage and field current</li>
+<li>AVR/excitation status</li>
+<li>CT/PT health</li>
+<li>Breaker and 86 status</li>
+<li>Turbine/governor status</li>
+<li>Approved trip matrix / cause-and-effect</li>
+<li>Physical inspection and test results</li>
+</ul>
+</section>
+
+
+<section class="topic" id="interactive-zone">
+<h2>⚡ 14. Interactive Generator Protection Zone</h2>
+
+<p>
+This visual learning model shows how the generator protection system can be
+thought of as a chain from the electrical machine to the final trip action.
+The exact arrangement varies by generator, transformer, relay and plant
+protection philosophy.
+</p>
+
+<div style="overflow-x:auto;">
+<table>
+<tr>
+<th>Protection area</th>
+<th>Typical protection</th>
+<th>What the relay is watching</th>
+<th>Typical engineering question</th>
+</tr>
+<tr>
+<td>Generator stator</td>
+<td>87G / 64G</td>
+<td>Differential current / earth-fault quantities</td>
+<td>Is the fault inside the protected stator zone?</td>
+</tr>
+<tr>
+<td>Rotor / field</td>
+<td>64F</td>
+<td>Field-to-earth insulation</td>
+<td>Is rotor insulation deteriorating?</td>
+</tr>
+<tr>
+<td>Unbalance</td>
+<td>46</td>
+<td>Negative-sequence current</td>
+<td>Is phase unbalance producing excessive rotor heating?</td>
+</tr>
+<tr>
+<td>Excitation</td>
+<td>40</td>
+<td>Generator impedance / excitation condition</td>
+<td>Has the generator become severely underexcited?</td>
+</tr>
+<tr>
+<td>Prime mover</td>
+<td>32</td>
+<td>Real-power direction</td>
+<td>Is the generator motoring?</td>
+</tr>
+<tr>
+<td>Magnetic flux</td>
+<td>24</td>
+<td>V/Hz</td>
+<td>Is magnetic flux becoming excessive?</td>
+</tr>
+<tr>
+<td>Terminal/system</td>
+<td>27 / 59 / 81</td>
+<td>Voltage and frequency</td>
+<td>Is the machine/system outside its permitted operating region?</td>
+</tr>
+</table>
+</div>
+
+<div class="formula">
+Generator
+   ↓
+CTs / PTs / VTs / Field measurements
+   ↓
+Protection Relay
+   ↓
+Protection Element
+   ↓
+Trip Logic / Interlocks
+   ↓
+86 Lockout and/or Direct Trip Logic
+   ↓
+Generator Breaker / Prime Mover / Excitation actions
+   ↓
+Alarm + SOE + Relay Event Record
+   ↓
+Engineer Investigation
+</div>
+
+<div class="note">
+<b>Learning point:</b> A relay is a measurement-and-decision device. The relay
+does not “know” that a generator has failed; it sees electrical quantities and
+applies its configured protection logic to them.
+</div>
+</section>
+
+<section class="topic" id="trip-decision">
+<h2>🧠 15. Generator Trip Decision Tree</h2>
+
+<p>
+Use this simplified decision tree when learning how to investigate a
+generator trip. It is an educational model, not a replacement for the actual
+plant cause-and-effect diagram.
+</p>
+
+<div class="formula">
+GENERATOR TRIPPED
+       ↓
+Check SOE / relay event time
+       ↓
+What was the FIRST protection indication?
+       ↓
+ ┌───────────────┬───────────────┬───────────────┐
+87G / 64G       32              40              46
+Internal /      Reverse        Loss of          Negative
+earth fault     power          excitation       sequence
+       ↓
+Then verify the measured quantities
+       ↓
+Was the measurement credible?
+       ↓
+CT / PT / relay / wiring check
+       ↓
+Confirm trip logic + 86 + breaker status
+       ↓
+Investigate physical root cause
+       ↓
+Approved restoration procedure
+</div>
+
+<h3>Five questions every engineer should ask</h3>
+<ol>
+<li><b>What happened first?</b> — Use SOE timestamps rather than screen-alarm order alone.</li>
+<li><b>What did the relay actually measure?</b> — Check current, voltage, frequency, MW, MVAR and relay element data.</li>
+<li><b>Was the measurement trustworthy?</b> — Consider CT/PT problems, wiring and supervision alarms.</li>
+<li><b>What logic operated next?</b> — Check trip matrix, interlocks, 86 and breaker feedback.</li>
+<li><b>What physical event caused the electrical signature?</b> — Connect the relay record to the turbine, generator, transformer and grid condition.</li>
+</ol>
+</section>
+
+<section class="topic" id="trip-worksheet">
+<h2>📋 16. Generator Trip Investigation Worksheet</h2>
+
+<p>
+Use this worksheet during training or when documenting a protection event.
+The fields are intentionally general so they can be adapted to the actual
+plant.
+</p>
+
+<table>
+<tr><th>Parameter</th><th>Value to record</th><th>Why it matters</th></tr>
+<tr><td>Date / time</td><td>____________</td><td>Correlate all SOE and relay records.</td></tr>
+<tr><td>Generator MW</td><td>____________</td><td>Shows loading and real-power direction.</td></tr>
+<tr><td>Generator MVAR</td><td>____________</td><td>Shows reactive-power condition.</td></tr>
+<tr><td>Power factor</td><td>____________</td><td>Helps understand excitation/loading condition.</td></tr>
+<tr><td>Terminal voltage</td><td>____________</td><td>Important for voltage/V/Hz analysis.</td></tr>
+<tr><td>Phase currents</td><td>Ia ___ / Ib ___ / Ic ___</td><td>Useful for faults and unbalance.</td></tr>
+<tr><td>Frequency</td><td>____________</td><td>Required for 81 and V/Hz analysis.</td></tr>
+<tr><td>Field voltage</td><td>____________</td><td>Important for excitation investigation.</td></tr>
+<tr><td>Field current</td><td>____________</td><td>Helps assess excitation condition.</td></tr>
+<tr><td>AVR status</td><td>____________</td><td>Check excitation control state.</td></tr>
+<tr><td>Relay operated</td><td>____________</td><td>Identify the protection element.</td></tr>
+<tr><td>86 status</td><td>____________</td><td>Determine lockout operation.</td></tr>
+<tr><td>Generator breaker</td><td>OPEN / CLOSED</td><td>Confirm actual breaker response.</td></tr>
+<tr><td>Turbine trip</td><td>YES / NO</td><td>Correlate electrical and mechanical events.</td></tr>
+<tr><td>First alarm</td><td>____________</td><td>Important for establishing sequence.</td></tr>
+<tr><td>Relay event file</td><td>AVAILABLE / NO</td><td>Oscillography can provide high-value evidence.</td></tr>
+</table>
+
+<div class="note">
+<b>Tip:</b> Record the values immediately before the event, at the event, and
+immediately after the event whenever the relay/SCADA records make that
+possible. A trend is often more informative than a single number.
+</div>
+</section>
+
+<section class="topic" id="case-studies">
+<h2>🎓 17. Practical Generator Protection Case Studies</h2>
+
+<h3>Case Study A — Possible Reverse Power</h3>
+
+<table>
+<tr><th>Parameter</th><th>Before event</th><th>At event</th></tr>
+<tr><td>MW</td><td>+49.5 MW</td><td>-0.8 MW</td></tr>
+<tr><td>MVAR</td><td>+8 MVAR</td><td>+2 MVAR</td></tr>
+<tr><td>Governor position</td><td>Normal</td><td>Rapidly decreasing</td></tr>
+<tr><td>Generator breaker</td><td>Closed</td><td>Closed initially</td></tr>
+<tr><td>32 indication</td><td>Normal</td><td>Operated</td></tr>
+</table>
+
+<p><b>Questions for the learner:</b></p>
+<ol>
+<li>What changed direction?</li>
+<li>What mechanical input should be checked?</li>
+<li>Why is breaker status important?</li>
+<li>Which SOE timestamps should be compared?</li>
+</ol>
+
+<details>
+<summary><b>Show learning explanation</b></summary>
+<p>
+The data is consistent with a possible motoring condition because real power
+changed from positive generation to negative power while the breaker remained
+closed initially. The investigation should then verify turbine/prime-mover
+input, governor response, the 32 relay measurement and the exact trip logic.
+The table alone does not prove the root cause.
+</p>
+</details>
+
+<h3>Case Study B — Possible Negative Sequence</h3>
+
+<table>
+<tr><th>Parameter</th><th>Observed</th></tr>
+<tr><td>Ia</td><td>900 A</td></tr>
+<tr><td>Ib</td><td>910 A</td></tr>
+<tr><td>Ic</td><td>620 A</td></tr>
+<tr><td>Voltage balance</td><td>Needs verification</td></tr>
+<tr><td>46 indication</td><td>Alarm / operation</td></tr>
+</table>
+
+<p>
+The first observation is phase-current imbalance. The engineer should not
+declare a generator winding fault from this table alone. Check the actual
+negative-sequence quantity, voltage balance, system fault records, CT health,
+breaker/feeder condition and relay event record.
+</p>
+
+<h3>Case Study C — Possible Loss of Excitation</h3>
+
+<table>
+<tr><th>Parameter</th><th>Trend</th></tr>
+<tr><td>Field current</td><td>Falls sharply</td></tr>
+<tr><td>Generator MVAR</td><td>Moves toward absorption</td></tr>
+<tr><td>Power factor</td><td>Becomes more leading / underexcited depending on sign convention</td></tr>
+<tr><td>Terminal voltage</td><td>Changes from normal value</td></tr>
+<tr><td>40 indication</td><td>Operated</td></tr>
+</table>
+
+<p>
+This pattern should lead the engineer toward an excitation-system
+investigation. Check AVR status, field voltage/current, exciter output, field
+breaker/circuit where applicable, generator terminal conditions and the relay
+impedance record.
+</p>
+
+<div class="warning">
+<b>Training rule:</b> These case studies are deliberately simplified. In an
+actual event, protection operation must be verified from the specific relay
+records, plant drawings, protection settings and approved operating
+procedures.
+</div>
+</section>
+
+<section class="topic" id="relay-record-reading">
+<h2>📈 18. How to Read a Generator Relay Event Record</h2>
+
+<p>
+A relay event report often contains more information than the simple alarm
+text displayed on the DCS. Learning to read the record is an important
+protection-engineering skill.
+</p>
+
+<div class="grid">
+<div class="card">
+<h4>1. Digital channels</h4>
+<p>Look for breaker status, trip outputs, 86, AVR status, field breaker and
+other plant-specific binary signals.</p>
+</div>
+
+<div class="card">
+<h4>2. Analog channels</h4>
+<p>Look for phase currents, voltages, frequency, MW/MVAR and other quantities
+recorded by the relay.</p>
+</div>
+
+<div class="card">
+<h4>3. Protection elements</h4>
+<p>Identify when 87G, 64G, 46, 40, 32 or another element picked up and when it
+actually operated.</p>
+</div>
+
+<div class="card">
+<h4>4. Sequence of events</h4>
+<p>Compare the timestamps of pickup, trip output, breaker opening and lockout
+operation.</p>
+</div>
+</div>
+
+<div class="formula">
+Example investigation:
+
+t₀   abnormal current appears
+↓
+t₁   protection element pickup
+↓
+t₂   relay trip output
+↓
+t₃   86 / trip logic response
+↓
+t₄   generator breaker opens
+↓
+t₅   turbine / excitation response
+↓
+t₆   alarms and stable post-trip condition
+</div>
+
+<p>
+The actual order depends on the plant protection design. The objective is to
+reconstruct the event from recorded evidence rather than from assumptions.
+</p>
+</section>
+
+<section class="topic">
+<h2>🎯 Final Learning Path</h2>
+<p>
+To become strong in generator protection, learn each function in this order:
+</p>
+<ol>
+<li>Understand the generator electrical zones.</li>
+<li>Understand CTs and PTs and their locations.</li>
+<li>Learn 87G differential protection deeply.</li>
+<li>Learn stator and rotor earth-fault protection.</li>
+<li>Learn abnormal-condition protections such as 46, 40, 32 and 24.</li>
+<li>Understand voltage and frequency protection.</li>
+<li>Study 86 lockout and the complete trip matrix.</li>
+<li>Finally, practice reading relay event reports and SOE records.</li>
+</ol>
+
+<div class="warning">
+<b>Safety / engineering note:</b> This page is an educational guide. Actual
+relay settings, trip logic, CT/PT connections, testing methods and
+re-energization decisions must come from the specific generator manufacturer,
+relay manual, approved protection study, plant drawings and operating/test
+procedures.
+</div>
+</section>
+
+</div>
+</div>
+</main>
+
+<footer class="footer">
+  <p><b>Power Plant Engineering Hub</b> — Learn. Calculate. Troubleshoot. Engineer.</p>
+  <p class="small">Generator Protection Masterclass • Educational reference</p>
+</footer>
+
+</body>
+</html>
