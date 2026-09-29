@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Turbine Masterclass | Power Plant Engineering Hub</title>
+
+<meta name="description"
+      content="Beginner-to-practical steam turbine masterclass covering turbine construction, HP IP LP sections, governing, valves, lubrication, bearings, condenser, protection, startup, trips and troubleshooting.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #06111f;
+    color: #e7eef7;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+    background: #071522;
+    border-bottom: 1px solid #24425d;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #20bfff;
+}
+
+.back-btn {
+    border: 1px solid #31516c;
+    padding: 9px 18px;
+    border-radius: 9px;
+    color: #dceaf6;
+}
+
+.back-btn:hover {
+    background: #10283d;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background:
+        radial-gradient(circle at top, #12324b 0%, #06111f 55%);
+}
+
+.hero-badge {
+    color: #8ea9bf;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #20bfff;
+}
+
+.hero p {
+    max-width: 850px;
+    margin: auto;
+    color: #aebfd0;
+    font-size: 18px;
+}
+
+.tags {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: #10283d;
+    border: 1px solid #294c68;
+    padding: 7px 14px;
+    border-radius: 30px;
+    color: #d9e8f5;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+.section {
+    margin: 35px 0;
+}
+
+.section-title {
+    color: #20bfff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: #9fb2c5;
+}
+
+/* =========================
+   ROADMAP
+========================= */
+
+.roadmap {
+    background: #0c2134;
+    border: 1px solid #294963;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.roadmap-item {
+    background: #081827;
+    border: 1px solid #203d55;
+    border-radius: 10px;
+    padding: 14px;
+    color: #dbe8f2;
+}
+
+.roadmap-item strong {
+    color: #20bfff;
+}
+
+/* =========================
+   LESSON MENU
+========================= */
+
+.lesson-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 10px;
+    margin: 25px 0 40px;
+}
+
+.lesson-menu a {
+    background: #0b1e30;
+    border: 1px solid #27455e;
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #c9d9e7;
+    transition: 0.2s;
+}
+
+.lesson-menu a:hover {
+    background: #12304a;
+    border-color: #20bfff;
+    color: #ffffff;
+}
+
+/* =========================
+   LESSON CARD
+========================= */
+
+.lesson {
+    background: #0b1b2b;
+    border: 1px solid #294760;
+    border-radius: 18px;
+    padding: 32px;
+    margin-bottom: 25px;
+    scroll-margin-top: 90px;
+}
+
+.lesson-number {
+    color: #20bfff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.lesson h2 {
+    margin: 5px 0 18px;
+    font-size: 28px;
+}
+
+.lesson h3 {
+    color: #48caff;
+    margin-top: 28px;
+}
+
+.lesson p {
+    color: #c2d0dc;
+}
+
+.lesson ul,
+.lesson ol {
+    color: #c2d0dc;
+}
+
+.lesson li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   FORMULA / FLOW
+========================= */
+
+.flow {
+    background: #061421;
+    border-left: 4px solid #20bfff;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #e5f4ff;
+    overflow-x: auto;
+}
+
+.formula {
+    background: #10283d;
+    border: 1px solid #31536d;
+    padding: 16px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: #dff5ff;
+}
+
+/* =========================
+   NOTE BOXES
+========================= */
+
+.note {
+    background: #10273b;
+    border: 1px solid #31556e;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+.note strong {
+    color: #20bfff;
+}
+
+.warning {
+    background: #301f18;
+    border: 1px solid #70402d;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+.warning strong {
+    color: #ffb36b;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    border: 1px solid #29465d;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #102a40;
+    color: #20bfff;
+}
+
+td {
+    background: #081827;
+    color: #c8d6e2;
+}
+
+/* =========================
+   CASE STUDY
+========================= */
+
+.case-study {
+    background: linear-gradient(135deg, #102d42, #0a1c2d);
+    border: 1px solid #36708f;
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.case-study h2 {
+    color: #20bfff;
+}
+
+/* =========================
+   CHECKLIST
+========================= */
+
+.checklist {
+    display: grid;
+    gap: 10px;
+}
+
+.check-item {
+    background: #081827;
+    border: 1px solid #26445b;
+    padding: 13px 16px;
+    border-radius: 8px;
+}
+
+.check-item::before {
+    content: "✓ ";
+    color: #20bfff;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 60px;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid #203b52;
+    color: #8198ab;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .topbar {
+        padding: 14px 4%;
+    }
+
+    .hero {
+        padding: 60px 18px 45px;
+    }
+
+    .lesson {
+        padding: 22px;
+    }
+
+    .roadmap {
+        padding: 22px;
+    }
+
+    .lesson h2 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+        ⚡ Power Plant Engineering Hub
+    </div>
+
+    <a class="back-btn" href="index.html">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-badge">
+        POWER PLANT TURBINE ENGINEERING
+    </div>
+
+    <h1>
+        🌀 Turbine <span>Masterclass</span>
+    </h1>
+
+    <p>
+        A beginner-to-practical guide to steam turbines,
+        turbine stages, governing systems, valves, lubrication,
+        bearings, condenser vacuum, feedwater systems,
+        protection, startup, trips and troubleshooting.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Beginner Friendly</span>
+        <span class="tag">Steam Turbine</span>
+        <span class="tag">HP / IP / LP</span>
+        <span class="tag">Governing</span>
+        <span class="tag">Protection</span>
+        <span class="tag">Troubleshooting</span>
+    </div>
+
+</section>
+
+
+<main class="container">
+
+
+<!-- =========================
+     ROADMAP
+========================= -->
+
+<section class="section">
+
+    <div class="roadmap">
+
+        <h2 class="section-title">
+            📚 Turbine Masterclass Roadmap
+        </h2>
+
+        <p class="section-subtitle">
+            Follow the lessons in sequence. Start with the basic
+            energy conversion process and gradually move toward
+            operation and troubleshooting.
+        </p>
+
+        <div class="roadmap-grid">
+
+            <div class="roadmap-item">
+                <strong>01</strong> Turbine Fundamentals
+            </div>
+
+            <div class="roadmap-item">
+                <strong>02</strong> Steam-to-Power Conversion
+            </div>
+
+            <div class="roadmap-item">
+                <strong>03</strong> Turbine Construction
+            </div>
+
+            <div class="roadmap-item">
+                <strong>04</strong> HP / IP / LP Sections
+            </div>
+
+            <div class="roadmap-item">
+                <strong>05</strong> Turbine Stages & Blades
+            </div>
+
+            <div class="roadmap-item">
+                <strong>06</strong> Impulse & Reaction
+            </div>
+
+            <div class="roadmap-item">
+                <strong>07</strong> Governing System
+            </div>
+
+            <div class="roadmap-item">
+                <strong>08</strong> Control & Governing Valves
+            </div>
+
+            <div class="roadmap-item">
+                <strong>09</strong> Speed & Load Control
+            </div>
+
+            <div class="roadmap-item">
+                <strong>10</strong> Lubrication System
+            </div>
+
+            <div class="roadmap-item">
+                <strong>11</strong> Turbine Bearings
+            </div>
+
+            <div class="roadmap-item">
+                <strong>12</strong> Gland Steam
+            </div>
+
+            <div class="roadmap-item">
+                <strong>13</strong> Condenser & Vacuum
+            </div>
+
+            <div class="roadmap-item">
+                <strong>14</strong> Feedwater Heaters
+            </div>
+
+            <div class="roadmap-item">
+                <strong>15</strong> Extraction Steam
+            </div>
+
+            <div class="roadmap-item">
+                <strong>16</strong> Deaerator & Feedwater
+            </div>
+
+            <div class="roadmap-item">
+                <strong>17</strong> Turbine Protection
+            </div>
+
+            <div class="roadmap-item">
+                <strong>18</strong> Turbine Startup
+            </div>
+
+            <div class="roadmap-item">
+                <strong>19</strong> Synchronization & Loading
+            </div>
+
+            <div class="roadmap-item">
+                <strong>20</strong> Turbine Trips
+            </div>
+
+            <div class="roadmap-item">
+                <strong>21</strong> Operating Parameters
+            </div>
+
+            <div class="roadmap-item">
+                <strong>22</strong> Vibration & Expansion
+            </div>
+
+            <div class="roadmap-item">
+                <strong>23</strong> Troubleshooting
+            </div>
+
+            <div class="roadmap-item">
+                <strong>24</strong> 50 MW TG Case Study
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LESSON MENU
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        🧭 All Turbine Lessons
+    </h2>
+
+    <div class="lesson-menu">
+
+        <a href="#lesson1">1. Turbine Fundamentals</a>
+        <a href="#lesson2">2. Steam-to-Power Conversion</a>
+        <a href="#lesson3">3. Turbine Construction</a>
+        <a href="#lesson4">4. HP / IP / LP Turbine</a>
+        <a href="#lesson5">5. Stages & Blades</a>
+        <a href="#lesson6">6. Impulse & Reaction</a>
+        <a href="#lesson7">7. Governing System</a>
+        <a href="#lesson8">8. Control Valves</a>
+        <a href="#lesson9">9. Speed & Load Control</a>
+        <a href="#lesson10">10. Lubrication</a>
+        <a href="#lesson11">11. Bearings</a>
+        <a href="#lesson12">12. Gland Steam</a>
+        <a href="#lesson13">13. Condenser & Vacuum</a>
+        <a href="#lesson14">14. Feedwater Heaters</a>
+        <a href="#lesson15">15. Extraction Steam</a>
+        <a href="#lesson16">16. Deaerator</a>
+        <a href="#lesson17">17. Turbine Protection</a>
+        <a href="#lesson18">18. Startup</a>
+        <a href="#lesson19">19. Synchronization & Loading</a>
+        <a href="#lesson20">20. Turbine Trips</a>
+        <a href="#lesson21">21. Operating Parameters</a>
+        <a href="#lesson22">22. Vibration & Expansion</a>
+        <a href="#lesson23">23. Troubleshooting</a>
+        <a href="#lesson24">24. 50 MW TG Case Study</a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 1
+========================================================= -->
+
+<section class="lesson" id="lesson1">
+
+    <div class="lesson-number">
+        LESSON 01
+    </div>
+
+    <h2>🌀 Turbine Fundamentals</h2>
+
+    <p>
+        A steam turbine is a rotating machine that converts
+        the energy of steam into mechanical shaft power.
+    </p>
+
+    <div class="flow">
+        Boiler → High Energy Steam → Turbine → Shaft Power
+        → Generator → Electrical Power
+    </div>
+
+    <h3>What actually happens?</h3>
+
+    <p>
+        Steam produced by the boiler enters the turbine at
+        high pressure and temperature. As the steam expands,
+        part of its thermal and pressure energy is converted
+        into velocity and then mechanical work on the turbine
+        blades.
+    </p>
+
+    <h3>Important idea</h3>
+
+    <p>
+        The turbine itself produces mechanical power.
+        The generator converts that mechanical power into
+        electrical power.
+    </p>
+
+    <div class="note">
+        <strong>⚡ Practical Point</strong>
+        <p>
+            Turbine output is strongly influenced by steam
+            flow, inlet steam conditions, exhaust pressure,
+            turbine efficiency and governing valve position.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 2
+========================================================= -->
+
+<section class="lesson" id="lesson2">
+
+    <div class="lesson-number">
+        LESSON 02
+    </div>
+
+    <h2>🔥 Steam-to-Power Energy Conversion</h2>
+
+    <p>
+        Understanding the complete energy path makes turbine
+        operation much easier to understand.
+    </p>
+
+    <div class="flow">
+        Fuel → Boiler → Steam → Turbine → Generator → Grid
+    </div>
+
+    <h3>Step-by-step</h3>
+
+    <ol>
+        <li>Fuel releases heat in the boiler.</li>
+        <li>Feedwater is converted into high-energy steam.</li>
+        <li>Steam enters the turbine.</li>
+        <li>Steam expands through turbine stages.</li>
+        <li>The rotor develops torque.</li>
+        <li>The generator converts shaft power into electricity.</li>
+        <li>Exhaust steam enters the condenser.</li>
+        <li>Condensate returns to the feedwater system.</li>
+    </ol>
+
+    <div class="formula">
+        Turbine Mechanical Power ≈ Steam Mass Flow ×
+        Specific Enthalpy Drop × Turbine Efficiency
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 3
+========================================================= -->
+
+<section class="lesson" id="lesson3">
+
+    <div class="lesson-number">
+        LESSON 03
+    </div>
+
+    <h2>🏗️ Turbine Construction</h2>
+
+    <p>
+        A power plant steam turbine contains many mechanical
+        and steam-flow components working together.
+    </p>
+
+    <h3>Main components</h3>
+
+    <ul>
+        <li>Rotor</li>
+        <li>Casing</li>
+        <li>Fixed blades / diaphragms</li>
+        <li>Moving blades</li>
+        <li>Main steam valves</li>
+        <li>Control / governing valves</li>
+        <li>Bearings</li>
+        <li>Lubricating oil system</li>
+        <li>Gland sealing system</li>
+        <li>Turning gear</li>
+        <li>Condenser</li>
+        <li>Protection system</li>
+    </ul>
+
+    <div class="note">
+        <strong>🔧 Field View</strong>
+        <p>
+            When troubleshooting a turbine, always think in
+            systems rather than looking at only one component.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 4
+========================================================= -->
+
+<section class="lesson" id="lesson4">
+
+    <div class="lesson-number">
+        LESSON 04
+    </div>
+
+    <h2>⚙️ HP / IP / LP Turbine Sections</h2>
+
+    <p>
+        Large steam turbines are commonly divided into
+        high-pressure, intermediate-pressure and
+        low-pressure sections.
+    </p>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <tr>
+                <th>Section</th>
+                <th>Main Function</th>
+                <th>Typical Condition</th>
+            </tr>
+
+            <tr>
+                <td>HP</td>
+                <td>Initial expansion of high-energy steam</td>
+                <td>Highest pressure</td>
+            </tr>
+
+            <tr>
+                <td>IP</td>
+                <td>Further steam expansion</td>
+                <td>Intermediate pressure</td>
+            </tr>
+
+            <tr>
+                <td>LP</td>
+                <td>Final expansion before condenser</td>
+                <td>Low pressure / high volume</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="note">
+        <strong>💡 Important</strong>
+        <p>
+            As steam pressure falls, its specific volume increases.
+            This is why LP turbine stages require large flow areas.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 5
+========================================================= -->
+
+<section class="lesson" id="lesson5">
+
+    <div class="lesson-number">
+        LESSON 05
+    </div>
+
+    <h2>🌀 Turbine Stages & Blades</h2>
+
+    <p>
+        Turbine expansion normally occurs across multiple
+        stages instead of one large pressure drop.
+    </p>
+
+    <h3>Basic stage concept</h3>
+
+    <div class="flow">
+        Steam → Fixed Blades / Nozzles → Moving Blades → Next Stage
+    </div>
+
+    <p>
+        Fixed blades guide or accelerate the steam while
+        moving blades extract energy and produce torque.
+    </p>
+
+    <h3>Why multiple stages?</h3>
+
+    <ul>
+        <li>Better energy extraction</li>
+        <li>Controlled expansion</li>
+        <li>Improved efficiency</li>
+        <li>Manageable blade speed</li>
+        <li>Better mechanical design</li>
+    </ul>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 6
+========================================================= -->
+
+<section class="lesson" id="lesson6">
+
+    <div class="lesson-number">
+        LESSON 06
+    </div>
+
+    <h2>🔄 Impulse vs Reaction Turbine</h2>
+
+    <p>
+        Two important turbine stage concepts are impulse
+        and reaction.
+    </p>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <tr>
+                <th>Feature</th>
+                <th>Impulse</th>
+                <th>Reaction</th>
+            </tr>
+
+            <tr>
+                <td>Pressure drop</td>
+                <td>Mainly across nozzle</td>
+                <td>Across fixed and moving blades</td>
+            </tr>
+
+            <tr>
+                <td>Moving blade function</td>
+                <td>Extracts momentum</td>
+                <td>Extracts momentum + reaction effect</td>
+            </tr>
+
+            <tr>
+                <td>Typical concept</td>
+                <td>Nozzle → Moving Blade</td>
+                <td>Fixed Blade → Moving Blade</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 7
+========================================================= -->
+
+<section class="lesson" id="lesson7">
+
+    <div class="lesson-number">
+        LESSON 07
+    </div>
+
+    <h2>🎛️ Turbine Governing System</h2>
+
+    <p>
+        The governing system controls steam admission so that
+        turbine speed and load remain within the required operating range.
+    </p>
+
+    <div class="flow">
+        Speed / Load Demand → Governor → Servo System
+        → Governing Valve → Steam Flow → Turbine Load
+    </div>
+
+    <h3>During synchronization</h3>
+
+    <p>
+        The governor primarily controls turbine speed and
+        mechanical input before and during synchronization.
+    </p>
+
+    <h3>After synchronization</h3>
+
+    <p>
+        Once connected to the grid, increasing mechanical
+        input generally increases generator MW output.
+    </p>
+
+    <div class="note">
+        <strong>⚡ Remember</strong>
+        <p>
+            Governor controls the mechanical side.
+            AVR controls the excitation/electrical voltage side.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 8
+========================================================= -->
+
+<section class="lesson" id="lesson8">
+
+    <div class="lesson-number">
+        LESSON 08
+    </div>
+
+    <h2>🔧 Control & Governing Valves</h2>
+
+    <p>
+        Steam valves determine how much steam enters the turbine.
+    </p>
+
+    <h3>Important valve concepts</h3>
+
+    <ul>
+        <li>Main stop valve</li>
+        <li>Control / governing valves</li>
+        <li>Valve opening feedback</li>
+        <li>Servo actuator</li>
+        <li>Hydraulic or electro-hydraulic control</li>
+        <li>Fast closing during trip conditions</li>
+    </ul>
+
+    <div class="warning">
+        <strong>🚨 Safety Point</strong>
+        <p>
+            Turbine valve operation is a critical protection
+            function. Never bypass or manually defeat turbine
+            protection/interlock systems during operation.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 9
+========================================================= -->
+
+<section class="lesson" id="lesson9">
+
+    <div class="lesson-number">
+        LESSON 09
+    </div>
+
+    <h2>📈 Turbine Speed & Load Control</h2>
+
+    <p>
+        Turbine behavior is different before and after
+        synchronization.
+    </p>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <tr>
+                <th>Condition</th>
+                <th>Main Objective</th>
+            </tr>
+
+            <tr>
+                <td>Before synchronization</td>
+                <td>Control speed and reach rated frequency</td>
+            </tr>
+
+            <tr>
+                <td>During synchronization</td>
+                <td>Match speed/frequency and phase</td>
+            </tr>
+
+            <tr>
+                <td>After synchronization</td>
+                <td>Control mechanical input and MW load</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 10
+========================================================= -->
+
+<section class="lesson" id="lesson10">
+
+    <div class="lesson-number">
+        LESSON 10
+    </div>
+
+    <h2>🛢️ Turbine Lubrication System</h2>
+
+    <p>
+        Lubricating oil protects turbine and generator bearings
+        and provides reliable operation of rotating equipment.
+    </p>
+
+    <h3>Important parameters</h3>
+
+    <ul>
+        <li>Lube oil pressure</li>
+        <li>Lube oil temperature</li>
+        <li>Oil tank level</li>
+        <li>Oil pump status</li>
+        <li>Emergency oil pump availability</li>
+        <li>Oil filter differential pressure</li>
+        <li>Bearing oil supply</li>
+    </ul>
+
+    <div class="warning">
+        <strong>🚨 Critical</strong>
+        <p>
+            Low lubricating-oil pressure can result in bearing
+            damage and may initiate a turbine trip depending
+            on the protection logic.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 11
+========================================================= -->
+
+<section class="lesson" id="lesson11">
+
+    <div class="lesson-number">
+        LESSON 11
+    </div>
+
+    <h2>⚙️ Turbine Bearings</h2>
+
+    <p>
+        Bearings support the rotating shaft and maintain the
+        required rotor position.
+    </p>
+
+    <h3>Monitor</h3>
+
+    <ul>
+        <li>Bearing metal temperature</li>
+        <li>Oil temperature</li>
+        <li>Oil pressure</li>
+        <li>Vibration</li>
+        <li>Shaft position</li>
+        <li>Axial displacement where applicable</li>
+    </ul>
+
+    <div class="note">
+        <strong>🔍 Troubleshooting clue</strong>
+        <p>
+            A sudden change in vibration or shaft position
+            should always be investigated rather than treated
+            as a normal trend.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 12
+========================================================= -->
+
+<section class="lesson" id="lesson12">
+
+    <div class="lesson-number">
+        LESSON 12
+    </div>
+
+    <h2>💨 Gland Steam & Sealing System</h2>
+
+    <p>
+        Turbine glands control steam leakage and prevent
+        unwanted air ingress into sections operating under
+        vacuum.
+    </p>
+
+    <div class="flow">
+        Turbine Shaft → Gland Seals → Steam/Air Leakage Control
+    </div>
+
+    <h3>Why is this important?</h3>
+
+    <ul>
+        <li>Reduces steam leakage</li>
+        <li>Limits air ingress</li>
+        <li>Supports condenser vacuum</li>
+        <li>Protects turbine efficiency</li>
+    </ul>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 13
+========================================================= -->
+
+<section class="lesson" id="lesson13">
+
+    <div class="lesson-number">
+        LESSON 13
+    </div>
+
+    <h2>💧 Condenser & Vacuum System</h2>
+
+    <p>
+        The condenser converts turbine exhaust steam back into
+        water and maintains low exhaust pressure.
+    </p>
+
+    <div class="flow">
+        Turbine Exhaust → Condenser → Condensate → Feedwater System
+    </div>
+
+    <h3>Why vacuum matters</h3>
+
+    <p>
+        Lower exhaust pressure allows greater expansion of steam
+        through the turbine, which can improve the available
+        enthalpy drop and turbine performance.
+    </p>
+
+    <h3>Common causes of poor vacuum</h3>
+
+    <ul>
+        <li>Low cooling-water flow</li>
+        <li>High cooling-water temperature</li>
+        <li>Air ingress</li>
+        <li>Air ejector / vacuum equipment problem</li>
+        <li>Condenser fouling</li>
+        <li>Abnormal steam or drain conditions</li>
+    </ul>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 14
+========================================================= -->
+
+<section class="lesson" id="lesson14">
+
+    <div class="lesson-number">
+        LESSON 14
+    </div>
+
+    <h2>♨️ HP & LP Feedwater Heaters</h2>
+
+    <p>
+        Feedwater heaters use extraction steam to heat boiler
+        feedwater before it enters the boiler.
+    </p>
+
+    <div class="flow">
+        Turbine Extraction Steam
+        → Feedwater Heater
+        → Higher Feedwater Temperature
+        → Improved Cycle Efficiency
+    </div>
+
+    <h3>Important parameters</h3>
+
+    <ul>
+        <li>Feedwater inlet temperature</li>
+        <li>Feedwater outlet temperature</li>
+        <li>Extraction pressure</li>
+        <li>Drain level</li>
+        <li>Heater differential pressure</li>
+        <li>Protection/interlocks</li>
+    </ul>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 15
+========================================================= -->
+
+<section class="lesson" id="lesson15">
+
+    <div class="lesson-number">
+        LESSON 15
+    </div>
+
+    <h2>🔀 Extraction Steam System</h2>
+
+    <p>
+        Extraction steam is taken from selected turbine stages
+        and used by auxiliary parts of the steam cycle.
+    </p>
+
+    <h3>Typical applications</h3>
+
+    <ul>
+        <li>HP feedwater heating</li>
+        <li>LP feedwater heating</li>
+        <li>Deaerator heating</li>
+        <li>Process steam where applicable</li>
+    </ul>
+
+    <div class="note">
+        <strong>💡 Practical Point</strong>
+        <p>
+            Changes in extraction conditions can affect turbine
+            performance, feedwater temperature and overall cycle efficiency.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 16
+========================================================= -->
+
+<section class="lesson" id="lesson16">
+
+    <div class="lesson-number">
+        LESSON 16
+    </div>
+
+    <h2>🚰 Deaerator & Feedwater System</h2>
+
+    <p>
+        The feedwater system returns condensate and treated water
+        toward the boiler while controlling temperature, pressure
+        and dissolved-gas conditions.
+    </p>
+
+    <div class="flow">
+        Condenser → Condensate System → LP Heaters
+        → Deaerator → Boiler Feed Pump → HP Heaters → Boiler
+    </div>
+
+    <h3>Watch carefully</h3>
+
+    <ul>
+        <li>Deaerator level</li>
+        <li>Deaerator pressure</li>
+        <li>Feedwater temperature</li>
+        <li>BFP discharge pressure</li>
+        <li>Feedwater flow</li>
+    </ul>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 17
+========================================================= -->
+
+<section class="lesson" id="lesson17">
+
+    <div class="lesson-number">
+        LESSON 17
+    </div>
+
+    <h2>🛡️ Turbine Protection</h2>
+
+    <p>
+        Turbine protection detects dangerous operating conditions
+        and initiates appropriate protective action.
+    </p>
+
+    <h3>Examples</h3>
+
+    <ul>
+        <li>Overspeed</li>
+        <li>Low lube-oil pressure</li>
+        <li>High bearing temperature</li>
+        <li>Excessive vibration</li>
+        <li>Abnormal axial displacement</li>
+        <li>Low condenser vacuum</li>
+        <li>Emergency stop conditions</li>
+    </ul>
+
+    <div class="warning">
+        <strong>🚨 Important</strong>
+        <p>
+            The exact trip setpoints and voting logic must always
+            be taken from the actual turbine manufacturer's
+            documentation and plant protection philosophy.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 18
+========================================================= -->
+
+<section class="lesson" id="lesson18">
+
+    <div class="lesson-number">
+        LESSON 18
+    </div>
+
+    <h2>🚀 Turbine Startup</h2>
+
+    <p>
+        Turbine startup is a controlled process. The exact sequence
+        varies by turbine design and manufacturer.
+    </p>
+
+    <h3>General sequence</h3>
+
+    <ol>
+        <li>Confirm turbine auxiliaries are available.</li>
+        <li>Establish required lubrication.</li>
+        <li>Confirm turning gear conditions.</li>
+        <li>Establish gland/sealing arrangements.</li>
+        <li>Establish condenser vacuum.</li>
+        <li>Prepare steam system.</li>
+        <li>Admit steam according to the approved procedure.</li>
+        <li>Accelerate turbine under controlled conditions.</li>
+        <li>Monitor vibration and expansion.</li>
+        <li>Reach rated speed.</li>
+        <li>Synchronize generator.</li>
+        <li>Load gradually according to operating procedure.</li>
+    </ol>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 19
+========================================================= -->
+
+<section class="lesson" id="lesson19">
+
+    <div class="lesson-number">
+        LESSON 19
+    </div>
+
+    <h2>🔄 Synchronization & Loading</h2>
+
+    <p>
+        Before closing the generator breaker, the generator must
+        satisfy the required synchronization conditions.
+    </p>
+
+    <div class="flow">
+        Generator Voltage ↔ Bus Voltage
+        <br>
+        Generator Frequency ↔ Bus Frequency
+        <br>
+        Phase Sequence = Same
+        <br>
+        Phase Angle ≈ Matched
+    </div>
+
+    <h3>After breaker closing</h3>
+
+    <p>
+        Mechanical input from the turbine can then be increased
+        to raise generator MW according to the plant operating
+        procedure.
+    </p>
+
+    <div class="note">
+        <strong>⚡ Remember</strong>
+        <p>
+            Synchronization connects the generator electrically.
+            Loading the generator is a separate operating process.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 20
+========================================================= -->
+
+<section class="lesson" id="lesson20">
+
+    <div class="lesson-number">
+        LESSON 20
+    </div>
+
+    <h2>🚨 Turbine Trips & Immediate Response</h2>
+
+    <p>
+        A turbine trip rapidly removes steam input to protect
+        the turbine and associated equipment.
+    </p>
+
+    <h3>When a trip occurs</h3>
+
+    <ol>
+        <li>Confirm turbine trip indication.</li>
+        <li>Identify the initiating protection.</li>
+        <li>Check turbine speed.</li>
+        <li>Check generator breaker status.</li>
+        <li>Check steam valve status.</li>
+        <li>Check lube oil pressure.</li>
+        <li>Check vibration and bearing parameters.</li>
+        <li>Check condenser vacuum.</li>
+        <li>Review alarms and sequence-of-events data.</li>
+    </ol>
+
+    <div class="warning">
+        <strong>🚨 Never reset blindly</strong>
+        <p>
+            Do not simply reset a turbine trip without identifying
+            and addressing the initiating condition according to
+            the plant's approved operating procedure.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 21
+========================================================= -->
+
+<section class="lesson" id="lesson21">
+
+    <div class="lesson-number">
+        LESSON 21
+    </div>
+
+    <h2>📊 Important Turbine Operating Parameters</h2>
+
+    <p>
+        A turbine operator should understand trends rather than
+        looking at only one instantaneous value.
+    </p>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <tr>
+                <th>Parameter</th>
+                <th>Why It Matters</th>
+            </tr>
+
+            <tr>
+                <td>MW Load</td>
+                <td>Generator electrical output</td>
+            </tr>
+
+            <tr>
+                <td>Steam Pressure</td>
+                <td>Available steam energy</td>
+            </tr>
+
+            <tr>
+                <td>Steam Temperature</td>
+                <td>Steam energy and thermal condition</td>
+            </tr>
+
+            <tr>
+                <td>Steam Flow</td>
+                <td>Major driver of turbine output</td>
+            </tr>
+
+            <tr>
+                <td>Condenser Vacuum</td>
+                <td>Controls exhaust pressure / expansion</td>
+            </tr>
+
+            <tr>
+                <td>Vibration</td>
+                <td>Mechanical condition</td>
+            </tr>
+
+            <tr>
+                <td>Bearing Temperature</td>
+                <td>Bearing health</td>
+            </tr>
+
+            <tr>
+                <td>Axial Position</td>
+                <td>Rotor thrust / position monitoring</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 22
+========================================================= -->
+
+<section class="lesson" id="lesson22">
+
+    <div class="lesson-number">
+        LESSON 22
+    </div>
+
+    <h2>📈 Vibration & Differential Expansion</h2>
+
+    <p>
+        Vibration and thermal expansion are important indicators
+        of turbine mechanical condition.
+    </p>
+
+    <h3>Possible vibration contributors</h3>
+
+    <ul>
+        <li>Rotor imbalance</li>
+        <li>Misalignment</li>
+        <li>Bearing problems</li>
+        <li>Mechanical looseness</li>
+        <li>Steam-flow related excitation</li>
+        <li>Rubbing</li>
+        <li>Thermal effects</li>
+    </ul>
+
+    <h3>Differential expansion</h3>
+
+    <p>
+        Different turbine components can expand at different
+        rates during startup and load changes. Monitoring
+        differential expansion helps prevent mechanical contact
+        or abnormal clearances.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 23
+========================================================= -->
+
+<section class="lesson" id="lesson23">
+
+    <div class="lesson-number">
+        LESSON 23
+    </div>
+
+    <h2>🧰 Practical Turbine Troubleshooting</h2>
+
+    <p>
+        Good troubleshooting starts with the symptom, trend,
+        sequence of events and operating condition.
+    </p>
+
+    <h3>Example: Turbine vibration increasing</h3>
+
+    <div class="flow">
+        Vibration ↑
+        → Check trend
+        → Check bearing parameters
+        → Check speed/load
+        → Check steam conditions
+        → Check axial position
+        → Check recent operational changes
+        → Investigate root cause
+    </div>
+
+    <h3>Example: MW falling unexpectedly</h3>
+
+    <ul>
+        <li>Check governing valve position.</li>
+        <li>Check steam flow.</li>
+        <li>Check inlet steam pressure.</li>
+        <li>Check turbine pressure stages.</li>
+        <li>Check condenser vacuum.</li>
+        <li>Check extraction conditions.</li>
+        <li>Check generator electrical parameters.</li>
+    </ul>
+
+    <div class="note">
+        <strong>🔍 Golden Rule</strong>
+        <p>
+            Do not troubleshoot from one parameter alone.
+            Compare multiple parameters and their trends.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LESSON 24
+========================================================= -->
+
+<section class="lesson" id="lesson24">
+
+    <div class="lesson-number">
+        LESSON 24
+    </div>
+
+    <h2>🏭 50 MW TG Practical Case Study</h2>
+
+    <p>
+        This case study connects turbine theory with the type
+        of operating observations made in a real power plant.
+    </p>
+
+    <div class="case-study">
+
+        <h2>Example Operating Condition</h2>
+
+        <div class="table-wrap">
+
+            <table>
+
+                <tr>
+                    <th>Parameter</th>
+                    <th>Example Observation</th>
+                </tr>
+
+                <tr>
+                    <td>Generator Load Set Point</td>
+                    <td>≈ 50 MW</td>
+                </tr>
+
+                <tr>
+                    <td>Actual Generator Load</td>
+                    <td>≈ 49.8 MW</td>
+                </tr>
+
+                <tr>
+                    <td>Turbine Inlet Pressure</td>
+                    <td>≈ 89 kg/cm²</td>
+                </tr>
+
+                <tr>
+                    <td>HP Heater 1</td>
+                    <td>In Service</td>
+                </tr>
+
+                <tr>
+                    <td>HP Heater 2</td>
+                    <td>In Service</td>
+                </tr>
+
+                <tr>
+                    <td>Governor / Servo Position</td>
+                    <td>Monitor DCS and field feedback together</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <h3>How an engineer should look at it</h3>
+
+        <ol>
+            <li>Confirm generator MW from the correct measurement source.</li>
+            <li>Compare turbine demand and actual load.</li>
+            <li>Check governing valve position.</li>
+            <li>Check steam pressure and temperature.</li>
+            <li>Check steam flow.</li>
+            <li>Check condenser vacuum.</li>
+            <li>Check extraction/heater conditions.</li>
+            <li>Compare DCS indication with field instruments.</li>
+            <li>Look for abnormal trends before making adjustments.</li>
+        </ol>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CHECKLIST
+========================================================= -->
+
+<section class="section">
+
+    <div class="roadmap">
+
+        <h2 class="section-title">
+            ✅ Turbine Operator / Engineer Checklist
+        </h2>
+
+        <div class="checklist">
+
+            <div class="check-item">
+                Steam pressure and temperature are stable
+            </div>
+
+            <div class="check-item">
+                Turbine load is stable
+            </div>
+
+            <div class="check-item">
+                Governing system is healthy
+            </div>
+
+            <div class="check-item">
+                Lube oil pressure and temperature are normal
+            </div>
+
+            <div class="check-item">
+                Bearing temperatures are normal
+            </div>
+
+            <div class="check-item">
+                Vibration trends are healthy
+            </div>
+
+            <div class="check-item">
+                Axial position / expansion are within operating limits
+            </div>
+
+            <div class="check-item">
+                Condenser vacuum is stable
+            </div>
+
+            <div class="check-item">
+                Feedwater system is healthy
+            </div>
+
+            <div class="check-item">
+                Turbine protection system is available
+            </div>
+
+            <div class="check-item">
+                No unexplained active alarms are present
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        ⚡ Power Plant Engineering Hub
+    </p>
+
+    <p>
+        Learn • Calculate • Troubleshoot • Engineer
+    </p>
+
+</footer>
+
+</body>
+</html>
