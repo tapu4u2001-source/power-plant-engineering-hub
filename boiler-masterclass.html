@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boiler & Combustion Masterclass | Power Plant Engineering Hub</title>
+
+    <meta name="description"
+          content="Practical Boiler and Combustion Masterclass covering AFBC, CFBC, combustion, PA, SA, furnace draft, bed temperature, fuel, steam generation, boiler protection and troubleshooting.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e3a5f);
+            color: white;
+            padding: 18px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 9px 16px;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #12395b, #2563eb);
+            color: white;
+            padding: 70px 6%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 55px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .hero-tags {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-tags span {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #12395b;
+        }
+
+        .section-title p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        .roadmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            margin-bottom: 50px;
+        }
+
+        .roadmap-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+        }
+
+        .roadmap-card strong {
+            color: #2563eb;
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .lesson {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 28px;
+            box-shadow: 0 5px 18px rgba(15,23,42,0.07);
+            border: 1px solid #e5e7eb;
+        }
+
+        .lesson h2 {
+            color: #12395b;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+
+        .lesson h3 {
+            color: #2563eb;
+            margin: 22px 0 10px;
+        }
+
+        .lesson p {
+            margin-bottom: 12px;
+        }
+
+        .lesson ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .lesson li {
+            margin-bottom: 6px;
+        }
+
+        .formula {
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+            padding: 16px;
+            margin: 18px 0;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+
+        .success {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 6px;
+        }
+
+        .flow {
+            background: #0f172a;
+            color: white;
+            padding: 22px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 17px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #dbe2ea;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #12395b;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .check-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .small-note {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            .header-inner {
+                flex-direction: column;
+            }
+
+            .lesson {
+                padding: 22px;
+            }
+
+            .lesson h2 {
+                font-size: 23px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="brand">⚡ Power Plant Engineering Hub</div>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Home
+        </a>
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <h1>🔥 Boiler & Combustion Masterclass</h1>
+
+    <p>
+        A practical guide to boiler operation, AFBC, CFBC,
+        combustion, fuel, air systems, furnace draft,
+        steam generation, boiler protection and troubleshooting.
+    </p>
+
+    <div class="hero-tags">
+        <span>Beginner Friendly</span>
+        <span>AFBC</span>
+        <span>CFBC</span>
+        <span>Combustion</span>
+        <span>Boiler Operation</span>
+        <span>Troubleshooting</span>
+    </div>
+
+</section>
+
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>🔥 Boiler Learning Roadmap</h2>
+        <p>From basic boiler principles to practical plant troubleshooting</p>
+    </div>
+
+
+    <div class="roadmap">
+
+        <div class="roadmap-card">
+            <strong>01</strong>
+            Boiler Fundamentals
+        </div>
+
+        <div class="roadmap-card">
+            <strong>02</strong>
+            AFBC vs CFBC
+        </div>
+
+        <div class="roadmap-card">
+            <strong>03</strong>
+            Furnace & Combustion
+        </div>
+
+        <div class="roadmap-card">
+            <strong>04</strong>
+            PA & SA Air
+        </div>
+
+        <div class="roadmap-card">
+            <strong>05</strong>
+            Fuel & GCV
+        </div>
+
+        <div class="roadmap-card">
+            <strong>06</strong>
+            Bed Temperature
+        </div>
+
+        <div class="roadmap-card">
+            <strong>07</strong>
+            Furnace Draft
+        </div>
+
+        <div class="roadmap-card">
+            <strong>08</strong>
+            Cyclone & Solids
+        </div>
+
+        <div class="roadmap-card">
+            <strong>09</strong>
+            Drum & Steam
+        </div>
+
+        <div class="roadmap-card">
+            <strong>10</strong>
+            Boiler Protection
+        </div>
+
+        <div class="roadmap-card">
+            <strong>11</strong>
+            Startup & Loading
+        </div>
+
+        <div class="roadmap-card">
+            <strong>12</strong>
+            Troubleshooting
+        </div>
+
+    </div>
+
+
+    <!-- LESSON 1 -->
+
+    <section class="lesson">
+
+        <h2>1. 🔥 Boiler Fundamentals</h2>
+
+        <p>
+            A boiler converts the chemical energy of fuel into
+            thermal energy and transfers that energy to water
+            to produce steam.
+        </p>
+
+        <div class="formula">
+            Fuel + Air → Combustion → Heat → Water → Steam
+        </div>
+
+        <h3>Major Energy Conversion</h3>
+
+        <p>
+            The overall power-generation chain can be understood as:
+        </p>
+
+        <div class="flow">
+            Fuel → Boiler → Steam → Turbine → Generator → Electricity
+        </div>
+
+        <h3>Main Boiler Systems</h3>
+
+        <ul>
+            <li>Fuel preparation and feeding system</li>
+            <li>Combustion/furnace system</li>
+            <li>Water circulation system</li>
+            <li>Steam generation system</li>
+            <li>Superheater and reheater</li>
+            <li>Economizer</li>
+            <li>Air preheater</li>
+            <li>Flue-gas system</li>
+            <li>Ash handling system</li>
+            <li>Boiler protection and control system</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 2 -->
+
+    <section class="lesson">
+
+        <h2>2. 🔥 AFBC vs CFBC</h2>
+
+        <p>
+            Fluidized-bed boilers use air to suspend and mix
+            solid particles so that combustion can take place
+            efficiently.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Feature</th>
+                <th>AFBC</th>
+                <th>CFBC</th>
+            </tr>
+
+            <tr>
+                <td>Bed type</td>
+                <td>Bubbling fluidized bed</td>
+                <td>Circulating fluidized bed</td>
+            </tr>
+
+            <tr>
+                <td>Solids circulation</td>
+                <td>Limited</td>
+                <td>Continuous circulation</td>
+            </tr>
+
+            <tr>
+                <td>Particle carryover</td>
+                <td>Lower</td>
+                <td>Higher by design</td>
+            </tr>
+
+            <tr>
+                <td>Solids separation</td>
+                <td>Usually simpler</td>
+                <td>Important part of the circulation system</td>
+            </tr>
+
+            <tr>
+                <td>Fuel flexibility</td>
+                <td>Good</td>
+                <td>Very good</td>
+            </tr>
+
+        </table>
+
+        <div class="success">
+            <strong>Remember:</strong>
+            CFBC depends heavily on controlled circulation
+            of solids through the furnace and separation/return system.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 3 -->
+
+    <section class="lesson">
+
+        <h2>3. 🔥 Boiler Main Flow Path</h2>
+
+        <h3>Typical Fuel Path</h3>
+
+        <div class="flow">
+            Coal → Crusher → Feeder → Furnace
+        </div>
+
+        <h3>Typical Air Path</h3>
+
+        <div class="flow">
+            FD Fan → Air Heater → PA / SA System → Furnace
+        </div>
+
+        <h3>Typical Flue-Gas Path</h3>
+
+        <div class="flow">
+            Furnace → Cyclone / Separator → Heat Transfer Sections
+            → Economizer → APH → ESP → ID Fan → Chimney
+        </div>
+
+        <p>
+            The exact arrangement depends on boiler design and OEM.
+        </p>
+
+    </section>
+
+
+    <!-- LESSON 4 -->
+
+    <section class="lesson">
+
+        <h2>4. 🔥 Furnace & Combustion</h2>
+
+        <p>
+            The furnace is the primary combustion zone where fuel
+            reacts with oxygen and releases heat.
+        </p>
+
+        <h3>Three Requirements for Combustion</h3>
+
+        <ul>
+            <li>Fuel</li>
+            <li>Oxygen / combustion air</li>
+            <li>Suitable temperature and residence time</li>
+        </ul>
+
+        <div class="formula">
+            Good Combustion = Fuel + Air + Temperature + Mixing + Residence Time
+        </div>
+
+        <p>
+            Poor mixing or insufficient residence time can result
+            in incomplete combustion and increased CO/unburnt carbon.
+        </p>
+
+    </section>
+
+
+    <!-- LESSON 5 -->
+
+    <section class="lesson">
+
+        <h2>5. 🔥 Primary Air — PA</h2>
+
+        <p>
+            Primary air is introduced through the lower portion
+            of a fluidized-bed furnace.
+        </p>
+
+        <h3>Main Functions</h3>
+
+        <ul>
+            <li>Fluidization of bed material</li>
+            <li>Supply part of combustion air</li>
+            <li>Maintain proper bed mixing</li>
+            <li>Support fuel combustion</li>
+            <li>Assist solids movement</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Important:</strong>
+            PA flow must be controlled according to the boiler's
+            design and operating procedure. Too little air can
+            compromise fluidization; excessive air can increase
+            solids carryover and change combustion conditions.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 6 -->
+
+    <section class="lesson">
+
+        <h2>6. 🔥 Secondary Air — SA</h2>
+
+        <p>
+            Secondary air is generally introduced above the bed
+            to support staged combustion and improve mixing.
+        </p>
+
+        <h3>Functions</h3>
+
+        <ul>
+            <li>Complete combustion</li>
+            <li>Improve fuel-air mixing</li>
+            <li>Support staged combustion</li>
+            <li>Help control CO</li>
+            <li>Influence furnace temperature distribution</li>
+        </ul>
+
+        <div class="formula">
+            PA → Fluidization + Primary Combustion
+            <br><br>
+            SA → Mixing + Combustion Completion
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 7 -->
+
+    <section class="lesson">
+
+        <h2>7. 🔥 Fuel Quality — GCV, Moisture & Ash</h2>
+
+        <h3>GCV</h3>
+
+        <p>
+            Gross Calorific Value indicates the heat released
+            from a unit mass of fuel under specified conditions.
+        </p>
+
+        <h3>Moisture</h3>
+
+        <p>
+            Higher fuel moisture requires additional energy for
+            evaporation and can affect combustion and boiler efficiency.
+        </p>
+
+        <h3>Ash</h3>
+
+        <p>
+            Ash increases the amount of non-combustible material
+            circulating through the boiler and affects ash handling,
+            erosion and heat-transfer surfaces.
+        </p>
+
+        <h3>Fuel Size</h3>
+
+        <ul>
+            <li>Ignition behaviour</li>
+            <li>Combustion rate</li>
+            <li>Residence time</li>
+            <li>Carryover</li>
+            <li>Bed behaviour</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 8 -->
+
+    <section class="lesson">
+
+        <h2>8. 🔥 Coal + Char</h2>
+
+        <p>
+            Coal provides fresh combustible material while char
+            represents partially combusted carbonaceous solids.
+        </p>
+
+        <p>
+            In circulating systems, combustible solids can remain
+            in the combustion loop for longer periods, supporting
+            carbon burnout.
+        </p>
+
+        <div class="flow">
+            Fuel → Combustion → Hot Solids → Separation →
+            Return → Furnace
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 9 -->
+
+    <section class="lesson">
+
+        <h2>9. 🔥 Bed Temperature</h2>
+
+        <p>
+            Bed temperature is a major operating parameter in
+            fluidized-bed combustion.
+        </p>
+
+        <h3>It influences:</h3>
+
+        <ul>
+            <li>Combustion stability</li>
+            <li>Fuel burnout</li>
+            <li>Heat transfer</li>
+            <li>Ash behaviour</li>
+            <li>Emission performance</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Engineering Note:</strong>
+            There is no single universal bed-temperature setpoint
+            for every AFBC or CFBC boiler. Always use the OEM
+            operating range, alarm limits and trip settings.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 10 -->
+
+    <section class="lesson">
+
+        <h2>10. 🔥 Furnace Draft & ID Fan</h2>
+
+        <p>
+            The ID fan removes flue gas from the boiler and helps
+            establish the required furnace pressure.
+        </p>
+
+        <div class="formula">
+            More ID Fan Capacity → Greater Flue-Gas Removal
+            → Furnace Pressure Tends More Negative
+        </div>
+
+        <h3>Operator Observation</h3>
+
+        <ul>
+            <li>Watch furnace pressure continuously.</li>
+            <li>Observe ID fan loading.</li>
+            <li>Check FD/PA/SA air balance.</li>
+            <li>Investigate sudden draft changes.</li>
+        </ul>
+
+        <div class="warning">
+            Furnace pressure limits are boiler-specific.
+            Do not apply a generic draft setpoint to another boiler.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 11 -->
+
+    <section class="lesson">
+
+        <h2>11. 🔥 O₂ & Excess Air</h2>
+
+        <p>
+            Flue-gas oxygen is an important indicator of the
+            combustion-air condition.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Observation</th>
+                <th>Possible Direction of Investigation</th>
+            </tr>
+
+            <tr>
+                <td>O₂ falling</td>
+                <td>Air reduction, fuel increase or combustion imbalance</td>
+            </tr>
+
+            <tr>
+                <td>O₂ rising</td>
+                <td>Fuel reduction, excess air or air leakage</td>
+            </tr>
+
+            <tr>
+                <td>High O₂ + high stack temperature</td>
+                <td>Possible excess-air / heat-loss investigation</td>
+            </tr>
+
+        </table>
+
+        <div class="warning">
+            O₂ target values depend on boiler design, fuel and
+            operating condition. Use plant-specific control limits.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 12 -->
+
+    <section class="lesson">
+
+        <h2>12. 🔥 Cyclone & Solids Circulation</h2>
+
+        <p>
+            In conventional CFBC arrangements, entrained solids
+            are separated from the flue gas and returned to the
+            furnace.
+        </p>
+
+        <div class="flow">
+            Furnace → Cyclone → Gas Path
+            <br><br>
+            Cyclone Solids → Return System → Furnace
+        </div>
+
+        <p>
+            Modern CFBC designs may use different separation and
+            recirculation arrangements. Always understand the
+            specific boiler configuration before troubleshooting.
+        </p>
+
+    </section>
+
+
+    <!-- LESSON 13 -->
+
+    <section class="lesson">
+
+        <h2>13. 🔥 Loop Seal / Solids Return</h2>
+
+        <p>
+            Where provided, a loop seal or similar return system
+            transfers hot solids back to the furnace while
+            maintaining the required pressure separation.
+        </p>
+
+        <h3>Operator should observe:</h3>
+
+        <ul>
+            <li>Fluidization air</li>
+            <li>Temperature</li>
+            <li>Pressure difference</li>
+            <li>Solids movement</li>
+            <li>Blockage or abnormal behaviour</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 14 -->
+
+    <section class="lesson">
+
+        <h2>14. 🔥 Drum & Water-Steam System</h2>
+
+        <p>
+            The boiler drum provides separation between water and
+            steam in drum-type boiler circulation systems.
+        </p>
+
+        <h3>Important Parameters</h3>
+
+        <ul>
+            <li>Drum level</li>
+            <li>Drum pressure</li>
+            <li>Feedwater flow</li>
+            <li>Steam flow</li>
+            <li>Feedwater temperature</li>
+        </ul>
+
+        <h3>Three-Element Control</h3>
+
+        <div class="formula">
+            Drum Level + Steam Flow + Feedwater Flow
+        </div>
+
+        <p>
+            Three-element control helps maintain drum level during
+            changing steam demand.
+        </p>
+
+    </section>
+
+
+    <!-- LESSON 15 -->
+
+    <section class="lesson">
+
+        <h2>15. 🔥 Superheater & Reheater</h2>
+
+        <h3>Superheater</h3>
+
+        <p>
+            Raises saturated steam temperature above saturation
+            temperature to produce superheated steam for the turbine.
+        </p>
+
+        <h3>Reheater</h3>
+
+        <p>
+            Steam returning from the turbine is reheated before
+            entering subsequent turbine stages where the plant
+            configuration includes reheating.
+        </p>
+
+        <div class="flow">
+            Boiler → Superheated Steam → HP Turbine
+            → Reheat → IP/LP Turbine
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 16 -->
+
+    <section class="lesson">
+
+        <h2>16. 🔥 Economizer & Air Preheater</h2>
+
+        <h3>Economizer</h3>
+
+        <p>
+            Recovers heat from flue gas to raise feedwater temperature
+            before the water enters the boiler.
+        </p>
+
+        <h3>Air Preheater</h3>
+
+        <p>
+            Recovers heat from flue gas and transfers it to combustion
+            air, improving overall thermal efficiency.
+        </p>
+
+        <div class="formula">
+            Waste Heat Recovery → Lower Fuel Requirement → Better Efficiency
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 17 -->
+
+    <section class="lesson">
+
+        <h2>17. 🔥 Boiler Load Control</h2>
+
+        <p>
+            Boiler load is controlled by coordinating fuel input,
+            combustion air and steam demand.
+        </p>
+
+        <div class="formula">
+            More Fuel + Correct Air
+            → More Heat Release
+            → More Steam Generation
+        </div>
+
+        <p>
+            A load increase should not be treated as simply increasing
+            fuel. Air, furnace pressure, bed condition, steam temperature,
+            drum level and other constraints must remain within their
+            operating limits.
+        </p>
+
+    </section>
+
+
+    <!-- LESSON 18 -->
+
+    <section class="lesson">
+
+        <h2>18. 🔥 Boiler Startup</h2>
+
+        <h3>Typical Startup Philosophy</h3>
+
+        <ul>
+            <li>Complete pre-start checks</li>
+            <li>Confirm water level and availability</li>
+            <li>Establish required ventilation/purge</li>
+            <li>Start required fans and auxiliaries</li>
+            <li>Establish fluidization where applicable</li>
+            <li>Start ignition/support fuel according to SOP</li>
+            <li>Establish stable combustion</li>
+            <li>Introduce main fuel progressively</li>
+            <li>Raise load gradually</li>
+        </ul>
+
+        <div class="warning">
+            Startup sequences are safety-critical and must follow
+            the specific boiler OEM procedure, interlocks and plant SOP.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 19 -->
+
+    <section class="lesson">
+
+        <h2>19. 🔥 Boiler Protection</h2>
+
+        <p>
+            Boiler protection systems are designed to prevent unsafe
+            operating conditions from developing into equipment damage
+            or personnel hazards.
+        </p>
+
+        <h3>Typical Protection Areas</h3>
+
+        <ul>
+            <li>Low drum level</li>
+            <li>High drum level</li>
+            <li>Furnace pressure abnormality</li>
+            <li>Fan trips</li>
+            <li>Loss of combustion</li>
+            <li>Fuel feeder problems</li>
+            <li>Flame/ignition problems where applicable</li>
+            <li>High temperature conditions</li>
+            <li>Boiler control-system failures</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 20 -->
+
+    <section class="lesson">
+
+        <h2>20. 🔥 ESP & Flue-Gas Path</h2>
+
+        <p>
+            After heat recovery, flue gas passes through the
+            particulate-control system before discharge through
+            the stack.
+        </p>
+
+        <div class="flow">
+            Boiler → Heat Recovery → ESP → ID Fan → Chimney
+        </div>
+
+        <h3>ESP Operator Parameters</h3>
+
+        <ul>
+            <li>Inlet temperature</li>
+            <li>Gas flow</li>
+            <li>Electrical field voltage</li>
+            <li>Electrical field current</li>
+            <li>Rapping operation</li>
+            <li>Hopper condition</li>
+            <li>Opacity / emission indication</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 21 -->
+
+    <section class="lesson">
+
+        <h2>21. 🔥 Boiler Efficiency</h2>
+
+        <p>
+            Boiler efficiency compares useful heat transferred to
+            steam with the energy supplied by the fuel.
+        </p>
+
+        <div class="formula">
+            Boiler Efficiency =
+            Useful Heat Output / Fuel Energy Input × 100
+        </div>
+
+        <h3>Important Losses</h3>
+
+        <ul>
+            <li>Dry flue-gas loss</li>
+            <li>Moisture-related losses</li>
+            <li>Unburnt carbon</li>
+            <li>Radiation and convection losses</li>
+            <li>Ash-related losses</li>
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 22 -->
+
+    <section class="lesson">
+
+        <h2>22. 🔥 Practical Boiler Troubleshooting</h2>
+
+        <table>
+
+            <tr>
+                <th>Observation</th>
+                <th>Areas to Investigate</th>
+            </tr>
+
+            <tr>
+                <td>Bed temperature falling</td>
+                <td>Fuel flow, air flow, combustion, bed inventory</td>
+            </tr>
+
+            <tr>
+                <td>O₂ suddenly high</td>
+                <td>Fuel reduction, excess air, air leakage</td>
+            </tr>
+
+            <tr>
+                <td>O₂ suddenly low</td>
+                <td>Air reduction, fuel increase, combustion imbalance</td>
+            </tr>
+
+            <tr>
+                <td>Furnace pressure abnormal</td>
+                <td>ID/FD system, dampers, gas-path restriction</td>
+            </tr>
+
+            <tr>
+                <td>Poor fluidization</td>
+                <td>PA flow, air nozzles, bed condition</td>
+            </tr>
+
+            <tr>
+                <td>High CO</td>
+                <td>Incomplete combustion, mixing, air/fuel balance</td>
+            </tr>
+
+            <tr>
+                <td>Steam generation falling</td>
+                <td>Fuel, combustion, heat transfer, fouling</td>
+            </tr>
+
+            <tr>
+                <td>Drum level unstable</td>
+                <td>Feedwater control, steam flow, level measurement</td>
+            </tr>
+
+            <tr>
+                <td>High bed DP</td>
+                <td>Bed inventory, ash accumulation, solids condition</td>
+            </tr>
+
+            <tr>
+                <td>Low bed DP</td>
+                <td>Low inventory, solids loss, circulation issue</td>
+            </tr>
+
+        </table>
+
+        <div class="warning">
+            These are investigation guides, not automatic diagnoses.
+            Always verify plant instruments, trends, interlocks and
+            OEM procedures before taking corrective action.
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 23 -->
+
+    <section class="lesson">
+
+        <h2>23. 🏭 Practical Boiler Engineer Checklist</h2>
+
+        <div class="checklist">
+
+            <div class="check-item">☐ Steam flow normal</div>
+
+            <div class="check-item">☐ Drum level stable</div>
+
+            <div class="check-item">☐ Main steam pressure normal</div>
+
+            <div class="check-item">☐ Main steam temperature normal</div>
+
+            <div class="check-item">☐ Bed temperature stable</div>
+
+            <div class="check-item">☐ Furnace pressure stable</div>
+
+            <div class="check-item">☐ PA flow healthy</div>
+
+            <div class="check-item">☐ SA flow healthy</div>
+
+            <div class="check-item">☐ O₂ within plant operating range</div>
+
+            <div class="check-item">☐ CO under control</div>
+
+            <div class="check-item">☐ Fuel flow stable</div>
+
+            <div class="check-item">☐ Bed DP normal</div>
+
+            <div class="check-item">☐ Cyclone/solids system healthy</div>
+
+            <div class="check-item">☐ ID fan healthy</div>
+
+            <div class="check-item">☐ FD/PA fans healthy</div>
+
+            <div class="check-item">☐ ESP healthy</div>
+
+            <div class="check-item">☐ Ash evacuation normal</div>
+
+            <div class="check-item">☐ No abnormal alarms</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 24 -->
+
+    <section class="lesson">
+
+        <h2>24. 🏭 Your Plant — Practical Boiler Case Study</h2>
+
+        <p>
+            This section will be customized using your actual plant data.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Parameter</th>
+                <th>Plant Value</th>
+            </tr>
+
+            <tr>
+                <td>Boiler Capacity</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Main Steam Pressure</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Main Steam Temperature</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Bed Temperature</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Furnace Draft</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>PA Flow</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>SA Flow</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>O₂</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>CO</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Coal GCV</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Coal Flow</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Char Flow</td>
+                <td>To be added</td>
+            </tr>
+
+            <tr>
+                <td>Bed DP</td>
+                <td>To be added</td>
+            </tr>
+
+        </table>
+
+        <div class="success">
+            <strong>Next level:</strong>
+            Once the actual plant data is entered, this section can become
+            a real operating reference for engineers and operators.
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="lesson">
+
+        <h2>🎯 Final Boiler Engineer Takeaway</h2>
+
+        <p>
+            A good boiler engineer does not look at one parameter in
+            isolation.
+        </p>
+
+        <div class="flow">
+            Fuel + PA + SA + Bed Condition + Draft
+            + Temperature + O₂ + Steam Demand
+            = Boiler Operating Condition
+        </div>
+
+        <p>
+            Always look at trends, relationships and the overall
+            process rather than reacting to a single reading.
+        </p>
+
+        <div class="success">
+            <strong>Golden Rule:</strong>
+            Understand the process first, then interpret the instrument.
+        </div>
+
+    </section>
+
+
+    <div class="small-note">
+        Educational material only. Boiler operating limits, alarms,
+        trips, startup procedures and protection settings must always
+        follow the specific OEM documentation and plant SOP.
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        ⚡ Power Plant Engineering Hub
+    </p>
+
+    <p style="margin-top:8px;">
+        Practical Engineering Knowledge for Power Plant Professionals
+    </p>
+
+</footer>
+
+</body>
+</html>
